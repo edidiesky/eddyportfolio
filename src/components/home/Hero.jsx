@@ -6,12 +6,12 @@ import { FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 const Hero = () => {
   return (
-    <HeroStyles className="f;ex item-center justify-center">
+    <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
-      {/* <div className="w-100">
-        <div className="w-90 auto flex item-center justify-space">
-          <h4 className="fs-16 text-light">Portfolio</h4>
-          <div className="w-100 flex item-center gap-2">
+      <div className="w-100 hero_top">
+        <div className="w-90 auto hero_top_wrapper flex item-center justify-space">
+          <h4 className="fs-16 text-bold">Portfolio</h4>
+          <div className="w-100 flex item-center jusify-center gap-2">
             <div className="icon flex item-center justify-center">
               <IoMdMail fontSize={"20px"} color="#fff" />
             </div>
@@ -26,7 +26,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* center section */}
       <div className="w-100 hero_center">
         <div className="w-85 auto flex item-start column gap-2">
@@ -71,7 +71,12 @@ const Hero = () => {
 
 const HeroStyles = styled.div`
   width: 100%;
-
+  .hero_top {
+    padding: 2rem 0;
+    .hero_top_wrapper{
+      justify-content: space-between;
+    }
+  }
   .hero_center {
     padding: 8rem 0;
     .span_length {
@@ -115,7 +120,7 @@ const HeroStyles = styled.div`
       }
     }
     h2 {
-      font-size:9rem;
+      font-size: 9rem;
       @media (max-width: 980px) {
         font-size: 7.5rem;
       }
