@@ -30,9 +30,6 @@ button {
 .relative {
   position: relative;
 }
-.owl-carousel .owl-stage-outer {
-  overflow: hidden;
-}
 a {
   color: inherit;
 }
@@ -52,7 +49,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--blue-1);
   font-family: "CustomFont_Normal", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   color: #Fff;
 }
 
@@ -62,7 +59,7 @@ body {
 }
 
 :root {
-  --dark-1: rgb(34, 34, 34);
+  --dark-1: rgb(24, 3, 60);
   --red: rgb(255, 56, 92);
   --grey-1: #8C85F3;
   --light-grey: rgb(113, 113, 113);
@@ -104,29 +101,6 @@ html {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.contactBtn,
-.cartBtn {
-  padding: 0.7rem 2rem;
-  text-align: center;
-  border: 1px solid var(--dark-1);
-  font-size: 17px;
-  display: block;
-  color: var(--dark-1);
-  border-radius: 10px;
-  transition: all 0.4s;
-}
-.contactBtn.green,
-.cartBtn.green {
-  background-color: var(--green);
-  color: #fff;
-  width: 100%;
-  border: none;
-  cursor: pointer;
-}
-
-.text-primary {
-  color: var(--primary);
-}
 .text-grey {
   color: var(--grey-1);
 }
@@ -226,7 +200,7 @@ h1 {
   font-family: "CustomFont_Bold", sans-serif;
 }
 .text-light {
-  font-weight: 400;
+  font-weight: normal;
   font-family: "CustomFont_Normal", sans-serif;
 }
 .radius1 {
@@ -405,11 +379,7 @@ h1 {
   width: 100%;
   z-index: 10;
 }
-.owl-theme .owl-dots .owl-dot {
-  display: inline-block;
-  zoom: 1;
-  display: inline !important;
-}
+
 
 /* slider css end */
 .relative {
