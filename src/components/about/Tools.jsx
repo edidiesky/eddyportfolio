@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
 import { projectdata } from "../data/project";
-import Card from "./Card";
-import Arrow from "../../assets/svg/arrow";
-import { Link } from "react-router-dom";
 
 const toolsdata = [
+  "Javascript",
+  "Css",
+  "Git",
   "React",
   "Tailwind",
   "Typescript",
@@ -27,23 +27,38 @@ const Tools = () => {
         </div>
         <div className="skills_wrapper item-start w-100">
           <div className="services_right w-90 auto">
-            <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
-              <h3 className="text-white fs-30 text-extra-bold">
-                Using the right tools with a well structured process leads to
-                the collaboration’s success
-              </h3>
-              <ul className="w-100 flex item-start gap-4">
-                {toolsdata?.map((x, index) => {
-                  return (
-                    <li className="flex fs-20 text-extra-bold text-white column gap-3">
-                      <div className="number fs-16 text-extra-bold text-white flex item-center">
-                        {index + 1}
-                      </div>
-                      {x}
-                    </li>
-                  );
-                })}
-              </ul>
+            <div className="w-90 auto services_left_wrapper flex column gap-4 justify-center">
+              <div className="flex column gap-3 w-100">
+                <h3 className="text-white fs-30 text-extra-bold">
+                  Using the right tools with a well structured process leads to
+                  the collaboration’s success
+                </h3>
+                <p className="text-light text-grey fs-18 block py-1">
+                  Development and design can feed and learn one from each other
+                  in any project. Hybrid professionals that understand and can
+                  communicate with both ends have the key to a better work flow
+                  in every environment.
+                </p>
+
+                <p className="text-light text-white fs-18 block py-1">
+                  I believe more can be achieved when both ends meet, and I have
+                  a passion for being right where they do so.
+                </p>
+              </div>
+              <div className="w-100 flex column gap-3">
+                <h3 className="text-white fs-16 text-extra-bold">
+                  FULL STACK DEVELOPMENT
+                </h3>
+                <div className="w-100 list flex item-start gap-1">
+                  {toolsdata?.map((x, index) => {
+                    return (
+                      <span className="fs-14 tab text-light text-white">
+                        {x}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -64,33 +79,21 @@ const WorkStyles = styled.div`
       margin: 120px 50px !important;
     }
   }
-  ul {
+  .services_left_wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    grid-gap: 7rem;
+    grid-template-columns: 1fr 1fr;
+    place-items: flex-start;
     @media (max-width: 780px) {
-      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      grid-template-columns: 1fr;
     }
   }
-  .number {
-    font-family: "Averta", sans-serif;
-    color: #f3f2f4;
-    font-size: 25px;
-    background-color: #18033c;
-    width: 80px;
-    height: 80px;
-    padding: 35px 20px 20px 20px;
-    box-sizing: border-box;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+  .list {
+    display: flex;
+    flex-wrap: wrap;
   }
+
   p {
     line-height: 1.8;
-  }
-  span {
-    color: rgb(238, 161, 190);
     @media (max-width: 580px) {
       font-size: 14px;
     }
@@ -124,8 +127,7 @@ const WorkStyles = styled.div`
     .services_right {
       padding: 0 4rem;
       padding-top: 4rem;
-      width: 70%;
-      margin-left: 140px;
+      width: 80%;
 
       @media (max-width: 980px) {
         width: 90%;
@@ -157,6 +159,12 @@ const WorkStyles = styled.div`
     @media (max-width: 580px) {
       font-size: 5.5rem;
     }
+  }
+  .tab {
+    padding: 8px 10px;
+    background: var(--grey-1);
+    border-radius: 45px;
+    color: #fff !important;
   }
 `;
 

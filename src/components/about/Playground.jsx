@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { IoMdMail } from "react-icons/io";
-import { projectdata } from "../data/project";
-import Card from "./Card";
-import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
 
 const toolsdata = [
