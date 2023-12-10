@@ -47,9 +47,13 @@ const WorkStyles = styled.div`
     top: -30%;
     left: -10%;
     z-index: 30;
+    @media (max-width:790px) {
+      left: 4%;
+    }
   }
   .image_background {
-    background: rgba(9, 5, 59, 0.221);
+    background: rgba(41, 59, 81, 0.225);
+
     z-index: 10;
   }
   h2 {
@@ -75,7 +79,7 @@ const WorkStyles = styled.div`
   .span_length {
     width: 50px;
     height: 1px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.419);
     @media (max-width: 580px) {
       width: 70px;
     }
@@ -104,7 +108,9 @@ const WorkStyles = styled.div`
       line-height: 1.8;
     }
     .image_wrapper {
-      height: 30rem;
+    height: 35rem;
+      background: #edf2f8;
+
       img {
         object-fit: cover;
       }
