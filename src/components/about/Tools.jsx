@@ -6,34 +6,46 @@ import Card from "./Card";
 import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
 
+const toolsdata = [
+  "React",
+  "Tailwind",
+  "Typescript",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "Prisma",
+  "Mongoose",
+];
 const Tools = () => {
   return (
     <WorkStyles>
       <div className="w-100 Tools flex item-center column justify-center">
         <div className="w-90 auto flex flex item-center justify-center column gap-2">
-          <h2 className="w-90 auto">
+          <h2 className="w-100">
             Tech <br /> Tools
           </h2>
         </div>
         <div className="skills_wrapper item-start w-100">
           <div className="services_right w-90 auto">
             <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
-              <h3 className="text-white fs-40 text-extra-bold">
+              <h3 className="text-white fs-30 text-extra-bold">
                 Using the right tools with a well structured process leads to
                 the collaboration’s success
               </h3>
-              <div className="w-100 flex item-center btn_wrapper">
-                <div className="btn_left flex item-center justify-center">
-                  <div className="icon flex item-center justify-center">
-                    <IoMdMail fontSize={"20px"} color="#fff" />
-                  </div>
-                </div>
-                <div className="btn_right flex item-center justify-center">
-                  <h4 className="block fs-18 text-extra-bold">
-                    hello@eddiongessien.com
-                  </h4>
-                </div>
-              </div>
+              <ul
+                className="w-100 flex item-start gap-4"
+              >
+                {toolsdata?.map((x, index) => {
+                  return (
+                    <li className="flex fs-20 text-extra-bold text-white column gap-3">
+                      <div className="number fs-16 text-extra-bold text-white flex item-center">
+                        {index + 1}
+                      </div>
+                      {x}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>
@@ -44,27 +56,28 @@ const Tools = () => {
 
 const WorkStyles = styled.div`
   width: 100%;
-  padding: 4rem 0;
   padding-bottom: 7rem;
-  .project_container {
-    margin-top: 14rem;
-    gap: 12rem;
+  .Tools {
+    margin: 120px 0 40px;
   }
-  .btn_wrapper {
-    margin-top: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    height: 9rem;
-    width: 90%;
-    cursor: pointer;
-    .btn_right {
-      width: 80%;
-      height: 100%;
-      border-left: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .btn_left {
-      width: 20%;
-      height: 100%;
-    }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 7rem;
+  }
+  .number {
+    font-family: "Averta", sans-serif;
+    color: #f3f2f4;
+    font-size: 25px;
+    background-color: #18033c;
+    width: 80px;
+    height: 80px;
+    padding: 35px 20px 20px 20px;
+    box-sizing: border-box;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
   p {
     line-height: 1.8;
@@ -98,8 +111,16 @@ const WorkStyles = styled.div`
       margin: 0 auto;
     }
     .services_right {
-      padding: 0 8rem;
-      padding-top: 8rem;
+      padding: 0 4rem;
+      padding-top: 4rem;
+      width: 70%;
+      margin-left: 140px;
+
+      @media (max-width: 980px) {
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 40px;
+      }
     }
   }
   h2 {

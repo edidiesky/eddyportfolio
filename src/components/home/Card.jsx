@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { projectdata } from "../data/project";
 
 const Card = ({ index }) => {
   return (
-    <div
+    <Link
+      to={"/"}
       className={
         index === 1 || index === 3
           ? "card relative w-100 active"
@@ -35,7 +37,7 @@ const Card = ({ index }) => {
             {projectdata[index]?.description}
           </p>
           {/* roles */}
-          {/* <div className="skills_wrapper w-100">
+          <div className="flex column gap-2 w-100">
             <div className="flex w-100 column gap-1">
               <span className="block fs-12 text-extra-bold">ROLES</span>
               <div
@@ -58,10 +60,10 @@ const Card = ({ index }) => {
                 })}
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

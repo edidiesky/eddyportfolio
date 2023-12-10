@@ -47,6 +47,11 @@ const WorkStyles = styled.div`
     top: -20%;
     left: -10%;
     z-index: 30;
+    @media (max-width: 980px) {
+      top: -20%;
+      left: 5%;
+      font-size: 4rem !important;
+    }
   }
   .image_background {
     background: rgba(41, 59, 81, 0.225);
@@ -65,6 +70,7 @@ const WorkStyles = styled.div`
     -webkit-text-stroke: 1px #cecae3;
     color: rgba(0, 0, 0, 0) !important;
     line-height: 1.1;
+    margin-left: 5rem !important;
 
     @media (max-width: 980px) {
       font-size: 7.5rem;
@@ -82,20 +88,32 @@ const WorkStyles = styled.div`
     }
   }
   .card {
+    transition: all 0.5s;
+
     &.active {
       margin-top: 16rem;
       @media (max-width: 780px) {
         margin-top: 0;
       }
     }
+    &:hover {
+      transform:translateY(-50px);
+      .card_bottom {
+        background: #8c85f345;
+      }
+    }
     .card_bottom {
       padding: 6rem 4rem;
       padding-left: 7rem;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s;
+      @media (max-width: 980px) {
+        padding-left: 2rem;
+      }
     }
     .tab {
       padding: 8px 10px;
-      background: #2f2f2f;
+      background: var(--grey-1);
       border-radius: 45px;
     }
     h3 {
@@ -105,7 +123,7 @@ const WorkStyles = styled.div`
       line-height: 1.8;
     }
     .image_wrapper {
-    height: 35rem;
+      height: 35rem;
       background: #edf2f8;
 
       img {

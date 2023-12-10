@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-100 flex item-center footer_right justify-end">
-          <div className="flex column fs-14 gap-2 text-extra-bold">
+          <div className="flex w-100 column fs-14 gap-2 text-extra-bold">
             <span className="block text-grey fs-12">SOCIALS</span>
             <div className="w-100 flex gap-3 item-center">
               <Link to={"/"} className="block span_highlight text-white">
@@ -52,13 +52,17 @@ const FooterStyles = styled.div`
     }
   }
   .footer {
-    padding: 2rem 0;
-    .footer_right,
-    .footer_left {
-      padding: 2rem;
+    padding: 4rem 0;
+    @media (max-width: 580px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap:1rem;
+      .footer_right {
+        justify-content: flex-start;
+      }
     }
     .footer_right {
-      justify-content: flex-emd;
+      justify-content: flex-end;
     }
   }
 `;

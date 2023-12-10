@@ -58,6 +58,9 @@ const HeroStyles = styled.div`
     width: 90%;
     max-width: 1496px;
     padding: 0 6rem;
+    @media (max-width: 980px) {
+      padding: 0 2rem;
+    }
   }
   .hero_top {
     padding: 2rem 0;
@@ -98,12 +101,12 @@ const HeroStyles = styled.div`
     @media (max-width: 980px) {
       font-size: 7.5rem;
     }
-    @media (max-width: 580px) {
-      font-size: 5.5rem;
-    }
   }
   .hero_center {
     padding: 8rem 4rem;
+    @media (max-width: 580px) {
+      padding: 2rem;
+    }
 
     .span_length {
       width: 100px;
@@ -120,17 +123,26 @@ const HeroStyles = styled.div`
       align-items: flex-start;
       @media (max-width: 780px) {
         width: 90%;
+        flex-direction: column;
       }
       .hero_c_Bottom_left {
         width: 55%;
+        @media (max-width: 780px) {
+          width: 90%;
+          flex-direction: column;
+        }
       }
 
       .hero_c_Bottom_ {
         width: 55%;
+        @media (max-width: 780px) {
+          width: 90%;
+          flex-direction: column;
+        }
       }
       p {
         line-height: 1.8;
-        @media (max-width: 580px) {
+        @media (max-width: 980px) {
           font-size: 17px;
           line-height: 1.8;
         }

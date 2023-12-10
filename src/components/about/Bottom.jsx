@@ -6,36 +6,57 @@ import Card from "./Card";
 import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
 
-const Services = () => {
+const Bottom = () => {
   return (
     <WorkStyles>
-      <div className="w-90 auto Services flex item-center column justify-center">
-        <div className="skills_wrapper item-start w-100">
-          <div className="services_left w-100">
-            <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
-              <h3 className="text-dark fs-40 text-extra-bold">Services</h3>
-              <p className="text-light fs-20">
-                Over the past couple of years I have several organizations in
-                building and devloping their products. I have collaborated with
-                several freelancing developers like me to build wide product
-                range. Working with other Full Stack developers to developers to envison
-                amazing products
-              </p>
-              <div className="services_left_wrapper_bottom w-100 flex column gap-4">
-                <div className="lenght w-100"></div>
-                <div className="w-100 flex about item-center gap-1 justify-end">
-                  <h4 className="fs-16 text-extra-bold text-dark">
-                    About & Services
-                  </h4>
-                  <Arrow />
+      <div className="skills_wrapper w-100">
+        <div className="services_right w-90 auto">
+          <div className="w-85 auto services_left_wrapper flex column gap-3 justify-center">
+            <span className="block fs-16 text-extra-bold">
+              Let us work together
+            </span>
+            <h3 className="text-white fs-50 text-extra-bold">
+              Interested ? <br /> Lets Get In Touch !
+            </h3>
+            <p className="text-light text-grey fs-20">
+              I’m open to freelance opportunities or remote position. Also feel
+              free to reach out if you need a hand on your side / open source
+              project. I’d would love to help
+            </p>
+            <p className="text-light w-85 text-grey fs-20">
+              I’m not really active on{" "}
+              <Link to={"/"} className="span_highlight">
+                Linkedin
+              </Link>{" "}
+              and{" "}
+              <Link to={"/"} className="span_highlight">
+                Facebook
+              </Link>{" "}
+              but you can stay in touch with me on{" "}
+              <Link to={"/"} className="span_highlight">
+                Twitter
+              </Link>
+              . Most of works can also be on found on my{" "}
+              <Link to={"/"} className="span_highlight">
+                Github
+              </Link>{" "}
+              page.
+            </p>
+            <div className="w-100 flex item-center btn_wrapper">
+              <div className="btn_left flex item-center justify-center">
+                <div className="icon flex item-center justify-center">
+                  <IoMdMail fontSize={"20px"} color="#fff" />
                 </div>
+              </div>
+              <div className="btn_right flex item-center justify-center">
+                <h4 className="block fs-18 text-extra-bold">
+                  hello@eddiongessien.com
+                </h4>
               </div>
             </div>
           </div>
-          <div className="services_right w-90 auto">
-            <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center"></div>
-          </div>
         </div>
+        <div className="skills_left"></div>
       </div>
     </WorkStyles>
   );
@@ -43,13 +64,11 @@ const Services = () => {
 
 const WorkStyles = styled.div`
   width: 100%;
-  z-index: 40;
-  transform: translateY(-50%);
-  @media (max-width: 980px) {
-    transform: translateY(0%);
-  }
-  p {
-    color: rgb(82, 67, 108);
+  padding: 4rem 0;
+  padding-bottom: 7rem;
+  .project_container {
+    margin-top: 14rem;
+    gap: 12rem;
   }
   .btn_wrapper {
     margin-top: 2rem;
@@ -69,9 +88,6 @@ const WorkStyles = styled.div`
   }
   p {
     line-height: 1.8;
-    @media (max-width: 580px) {
-      font-size: 17px;
-    }
   }
   span {
     color: rgb(238, 161, 190);
@@ -91,7 +107,7 @@ const WorkStyles = styled.div`
   .skills_wrapper {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-    grid-gap: 5rem;
+    grid-gap: 6rem;
     place-items: start;
     @media (min-width: 2080px) {
       width: 90%;
@@ -106,20 +122,15 @@ const WorkStyles = styled.div`
       margin: 0 auto;
     }
     .services_right {
-      padding: 4rem 0;
+      padding: 4rem 6rem;
       padding-top: 9rem;
     }
     .services_left {
       padding: 4rem 3rem;
       background-color: #eea1be;
-      z-index: 56;
-
       .services_left_wrapper {
-        padding: 4rem 8rem;
+        padding-top: 4rem;
         padding-bottom: 4rem;
-        @media (max-width: 980px) {
-          padding: 4rem 2rem;
-        }
         .services_left_wrapper_bottom {
           padding-top: 2rem;
           .about {
@@ -163,4 +174,4 @@ const WorkStyles = styled.div`
   }
 `;
 
-export default Services;
+export default Bottom;
