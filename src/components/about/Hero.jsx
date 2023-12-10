@@ -7,26 +7,12 @@ import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
+import Header from "../common/Header";
 const Hero = () => {
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
-      <div className="w-100 hero_top">
-        <div className="w-90 auto hero_top_wrapper flex item-center justify-space">
-          <h4 className="fs-16 text-bold">© Code by Victor</h4>
-          <div className="flex-1 hero_top_wrapper_left flex item-center jusify-center gap-4">
-            <h4 className="fs-20 span_highlight text-bold">
-              <FaXTwitter fontSize={"25px"} />
-            </h4>
-            <h4 className="fs-20 span_highlight text-bold">
-              <BsGithub fontSize={"25px"} />
-            </h4>
-            <h4 className="fs-20 span_highlight text-bold">
-              <RiLinkedinFill fontSize={"25px"} />
-            </h4>
-          </div>
-        </div>
-      </div>
+      <Header/>
       {/* center section */}
       <div className="w-100 hero_center">
         <div className="about_hero_wrapper auto flex item-start column gap-2">

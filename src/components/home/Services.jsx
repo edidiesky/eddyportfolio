@@ -29,12 +29,12 @@ const Services = () => {
               </p>
               <div className="services_left_wrapper_bottom w-100 flex column gap-4">
                 <div className="lenght w-100"></div>
-                <div className="w-100 flex about item-center gap-1 justify-end">
+                <Link to={'/about'} className="w-100 flex about item-center gap-1 justify-end">
                   <h4 className="fs-16 text-extra-bold text-dark">
                     About & Services
                   </h4>
                   <Arrow />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
