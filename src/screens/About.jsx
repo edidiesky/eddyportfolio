@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Hero, Services, Tools } from "../components/about";
+import { Hero, Services, Tools, Playground } from "../components/about";
 import Footer from "../components/common/Footer";
 import Bottom from "../components/about/Bottom";
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Tools />
+      <Playground/>
       <Bottom />
       <Footer />
     </HomeStyles>
@@ -17,6 +18,7 @@ const Home = () => {
 
 const HomeStyles = styled.div`
   width: 100%;
+  overflow:hidden;
 `;
 
 export default Home;

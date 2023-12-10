@@ -44,9 +44,9 @@ const Services = () => {
 const WorkStyles = styled.div`
   width: 100%;
   z-index: 40;
-  transform: translateY(-50%);
-  @media (max-width: 980px) {
-    transform: translateY(0%);
+  margin-top: -200px;
+  @media (max-width: 1080px) {
+    margin-top: 0px;
   }
   p {
     color: rgb(82, 67, 108);

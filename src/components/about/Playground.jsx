@@ -16,34 +16,32 @@ const toolsdata = [
   "Prisma",
   "Mongoose",
 ];
-const Tools = () => {
+const Playground = () => {
   return (
     <WorkStyles>
-      <div className="w-100 Tools flex item-center column justify-center">
+      <div className="w-100 Playground flex item-center column justify-center">
         <div className="w-90 auto flex flex item-center justify-center column gap-2">
           <h2 className="w-100">
-            Tech <br /> Tools
+            Playground <br /> & Exploration
           </h2>
         </div>
         <div className="skills_wrapper item-start w-100">
           <div className="services_right w-90 auto">
             <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
               <h3 className="text-white fs-30 text-extra-bold">
-                Using the right tools with a well structured process leads to
-                the collaboration’s success
+                Driven by a love of exploring new knowledge around design and
+                more.
               </h3>
-              <ul className="w-100 flex item-start gap-4">
-                {toolsdata?.map((x, index) => {
-                  return (
-                    <li className="flex fs-20 text-extra-bold text-white column gap-3">
-                      <div className="number fs-16 text-extra-bold text-white flex item-center">
-                        {index + 1}
-                      </div>
-                      {x}
-                    </li>
-                  );
-                })}
-              </ul>
+              <p className="fs-20 text-grey text-light">
+                Collecting visual inspirations, learning new things and building
+                projects are what filling my daily life.
+              </p>
+              <p className="fs-20 text-grey text-light">
+                I tried to understand my learning process and want that there is
+                something to learn from the start to the beginning. I’ve shared
+                it further on Instagram or Codepen.
+              </p>
+              
             </div>
           </div>
         </div>
@@ -54,11 +52,12 @@ const Tools = () => {
 
 const WorkStyles = styled.div`
   width: 100%;
+  padding-bottom: 4rem;
   /* transform: translateY(-30%); */
   @media (max-width: 980px) {
     transform: translateY(0%);
   }
-  .Tools {
+  .Playground {
     margin: 120px 120px !important;
     @media (max-width: 1080px) {
       margin: 120px 50px !important;
@@ -124,9 +123,15 @@ const WorkStyles = styled.div`
     .services_right {
       padding: 0 4rem;
       padding-top: 4rem;
-      width: 70%;
+      width: 70% !important;
       margin-left: 140px;
-
+      .services_left_wrapper {
+        width: 50% !important;
+        margin:0;
+        @media (max-width: 980px) {
+          width: 90%;
+        }
+      }
       @media (max-width: 980px) {
         width: 90%;
         margin: 0 auto;
@@ -160,4 +165,4 @@ const WorkStyles = styled.div`
   }
 `;
 
-export default Tools;
+export default Playground;

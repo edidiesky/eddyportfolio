@@ -8,6 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 import Header from "../common/Header";
+import Services from "./Services";
 const Hero = () => {
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
@@ -47,6 +48,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+     
     </HeroStyles>
   );
 };
@@ -54,6 +56,7 @@ const Hero = () => {
 const HeroStyles = styled.div`
   width: 100%;
   z-index: 45;
+  position:relative;
   .about_hero_wrapper {
     width: 90%;
     max-width: 1496px;

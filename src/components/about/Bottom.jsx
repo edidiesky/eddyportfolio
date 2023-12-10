@@ -64,12 +64,8 @@ const Bottom = () => {
 
 const WorkStyles = styled.div`
   width: 100%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   padding-bottom: 7rem;
-  .project_container {
-    margin-top: 14rem;
-    gap: 12rem;
-  }
   .btn_wrapper {
     margin-top: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
