@@ -1,14 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import { AnimatePresence } from "framer-motion";
 import { Hero, Services, Work } from "../components/home";
 import Footer from "../components/common/Footer";
+import Preloader from "../components/common/Preloader";
 const Home = () => {
+  const [isloading, setIsLoading] = React.useState(true);
+
+  
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <HomeStyles className="w-100 flex column gap-2">
+      <AnimatePresence mode="will">
+        {isloading && <Preloader />}
+      </AnimatePresence>
+
       <Hero />
       <Work />
       <Services />
-      <Footer/>
+      <Footer />
     </HomeStyles>
   );
 };
