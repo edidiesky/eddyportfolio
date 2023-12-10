@@ -29,38 +29,34 @@ const Hero = () => {
       </div>
       {/* center section */}
       <div className="w-100 hero_center">
-        <div className="w-85 auto flex item-start column gap-2">
+        <div className="about_hero_wrapper auto flex item-start column gap-2">
           <div className="flex item-center gap-2">
-            <span className="block fs-16 text-extra-bold">
-              I'm Victor Essien
-            </span>
-            <div className="span_length"></div>
-            <span className="block fs-16 text-extra-bold">
-              Available For Freelance Work
+            <span className="block fs-18 text-extra-bold">
+              About & Services
             </span>
           </div>
+          <h1>Hello ! I'm Victor</h1>
           <h2 className="fs-60 w-100 text-bold">
-            I'm Freelance Full Stack Developer Turning Your Paperball Into
-            Paperplane
+            I’m Building Digital Experience & Interface
           </h2>
-          <div className="hero_c_Bottom">
-            <p className="fs-20 text-light text-grey">
-              I help companies to design digital products and turn ideas into a
-              functional and delightful experience. I’m focusing on working on
-              interface and digital design – mainly building products, branding
-              and websites.
-            </p>{" "}
-            <div className="w-100 flex item-center btn_wrapper">
-              <div className="btn_left flex item-center justify-center">
-                <div className="icon flex item-center justify-center">
-                  <IoMdMail fontSize={"20px"} color="#fff" />
-                </div>
-              </div>
-              <div className="btn_right flex item-center justify-center">
-                <h4 className="block fs-18 text-extra-bold">
-                  hello@eddiongessien.com
-                </h4>
-              </div>
+          <div className="hero_c_Bottom flex item-start gap-4">
+            <div className="flex-1 hero_c_Bottom_left flex column gap-2">
+              <h4 className="fs-30 text-extra-bold">
+                I’m Victor Essien, a freelance Software developer currently
+                residing in Lagos, Nigeria.
+              </h4>
+              <p className="fs-20 text-light text-grey">
+                My experience comes from working with companies to solve
+                problems on their product and help them ship redesign, alpha
+                products or new features. One of my goals during a project is to
+                make sure we are always on the same page by documenting and
+                communicating about the journey.
+              </p>{" "}
+            </div>
+
+            <div className="flex-1 picture_background relative">
+              {/* <div className="image_background w-100"></div> */}
+              <img src="/eddy.jpeg" alt="" className="w-100" />
             </div>
           </div>
         </div>
@@ -71,6 +67,12 @@ const Hero = () => {
 
 const HeroStyles = styled.div`
   width: 100%;
+  z-index: 45;
+  .about_hero_wrapper {
+    width: 90%;
+    max-width: 1496px;
+    padding: 0 6rem;
+  }
   .hero_top {
     padding: 2rem 0;
     .hero_top_wrapper {
@@ -82,8 +84,41 @@ const HeroStyles = styled.div`
       }
     }
   }
+  .picture_background {
+    .image_background {
+      background: rgba(41, 59, 81, 0.225);
+
+      z-index: 45;
+    }
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    z-index: 45;
+  }
+  h1 {
+    font-size: 13rem;
+    line-height: 9.4vw;
+    text-rendering: optimizeLegibility;
+    width: 100%;
+    font-family: "CustomFont_", sans-serif;
+    font-weight: light;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: 1px #fff;
+    -webkit-text-stroke: 1px #cecae3;
+    color: rgba(0, 0, 0, 0) !important;
+    line-height: 1.1;
+
+    @media (max-width: 980px) {
+      font-size: 7.5rem;
+    }
+    @media (max-width: 580px) {
+      font-size: 5.5rem;
+    }
+  }
   .hero_center {
-    padding: 8rem 0;
+    padding: 8rem 4rem;
+
     .span_length {
       width: 100px;
       height: 1px;
@@ -93,26 +128,19 @@ const HeroStyles = styled.div`
       }
     }
     .hero_c_Bottom {
-      width: 55%;
-
-      .btn_wrapper {
-        margin-top: 4rem;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        height: 9rem;
-        width: 90%;
-        cursor: pointer;
-        .btn_right {
-          width: 80%;
-          height: 100%;
-          border-left: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .btn_left {
-          width: 20%;
-          height: 100%;
-        }
-      }
+      /* width: 55%; */
+      margin-top: 4rem;
+      gap: 6rem;
+      align-items: flex-start;
       @media (max-width: 780px) {
         width: 90%;
+      }
+      .hero_c_Bottom_left {
+        width: 55%;
+      }
+
+      .hero_c_Bottom_ {
+        width: 55%;
       }
       p {
         line-height: 1.8;
