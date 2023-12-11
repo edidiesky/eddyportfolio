@@ -22,40 +22,40 @@ const toolsdata = [
   "Mongoose",
 ];
 const Tools = () => {
-    const ref = useRef();
+  const ref = useRef();
 
-    const toolsparagraphTextArray1 = [
-      "Development and design can feed and learn one from",
-      "each other in any project. Hybrid professionals that",
-      "understand and can communicate with both ends have",
-      "the key to a better work flow in every environment.",
-    ];
+  const toolsparagraphTextArray1 = [
+    "Development and design can feed and learn one from",
+    "each other in any project. Hybrid professionals that",
+    "understand and can communicate with both ends have",
+    "the key to a better work flow in every environment.",
+  ];
 
-     const toolsparagraphTextArray2 = [
-       "I believe more can be achieved when both ends meet,",
-       "and I have a passion for being right where they do so.",
-     ];
+  const toolsparagraphTextArray2 = [
+    "I believe more can be achieved when both ends meet,",
+    "and I have a passion for being right where they do so.",
+  ];
 
-     const toolsTextArray = [
-       "Using the right tools with a",
-       "well structured process leads",
-       "to the collaboration’s success",
-     ];
+  const toolsTextArray = [
+    "Using the right tools with a",
+    "well structured process leads",
+    "to the collaboration’s success",
+  ];
 
-    const { ref: inViewRef, inView } = useInView({
-      /* Optional options */
-      threshold: .7,
-      delay: 4,
-    });
-    const setRefs = useCallback(
-      (node) => {
-        // Ref's from useRef needs to have the node assigned to `current`
-        ref.current = node;
-        // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
-        inViewRef(node);
-      },
-      [inViewRef]
-    );
+  const { ref: inViewRef, inView } = useInView({
+    /* Optional options */
+    threshold: 0.7,
+    delay: 4,
+  });
+  const setRefs = useCallback(
+    (node) => {
+      // Ref's from useRef needs to have the node assigned to `current`
+      ref.current = node;
+      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
   return (
     <WorkStyles>
       <div className="w-100 Tools flex item-center column justify-center">
@@ -136,14 +136,23 @@ const Tools = () => {
               </div>
               <div className="w-100 flex column gap-3">
                 <h3 className="text-white fs-16 text-extra-bold">
-                  FULL STACK DEVELOPMENT
+                  <span className="mask">
+                    <motion.span
+                      className=" text-white"
+                      variants={slideup}
+                      initial={"initial"}
+                      animate={inView ? "open" : "closed"}
+                    >
+                      FULL STACK DEVELOPMENT
+                    </motion.span>
+                  </span>
                 </h3>
                 <div className="w-100 list flex item-start gap-2">
                   {toolsdata?.map((x, index) => {
                     return (
                       <span className="mask">
                         <motion.span
-                        style={{margin:"1.4rem 0"}}
+                          style={{ margin: "1.4rem 0" }}
                           className="fs-14 tab text-light text-white"
                           key={index}
                           custom={index}
