@@ -1,43 +1,143 @@
-import React from "react";
-import { IoMdMail } from "react-icons/io";
-import { FaXTwitter } from "react-icons/fa6";
-import { BsGithub } from "react-icons/bs";
-import { RiLinkedinFill } from "react-icons/ri";
-import { IoLogoGithub } from "react-icons/io5";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
+import React, { useLayoutEffect, useRef, useCallback } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
+import { motion } from "framer-motion";
+import { opacity, slideup } from "../../anim";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import Header from "../common/Header";
-import Services from "./Services";
 const Hero = () => {
+  const ref = useRef();
+
+  const herotextArray = [
+    "I’m",
+    "Victor Essien",
+    "a",
+    "freelance", 
+    " Software",
+    "developer",
+    "currently",
+    " residing",
+    "in Lagos",
+    "Nigeria",
+  ];
+
+  const heroparagraphTextArray = [
+    " My experience comes from working with companies to",
+    "solve problems on their product and help them ship",
+    "redesign, alpha products or new features. One of",
+    " my goals during a project is to make sure we are",
+    " always on the same page by documenting and",
+    "communicating about the journey",
+  ];
+
+  useLayoutEffect(() => {
+    new SplitType(".about_hero_text");
+    gsap
+      .timeline()
+      .fromTo(
+        ".about_span",
+        { opacity: 0 }, // Initial skewY value
+        {
+          opacity: 1,
+          duration: 1.6,
+          delay: 0.6,
+          ease: "power4.Out",
+          stagger: {
+            amount: 0.3,
+          },
+        }
+      )
+      .fromTo(
+        ".line .word",
+        { skewY: 65, y: 870 }, // Initial skewY value
+        {
+          skewY: 0,
+          y: 0,
+          duration: 3,
+          delay: 0.6,
+          ease: "power4.Out",
+          stagger: {
+            amount: 0.3,
+          },
+        }
+      );
+  }, []);
+  const { ref: inViewRef, inView } = useInView({
+    /* Optional options */
+    threshold: .6,
+    delay: 4,
+  });
+  const setRefs = useCallback(
+    (node) => {
+      // Ref's from useRef needs to have the node assigned to `current`
+      ref.current = node;
+      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
+
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
-      <Header/>
+      <Header />
       {/* center section */}
       <div className="w-100 hero_center">
         <div className="about_hero_wrapper auto flex item-start column gap-2">
           <div className="flex item-center gap-2">
-            <span className="block fs-18 text-extra-bold">
-              About & Services
-            </span>
+            <div className="hidden">
+              <span className="block about_span fs-18 text-extra-bold">
+                About & Services
+              </span>
+            </div>
           </div>
-          <h1>Hello ! I'm Victor</h1>
-          <h2 className="fs-60 w-100 text-bold">
+          <h1 className="about_hero_text">Hello ! I'm Victor</h1>
+          <h2 className="fs-60 about_hero_text w-100 text-bold">
             I’m Building Digital Experience & Interface
           </h2>
-          <div className="hero_c_Bottom flex item-start gap-4">
-            <div className="flex-1 hero_c_Bottom_left flex column gap-2">
+          <div  className="hero_c_Bottom flex item-start gap-4">
+            <div ref={setRefs} className="flex-1 hero_c_Bottom_left flex column gap-2">
               <h4 className="fs-30 text-extra-bold">
-                I’m Victor Essien, a freelance Software developer currently
-                residing in Lagos, Nigeria.
+                {herotextArray.map((word, index) => {
+                  return (
+                    <span className="mask">
+                      <motion.span
+                        key={index}
+                        custom={index}
+                        variants={opacity}
+                        initial={"initial"}
+                        animate={inView ? "open" : "closed"}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                  );
+                })}
               </h4>
+              {/* // */}
               <p className="fs-20 text-light text-grey">
-                My experience comes from working with companies to solve
+                {/* My experience comes from working with companies to solve
                 problems on their product and help them ship redesign, alpha
                 products or new features. One of my goals during a project is to
                 make sure we are always on the same page by documenting and
-                communicating about the journey.
+                communicating about the journey. */}
+
+                {heroparagraphTextArray.map((word, index) => {
+                  return (
+                    <span className="mask">
+                      <motion.span
+                        key={index}
+                        custom={index}
+                        variants={slideup}
+                        initial={"initial"}
+                        animate={inView ? "open" : "closed"}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                  );
+                })}
               </p>{" "}
             </div>
 
@@ -48,7 +148,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-     
     </HeroStyles>
   );
 };
@@ -56,7 +155,10 @@ const Hero = () => {
 const HeroStyles = styled.div`
   width: 100%;
   z-index: 45;
-  position:relative;
+  position: relative;
+  .line {
+    overflow: hidden !important;
+  }
   .about_hero_wrapper {
     width: 90%;
     max-width: 1496px;
@@ -88,6 +190,15 @@ const HeroStyles = styled.div`
     object-fit: cover;
     z-index: 45;
   }
+  h4 {
+    line-height: 1.8;
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 0.7rem;
+    }
+  }
+
   h1 {
     font-size: 13rem;
     line-height: 9.4vw;
@@ -149,9 +260,14 @@ const HeroStyles = styled.div`
           font-size: 17px;
           line-height: 1.8;
         }
+        .mask {
+          display: inline-flex;
+          overflow: hidden;
+          margin-right: 0.7rem;
+        }
       }
     }
-    span {
+    .about_span {
       color: rgb(238, 161, 190);
       @media (max-width: 580px) {
         font-size: 14px;

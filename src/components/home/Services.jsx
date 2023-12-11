@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef, useCallback } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
 import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
 import { slideup } from "../../anim";
@@ -9,11 +11,61 @@ import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
 
 const Services = () => {
-   const phrases = ["Services", "&", "Contact"];
-   const { ref, inView, entry } = useInView({
-     /* Optional options */
-     threshold: 0,
-   });
+  const ref = useRef();
+  const phrases = ["Services", "&", "Contact"];
+  const experience = [
+    "I",
+    "building ",
+    "digital",
+    "product",
+    "and",
+    "experience",
+  ];
+
+  const experienceDetails = [
+    "Focused",
+    "on",
+    "full",
+    "software",
+    "development",
+    "of",
+    "web",
+    "applications",
+    "over",
+    "the",
+    "years",
+    "I",
+    "helped",
+    "companies ",
+    "and",
+    "growing",
+    "startups",
+    "build",
+    "websites",
+    "of",
+    "all",
+    " sorts",
+  ];
+
+  const { ref: inViewRef, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+    delay: 0.7,
+  });
+  const setRefs = useCallback(
+    (node) => {
+      // Ref's from useRef needs to have the node assigned to `current`
+      ref.current = node;
+      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
+
+  // useLayoutEffect(() => {
+  //   new SplitType(".paragraphtext");
+
+  // }, []);
   return (
     <WorkStyles>
       <div className="w-100 Services flex item-center column justify-center">
@@ -21,7 +73,7 @@ const Services = () => {
           <h2 className="">
             {phrases.map((word, index) => {
               return (
-                <span ref={ref} className="mask">
+                <span ref={setRefs} className="mask">
                   <motion.span
                     key={index}
                     custom={index}
@@ -38,15 +90,27 @@ const Services = () => {
           <div className="w-100 project_container flex item-start column"></div>
         </div>
         <div className="skills_wrapper item-start w-100">
-          <div className="services_left w-100">
+          <div ref={setRefs} className="services_left w-100">
             <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
               <h3 className="text-dark fs-35 text-extra-bold">
                 I building digital product and experience
               </h3>
-              <p className="text-light text-dark fs-20">
-                Focused on full software development of web applications over
-                the years I helped companies and growing startups build websites
-                of all sorts
+              <p className="text-light paragraphtext text-dark fs-20">
+                {experienceDetails.map((word, index) => {
+                  return (
+                    <span className="mask">
+                      <motion.span
+                        key={index}
+                        custom={index}
+                        variants={slideup}
+                        initial={"initial"}
+                        animate={inView ? "open" : "closed"}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                  );
+                })}
               </p>
               <div className="services_left_wrapper_bottom w-100 flex column gap-4">
                 <div className="lenght w-100"></div>
@@ -66,10 +130,28 @@ const Services = () => {
             <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
               <span className="block fs-16 text-extra-bold">Contact</span>
               <h3 className="text-white fs-50 text-extra-bold">
-                Interested ? <br /> Lets Get In Touch !
+                <span className="mask">
+                  <motion.span
+                    variants={slideup}
+                    initial={"initial"}
+                    animate={inView ? "open" : "closed"}
+                  >
+                    Interested ?
+                  </motion.span>
+                </span>{" "}
+                <br />
+                <span className="mask">
+                  <motion.span
+                    variants={slideup}
+                    initial={"initial"}
+                    animate={inView ? "open" : "closed"}
+                  >
+                    Lets Get In Touch !
+                  </motion.span>
+                </span>
               </h3>
               <p className="text-light w-85 text-grey fs-20">
-                I’m not really active on{" "}
+                {/* I’m not really active on{" "}
                 <Link to={"/"} className="span_highlight">
                   Linkedin
                 </Link>{" "}
@@ -85,7 +167,22 @@ const Services = () => {
                 <Link to={"/"} className="span_highlight">
                   Github
                 </Link>{" "}
-                page.
+                page. */}
+                {experienceDetails.map((word, index) => {
+                  return (
+                    <span className="mask">
+                      <motion.span
+                        key={index}
+                        custom={index}
+                        variants={slideup}
+                        initial={"initial"}
+                        animate={inView ? "open" : "closed"}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                  );
+                })}
               </p>
               <div className="w-100 flex item-center btn_wrapper">
                 <div className="btn_left flex item-center justify-center">
@@ -133,8 +230,20 @@ const WorkStyles = styled.div`
   }
   p {
     line-height: 1.8;
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 0.7rem;
+    }
   }
 
+  h3 {
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 0.7rem;
+    }
+  }
   .span_highlight {
     transition: all 0.5s;
 

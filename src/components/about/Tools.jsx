@@ -1,4 +1,9 @@
-import React from "react";
+import React, { useLayoutEffect, useRef, useCallback } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
+import { motion } from "framer-motion";
+import { slideup, opacity } from "../../anim";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
 import { projectdata } from "../data/project";
@@ -17,6 +22,40 @@ const toolsdata = [
   "Mongoose",
 ];
 const Tools = () => {
+    const ref = useRef();
+
+    const toolsparagraphTextArray1 = [
+      "Development and design can feed and learn one from",
+      "each other in any project. Hybrid professionals that",
+      "understand and can communicate with both ends have",
+      "the key to a better work flow in every environment.",
+    ];
+
+     const toolsparagraphTextArray2 = [
+       "I believe more can be achieved when both ends meet,",
+       "and I have a passion for being right where they do so.",
+     ];
+
+     const toolsTextArray = [
+       "Using the right tools with a",
+       "well structured process leads",
+       "to the collaboration’s success",
+     ];
+
+    const { ref: inViewRef, inView } = useInView({
+      /* Optional options */
+      threshold: 1,
+      delay: 4,
+    });
+    const setRefs = useCallback(
+      (node) => {
+        // Ref's from useRef needs to have the node assigned to `current`
+        ref.current = node;
+        // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+        inViewRef(node);
+      },
+      [inViewRef]
+    );
   return (
     <WorkStyles>
       <div className="w-100 Tools flex item-center column justify-center">
@@ -27,22 +66,72 @@ const Tools = () => {
         </div>
         <div className="skills_wrapper item-start w-100">
           <div className="services_right w-90 auto">
-            <div className="w-90 auto services_left_wrapper flex column gap-4 justify-center">
+            <div
+              ref={setRefs}
+              className="w-90 auto services_left_wrapper flex column gap-4 justify-center"
+            >
               <div className="flex column gap-3 w-100">
                 <h3 className="text-white fs-30 text-extra-bold">
-                  Using the right tools with a well structured process leads to
-                  the collaboration’s success
+                  {/* Using the right tools with a well structured process leads to
+                  the collaboration’s success */}
+                  {toolsTextArray.map((word, index) => {
+                    return (
+                      <span className="mask">
+                        <motion.span
+                          key={index}
+                          custom={index}
+                          variants={slideup}
+                          initial={"initial"}
+                          animate={inView ? "open" : "closed"}
+                        >
+                          {word}
+                        </motion.span>
+                      </span>
+                    );
+                  })}
                 </h3>
                 <p className="text-light text-grey fs-18 block py-1">
-                  Development and design can feed and learn one from each other
+                  {/* Development and design can feed and learn one from each other
                   in any project. Hybrid professionals that understand and can
                   communicate with both ends have the key to a better work flow
-                  in every environment.
+                  in every environment. */}
+
+                  {toolsparagraphTextArray1.map((word, index) => {
+                    return (
+                      <span className="mask">
+                        <motion.span
+                          key={index}
+                          custom={index}
+                          variants={slideup}
+                          initial={"initial"}
+                          animate={inView ? "open" : "closed"}
+                        >
+                          {word}
+                        </motion.span>
+                      </span>
+                    );
+                  })}
                 </p>
 
                 <p className="text-light text-white fs-18 block py-1">
-                  I believe more can be achieved when both ends meet, and I have
-                  a passion for being right where they do so.
+                  {/* I believe more can be achieved when both ends meet, and I have
+                  a passion for being right where they do so. */}
+
+                  {toolsparagraphTextArray2.map((word, index) => {
+                    return (
+                      <span className="mask">
+                        <motion.span
+                          key={index}
+                          custom={index}
+                          variants={opacity}
+                          initial={"initial"}
+                          animate={inView ? "open" : "closed"}
+                        >
+                          {word}
+                        </motion.span>
+                      </span>
+                    );
+                  })}
                 </p>
               </div>
               <div className="w-100 flex column gap-3">
@@ -94,8 +183,22 @@ const WorkStyles = styled.div`
 
   p {
     line-height: 1.8;
-    @media (max-width: 580px) {
-      font-size: 14px;
+    @media (max-width: 980px) {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 0.7rem;
+    }
+  }
+
+  h3 {
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 0.7rem;
     }
   }
   .span_highlight {

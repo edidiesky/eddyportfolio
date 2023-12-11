@@ -23,18 +23,6 @@ const Hero = () => {
           },
         }
       )
-      .fromTo(
-        ".btn",
-        { y: 600 }, // Initial skewY value
-        {
-          y: 0,
-          duration:6,
-          ease: "power4.Out",
-          stagger: {
-            amount: 0.5,
-          },
-        }
-      )
 
   }, []);
   return (

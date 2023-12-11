@@ -1,23 +1,81 @@
-import React from "react";
+import React, { useLayoutEffect, useRef, useCallback } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
+import { motion } from "framer-motion";
+import { slideup, opacity } from "../../anim";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
 import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
 
 const Services = () => {
+  const ref = useRef();
+
+  const heroparagraphTextArray = [
+    "Over the past couple of years I have several",
+    "organizations in building and devloping their",
+    "products. I have collaborated with several",
+    "freelancing developers like me to build wide product range. Working with other Full Stack",
+
+    "developers to envison amazing products",
+  ];
+
+  const { ref: inViewRef, inView } = useInView({
+    /* Optional options */
+    threshold: 0.8,
+    delay: 4,
+  });
+  const setRefs = useCallback(
+    (node) => {
+      // Ref's from useRef needs to have the node assigned to `current`
+      ref.current = node;
+      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
   return (
     <WorkStyles>
       <div className="w-90 auto Services flex item-center column justify-center">
         <div className="skills_wrapper item-start w-100">
           <div className="services_left w-100">
-            <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
-              <h3 className="text-dark fs-40 text-extra-bold">Services</h3>
+            <div
+              ref={setRefs}
+              className="w-85 auto services_left_wrapper flex column gap-4 justify-center"
+            >
+              <h3 className="text-dark fs-40 text-extra-bold">
+                <span className="mask">
+                  <motion.span
+                    variants={slideup}
+                    initial={"initial"}
+                    animate={inView ? "open" : "closed"}
+                  >
+                    Services
+                  </motion.span>
+                </span>
+              </h3>
               <p className="text-light fs-20">
-                Over the past couple of years I have several organizations in
+                {/* Over the past couple of years I have several organizations in
                 building and devloping their products. I have collaborated with
                 several freelancing developers like me to build wide product
-                range. Working with other Full Stack developers to developers to envison
-                amazing products
+                range. Working with other Full Stack developers to developers to
+                envison amazing products */}
+                {heroparagraphTextArray.map((word, index) => {
+                  return (
+                    <span className="mask">
+                      <motion.span
+                        key={index}
+                        custom={index}
+                        variants={slideup}
+                        initial={"initial"}
+                        animate={inView ? "open" : "closed"}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                  );
+                })}
               </p>
               <div className="services_left_wrapper_bottom w-100 flex column gap-4">
                 <div className="lenght w-100"></div>
@@ -67,12 +125,19 @@ const WorkStyles = styled.div`
   }
   p {
     line-height: 1.8;
-    @media (max-width: 580px) {
+    @media (max-width: 980px) {
       font-size: 17px;
+      line-height: 1.8;
+    }
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 0.7rem;
     }
   }
+
   span {
-    color: rgb(238, 161, 190);
+    /* color: rgb(238, 161, 190); */
     @media (max-width: 580px) {
       font-size: 14px;
     }
