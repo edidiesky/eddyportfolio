@@ -40,8 +40,8 @@ const Hero = () => {
         { opacity: 0 }, // Initial skewY value
         {
           opacity: 1,
-          duration: 1.6,
-          delay: 0.6,
+          duration: 1,
+          delay: 0.4,
           ease: "power4.Out",
           stagger: {
             amount: 0.3,
@@ -55,7 +55,7 @@ const Hero = () => {
           skewY: 0,
           y: 0,
           duration: 3,
-          delay: 0.6,
+          delay: 0.3,
           ease: "power4.Out",
           stagger: {
             amount: 0.3,

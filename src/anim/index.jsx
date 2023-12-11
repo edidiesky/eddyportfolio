@@ -22,7 +22,7 @@ export const imageSlideDown = {
   open: (i) => ({
     opacity: 1,
     clipPath: "inset(0% 0% 0% 0%)",
-    transition: { duration: 1, delay: 0.05 * i },
+    transition: { duration: 1, delay: 0.05 * i, ease: [0.42, 0, 0.58, 1] },
   }),
   closed: {
     opacity: 0,
