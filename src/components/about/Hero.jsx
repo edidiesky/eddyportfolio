@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useCallback } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-import { opacity, slideup } from "../../anim";
+import { opacity, slideup, imageSlideDown } from "../../anim";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import Header from "../common/Header";
@@ -96,8 +96,11 @@ const Hero = () => {
           <h2 className="fs-60 about_hero_text w-100 text-bold">
             I’m Building Digital Experience & Interface
           </h2>
-          <div  className="hero_c_Bottom flex item-start gap-4">
-            <div ref={setRefs} className="flex-1 hero_c_Bottom_left flex column gap-2">
+          <div className="hero_c_Bottom flex item-start gap-4">
+            <div
+              ref={setRefs}
+              className="flex-1 hero_c_Bottom_left flex column gap-2"
+            >
               <h4 className="fs-30 text-extra-bold">
                 {herotextArray.map((word, index) => {
                   return (
@@ -143,7 +146,16 @@ const Hero = () => {
 
             <div className="flex-1 picture_background relative">
               {/* <div className="image_background w-100"></div> */}
-              <img src="/eddy.jpeg" alt="" className="w-100" />
+              <div className="w-100 hidden">
+                <motion.img
+                  variants={imageSlideDown}
+                  initial={"initial"}
+                  animate={inView ? "open" : "closed"}
+                  src="/eddy.jpeg"
+                  alt=""
+                  className="w-100"
+                ></motion.img>
+              </div>
             </div>
           </div>
         </div>
