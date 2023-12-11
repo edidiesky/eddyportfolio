@@ -44,7 +44,7 @@ const Tools = () => {
 
     const { ref: inViewRef, inView } = useInView({
       /* Optional options */
-      threshold: 1,
+      threshold: .7,
       delay: 4,
     });
     const setRefs = useCallback(
@@ -138,11 +138,21 @@ const Tools = () => {
                 <h3 className="text-white fs-16 text-extra-bold">
                   FULL STACK DEVELOPMENT
                 </h3>
-                <div className="w-100 list flex item-start gap-1">
+                <div className="w-100 list flex item-start gap-2">
                   {toolsdata?.map((x, index) => {
                     return (
-                      <span className="fs-14 tab text-light text-white">
-                        {x}
+                      <span className="mask">
+                        <motion.span
+                        style={{margin:"1.4rem 0"}}
+                          className="fs-14 tab text-light text-white"
+                          key={index}
+                          custom={index}
+                          variants={opacity}
+                          initial={"initial"}
+                          animate={inView ? "open" : "closed"}
+                        >
+                          {x}
+                        </motion.span>
                       </span>
                     );
                   })}
