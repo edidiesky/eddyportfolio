@@ -1,18 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
-import { projectdata } from "../data/project";
-import Card from "./Card";
+import { slideup } from "../../anim";
+
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
 
 const Services = () => {
+   const phrases = ["Services", "&", "Contact"];
+   const { ref, inView, entry } = useInView({
+     /* Optional options */
+     threshold: 0,
+   });
   return (
     <WorkStyles>
       <div className="w-100 Services flex item-center column justify-center">
         <div className="w-90 auto flex flex item-center justify-center column gap-2">
           <h2 className="">
-            Services <br /> & Contact
+            {phrases.map((word, index) => {
+              return (
+                <span ref={ref} className="mask">
+                  <motion.span
+                    key={index}
+                    custom={index}
+                    variants={slideup}
+                    initial={"initial"}
+                    animate={inView ? "open" : "closed"}
+                  >
+                    {word}
+                  </motion.span>
+                </span>
+              );
+            })}
           </h2>
           <div className="w-100 project_container flex item-start column"></div>
         </div>
@@ -29,7 +50,10 @@ const Services = () => {
               </p>
               <div className="services_left_wrapper_bottom w-100 flex column gap-4">
                 <div className="lenght w-100"></div>
-                <Link to={'/about'} className="w-100 flex about item-center gap-1 justify-end">
+                <Link
+                  to={"/about"}
+                  className="w-100 flex about item-center gap-1 justify-end"
+                >
                   <h4 className="fs-16 text-extra-bold text-dark">
                     About & Services
                   </h4>
@@ -46,12 +70,22 @@ const Services = () => {
               </h3>
               <p className="text-light w-85 text-grey fs-20">
                 I’m not really active on{" "}
-                <Link to={'/'} className="span_highlight">Linkedin</Link> and{" "}
-                <Link to={'/'} className="span_highlight">Facebook</Link> but you can stay
-                in touch with me on{" "}
-                <Link to={'/'} className="span_highlight">Twitter</Link>. Most of works can
-                also be on found on my{" "}
-                <Link to={'/'} className="span_highlight">Github</Link> page.
+                <Link to={"/"} className="span_highlight">
+                  Linkedin
+                </Link>{" "}
+                and{" "}
+                <Link to={"/"} className="span_highlight">
+                  Facebook
+                </Link>{" "}
+                but you can stay in touch with me on{" "}
+                <Link to={"/"} className="span_highlight">
+                  Twitter
+                </Link>
+                . Most of works can also be on found on my{" "}
+                <Link to={"/"} className="span_highlight">
+                  Github
+                </Link>{" "}
+                page.
               </p>
               <div className="w-100 flex item-center btn_wrapper">
                 <div className="btn_left flex item-center justify-center">
@@ -100,12 +134,7 @@ const WorkStyles = styled.div`
   p {
     line-height: 1.8;
   }
-  span {
-    color: rgb(238, 161, 190);
-    @media (max-width: 580px) {
-      font-size: 14px;
-    }
-  }
+
   .span_highlight {
     transition: all 0.5s;
 
@@ -175,6 +204,13 @@ const WorkStyles = styled.div`
     -webkit-text-stroke: 1px #cecae3;
     color: rgba(0, 0, 0, 0) !important;
     line-height: 1.1;
+    padding-right: 5rem !important;
+    width: 70%;
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 1.5rem;
+    }
 
     @media (max-width: 980px) {
       font-size: 7.5rem;

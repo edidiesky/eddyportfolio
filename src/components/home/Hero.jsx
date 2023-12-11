@@ -1,15 +1,46 @@
-import React from "react";  
 import { IoMdMail } from "react-icons/io";
-import { FaXTwitter } from "react-icons/fa6";
-import { BsGithub } from "react-icons/bs";
-import { RiLinkedinFill } from "react-icons/ri";
+import React, { useLayoutEffect } from "react";
+import SplitType from "split-type";
+import gsap from "gsap";
 import styled from "styled-components";
 import Header from "../common/Header";
 const Hero = () => {
+  useLayoutEffect(() => {
+    new SplitType(".heroText");
+    gsap
+      .timeline()
+      .fromTo(
+        ".line .word",
+        { skewY: 65, y: 870 }, // Initial skewY value
+        {
+          skewY: 0,
+          y: 0,
+          duration:3,
+          delay: 4.7,
+          ease: "power4.Out",
+          stagger: {
+            amount: 0.5,
+          },
+        }
+      )
+      .fromTo(
+        ".btn",
+        { y: 600 }, // Initial skewY value
+        {
+          y: 0,
+          duration:6,
+          ease: "power4.Out",
+          stagger: {
+            amount: 0.5,
+          },
+        }
+      )
+
+  }, []);
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
-      <Header/>
+      <Header />
       {/* center section */}
       <div className="w-100 hero_center">
         <div className="w-85 auto flex item-start column gap-2">
@@ -22,12 +53,12 @@ const Hero = () => {
               Available For Freelance Work
             </span>
           </div>
-          <h2 className="fs-60 w-100 text-bold">
+          <h2 className="fs-60 heroText w-100 text-bold">
             I'm Freelance Full Stack Developer Turning Your Paperball Into
             Paperplane
           </h2>
           <div className="hero_c_Bottom">
-            <p className="fs-20 text-light text-grey">
+            <p className="fs-20 heroText text-light text-grey">
               I help companies to design digital products and turn ideas into a
               functional and delightful experience. I’m focusing on working on
               interface and digital design – mainly building products, branding
@@ -54,6 +85,9 @@ const Hero = () => {
 
 const HeroStyles = styled.div`
   width: 100%;
+  .line {
+    overflow:hidden !important;
+  }
   .hero_top {
     padding: 2rem 0;
     .icon {

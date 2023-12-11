@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { projectdata } from "../data/project";
 import Card from "./Card";
+import { slideup } from "../../anim";
 
 const Work = () => {
+  const phrases = ["Case", "Study", "&", "Projects"];
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+  // console.log(inView);
   return (
     <WorkStyles>
       <div className="w-100 flex item-center justify-center">
         <div className="w-90 auto flex flex item-center justify-center column gap-2">
           <h2 className="">
-            Case Studies <br /> & Projects
+            {phrases.map((word,index) => {
+              return (
+                <span ref={ref} className="mask">
+                  <motion.span
+                    key={index}
+                    custom={index}
+                    variants={slideup}
+                    initial={"initial"}
+                    animate={inView ? "open" : "closed"}
+                  >
+                    {word}
+                  </motion.span>
+                </span>
+              );
+            })}
           </h2>
           <div className="w-100 project_container flex item-start column">
             <div className="project_wrapper w-100">
@@ -59,7 +82,7 @@ const WorkStyles = styled.div`
     z-index: 10;
   }
   h2 {
-    font-size: 13rem;
+    font-size: 14rem;
     line-height: 9.4vw;
     text-rendering: optimizeLegibility;
     width: 100%;
@@ -70,7 +93,14 @@ const WorkStyles = styled.div`
     -webkit-text-stroke: 1px #cecae3;
     color: rgba(0, 0, 0, 0) !important;
     line-height: 1.1;
-    margin-left: 5rem !important;
+    /* padib-left: 5rem !important; */
+    padding-right: 5rem !important;
+    width: 70%;
+    .mask {
+      display: inline-flex;
+      overflow: hidden;
+      margin-right: 1.5rem;
+    }
 
     @media (max-width: 980px) {
       font-size: 7.5rem;
@@ -97,7 +127,7 @@ const WorkStyles = styled.div`
       }
     }
     &:hover {
-      transform:translateY(-50px);
+      transform: translateY(-50px);
       .card_bottom {
         background: #8c85f345;
       }
