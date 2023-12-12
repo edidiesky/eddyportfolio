@@ -42,7 +42,6 @@ const Header = () => {
 
             <Link
               to={"/about"}
-              target="_blank"
               className="fs-16 flex gap-1 item-center justify-center text-bold"
             >
               About & Services
