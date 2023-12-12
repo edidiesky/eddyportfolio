@@ -124,18 +124,18 @@ const WorkStyles = styled.div`
     overflow: hidden;
     cursor: pointer;
     position: absolute;
-    top: -45%;
+    top: 60%;
     right: 5%;
     background-color: var(--blue-1);
-    box-shadow:0 3px 4px rgba(0,0,0,.1);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.7s ease;
-    transform: translateY(70%);
-    @media (max-width: 780px) {
-      transform: translateY(45%);
-    }
-
-    @media (max-width: 380px) {
-      transform: none;
+    transform: translateY(50%);
+    @media (max-width: 580px) {
+      width: 10rem;
+      height: 10rem;
+      .text1 {
+        font-size: 13px;
+      }
     }
 
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -199,13 +199,22 @@ const WorkStyles = styled.div`
     }
     h3 {
       font-size: 3.5rem;
+      @media (max-width: 580px) {
+        font-size: 2.7rem;
+      }
     }
     p {
       line-height: 1.8;
+      @media (max-width: 580px) {
+        font-size: 1.4rem;
+      }
     }
     .image_wrapper {
       height: 35rem;
       background: #edf2f8;
+      @media (max-width: 580px) {
+        height: 25rem;
+      }
 
       img {
         object-fit: cover;

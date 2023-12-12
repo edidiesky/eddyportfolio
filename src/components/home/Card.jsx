@@ -16,7 +16,7 @@ const Card = ({ index }) => {
       <div
         style={{
           background: `${projectdata[index]?.color}`,
-          padding: "5rem 4rem",
+          // padding: "5rem 4rem",
         }}
         className="image_wrapper flex item-center justify-center relative w-100"
       >
@@ -41,10 +41,10 @@ const Card = ({ index }) => {
 
         {/* <div className="image_background absolute w-100 h-100"></div> */}
         <img
-          style={{ width: "95%" }}
+          // style={{ width: "95%" }}
           src={projectdata[index]?.image}
           alt=""
-          className="w-100 h-100"
+          className="w-100"
         />
       </div>
       <div className="card_bottom w-100">
