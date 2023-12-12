@@ -117,6 +117,57 @@ const WorkStyles = styled.div`
       width: 70px;
     }
   }
+  .card_btn1 {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: -45%;
+    right: 5%;
+    background-color: var(--blue-1);
+    box-shadow:0 3px 4px rgba(0,0,0,.1);
+    transition: all 0.7s ease;
+    transform: translateY(70%);
+    @media (max-width: 780px) {
+      transform: translateY(45%);
+    }
+
+    @media (max-width: 380px) {
+      transform: none;
+    }
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    .text1 {
+      z-index: 10;
+      color: #fff;
+    }
+    &:is(:hover, :focus-visible)::before {
+      bottom: 20%;
+      transform: translateX(-50%) scale(1.4);
+      color: #fff;
+      .text1 {
+        color: #fff !important;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -200%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 70%;
+      border-radius: 100%;
+
+      background-color: #ededefc5;
+      /* Add more styles for the card here */
+      transition: all 1s ease;
+      z-index: 1;
+      padding: 2rem;
+    }
+  }
   .card {
     transition: all 0.5s;
 

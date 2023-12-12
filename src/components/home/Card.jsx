@@ -1,11 +1,12 @@
 import React from "react";
+import { HiArrowUpRight } from "react-icons/hi2";
+
 import { Link } from "react-router-dom";
 import { projectdata } from "../../data/projectdata";
 
 const Card = ({ index }) => {
   return (
-    <Link
-      to={"/"}
+    <div
       className={
         index === 1 || index === 3
           ? "card relative w-100 active"
@@ -13,9 +14,25 @@ const Card = ({ index }) => {
       }
     >
       <div
-        style={{ background: `${projectdata[index]?.color}`, padding:"5rem 4rem" }}
+        style={{
+          background: `${projectdata[index]?.color}`,
+          padding: "5rem 4rem",
+        }}
         className="image_wrapper flex item-center justify-center relative w-100"
       >
+        <Link
+          target="_blank"
+          to={`${projectdata[index]?.website}`}
+          style={{
+            background: `${projectdata[index]?.color}`,
+          }}
+          className="card_btn1 fs-16 flex justify-center item-center text-light"
+        >
+          <div className="text1 text-bold flex itemcenter gap-1 text-center">
+            Live Site
+            <HiArrowUpRight />
+          </div>
+        </Link>
         {projectdata[index]?.subtext && (
           <h3 className="text-extra-bold subtext absolute">
             {projectdata[index]?.subtext}
@@ -70,7 +87,7 @@ const Card = ({ index }) => {
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

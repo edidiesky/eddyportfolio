@@ -6,23 +6,36 @@ import { RiLinkedinFill } from "react-icons/ri";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
   return (
     <HeaderStyles className="w-100">
       <div className="w-100 hero_top">
         <div className="w-90 auto hero_top_wrapper flex item-center justify-space">
-          <Link to={'/'} className="fs-16 text-bold">© Code by Victor</Link>
+          <Link to={"/"} className="fs-16 text-bold">
+            © Code by Victor
+          </Link>
           <div className="flex-1 hero_top_wrapper_left flex item-center jusify-center gap-4">
-            <div className="fs-20 icon flex item-center justify-center text-bold">
+            <Link
+              to={"https://twitter.com/edidiesky"}
+              target="_blank"
+              className="fs-20 icon flex item-center justify-center text-bold"
+            >
               <FaXTwitter fontSize={"25px"} />
-            </div>
-            <div className="fs-20 icon flex item-center justify-center text-bold">
+            </Link>
+            <Link
+              to={"https://github.com/edidiesky"}
+              target="_blank"
+              className="fs-20 icon flex item-center justify-center text-bold"
+            >
               <BsGithub fontSize={"25px"} />
-            </div>
-            <div className="fs-20 icon flex item-center justify-center text-bold">
+            </Link>
+            <Link
+              to={"https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"}
+              target="_blank"
+              className="fs-20 icon flex item-center justify-center text-bold"
+            >
               <RiLinkedinFill fontSize={"25px"} />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
