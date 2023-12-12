@@ -21,16 +21,32 @@ const Footer = () => {
           <div className="flex w-100 column fs-14 gap-2 text-extra-bold">
             <span className="block text-grey fs-12">SOCIALS</span>
             <div className="w-100 flex gap-3 item-center">
-              <Link to={"/"} className="block span_highlight text-white">
+              <Link
+                to={"https://github.com/edidiesky"}
+                target="_blank"
+                className="block span_highlight text-white"
+              >
                 Github
               </Link>
-              <Link to={"/"} className="block span_highlight text-white">
+              <Link
+                to={"https://twitter.com/edidiesky"}
+                target="_blank"
+                className="block span_highlight text-white"
+              >
                 Facebook
               </Link>
-              <Link to={"/"} className="block span_highlight text-white">
+              <Link
+                to={"https://twitter.com/edidiesky"}
+                target="_blank"
+                className="block span_highlight text-white"
+              >
                 Twitter
               </Link>
-              <Link to={"/"} className="block span_highlight text-white">
+              <Link
+                to={"https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"}
+                target="_blank"
+                className="block span_highlight text-white"
+              >
                 Linkedln
               </Link>
             </div>
