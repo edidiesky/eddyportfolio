@@ -81,7 +81,7 @@ const Hero = () => {
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
-      <Header />
+      <Header text={'Home'} path={''} />
       {/* center section */}
       <div className="w-100 hero_center">
         <div className="about_hero_wrapper auto flex item-start column gap-2">

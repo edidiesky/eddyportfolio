@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Arrow from "../../assets/svg/arrow";
 
-const Header = () => {
+const Header = ({ text,path }) => {
   return (
     <HeaderStyles className="w-100">
       <div className="w-100 hero_top">
@@ -41,10 +41,10 @@ const Header = () => {
             </div>
 
             <Link
-              to={"/about"}
+              to={`${path}`}
               className="fs-16 flex gap-1 item-center justify-center text-bold"
             >
-              About & Services
+              {text ? text : "About & Services"}
               <Arrow color={"#fff"} />
             </Link>
           </div>
@@ -58,7 +58,7 @@ const HeaderStyles = styled.div`
   width: 100%;
   a {
     .arrow {
-      color:#fff !important;
+      color: #fff !important;
       transition: all 0.5s;
     }
     &:hover {
