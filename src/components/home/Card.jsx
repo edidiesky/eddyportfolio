@@ -58,7 +58,7 @@ const Card = ({ index }) => {
           </div>
           <h3 className="text-extra-bold">{projectdata[index]?.title}</h3>
           <p className="text-light fs-18 text-grey">
-            {projectdata[index]?.description}
+            {projectdata[index]?.description?.substring(0, 160)} ....
           </p>
           {/* roles */}
           <div className="flex column gap-2 w-100">
