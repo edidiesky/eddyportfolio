@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { projectdata } from "../data/projectdata";
+import { projectdata } from "../../data/projectdata";
 
 const Card = ({ index }) => {
   return (
@@ -12,15 +12,23 @@ const Card = ({ index }) => {
           : "card relative w-100"
       }
     >
-      <div className="image_wrapper relative w-100">
+      <div
+        style={{ background: `${projectdata[index]?.color}`, padding:"5rem 4rem" }}
+        className="image_wrapper flex item-center justify-center relative w-100"
+      >
         {projectdata[index]?.subtext && (
           <h3 className="text-extra-bold subtext absolute">
             {projectdata[index]?.subtext}
           </h3>
         )}
 
-        <div className="image_background absolute w-100 h-100"></div>
-        <img src={projectdata[index]?.image} alt="" className="w-100 h-100" />
+        {/* <div className="image_background absolute w-100 h-100"></div> */}
+        <img
+          style={{ width: "95%" }}
+          src={projectdata[index]?.image}
+          alt=""
+          className="w-100 h-100"
+        />
       </div>
       <div className="card_bottom w-100">
         <div className="w-85 auto flex column gap-3">
@@ -28,7 +36,7 @@ const Card = ({ index }) => {
             <span className="block text-grey fs-16 text-extra-bold">01</span>
             <div className="span_length"></div>
             <span className="block text-grey fs-16 text-extra-bold">
-              Nwitter
+              {projectdata[index]?.text}
             </span>
           </div>
           <h3 className="text-extra-bold">{projectdata[index]?.title}</h3>
@@ -51,10 +59,10 @@ const Card = ({ index }) => {
             <div className="flex w-100 column gap-1">
               <span className="block fs-12 text-extra-bold">TECH STACK</span>
               <div
-                style={{ gap: "5px" }}
+                style={{ gap: "5px", flexWrap: "wrap" }}
                 className="w-100 flex item-center flex-wrap"
               >
-                {projectdata[index]?.tech?.map((x) => {
+                {projectdata[index]?.technologies?.map((x) => {
                   return <div className="tab fs-12 text-light">{x}</div>;
                 })}
               </div>

@@ -45,10 +45,10 @@ const Work = () => {
               <Card index={2} />
             </div>
 
-            <div className="skills_wrapper w-100">
+            {/* <div className="skills_wrapper w-100">
               <Card index={4} />
               <Card index={3} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -158,6 +158,7 @@ const WorkStyles = styled.div`
 
       img {
         object-fit: cover;
+        /* width:300px !important; */
       }
     }
   }
