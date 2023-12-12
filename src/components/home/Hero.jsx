@@ -15,8 +15,8 @@ const Hero = () => {
         {
           skewY: 0,
           y: 0,
-          duration:3,
-          delay: 4.7,
+          duration:2.8,
+          delay: 4,
           ease: "power4.Out",
           stagger: {
             amount: 0.5,

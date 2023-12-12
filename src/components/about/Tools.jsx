@@ -6,7 +6,6 @@ import { slideup, opacity } from "../../anim";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
-import { projectdata } from "../data/project";
 
 const toolsdata = [
   "Javascript",
