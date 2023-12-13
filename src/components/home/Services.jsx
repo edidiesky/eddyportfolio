@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Arrow from "../../assets/svg/arrow";
 import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
 const Services = () => {
   const ref = useRef();
@@ -184,18 +185,7 @@ const Services = () => {
                   );
                 })}
               </p>
-              <div className="w-100 flex item-center btn_wrapper">
-                <div className="btn_left flex item-center justify-center">
-                  <div className="icon flex item-center justify-center">
-                    <IoMdMail fontSize={"20px"} color="#fff" />
-                  </div>
-                </div>
-                <div className="btn_right flex item-center justify-center">
-                  <h4 className="block fs-18 text-extra-bold">
-                    hello@eddiongessien.com
-                  </h4>
-                </div>
-              </div>
+              <Button/>
             </div>
           </div>
         </div>

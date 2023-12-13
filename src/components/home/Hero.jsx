@@ -1,30 +1,34 @@
 import { IoMdMail } from "react-icons/io";
 import React, { useLayoutEffect } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import SplitType from "split-type";
 import gsap from "gsap";
 import styled from "styled-components";
 import Header from "../common/Header";
+import Button from "../common/Button";
 const Hero = () => {
   useLayoutEffect(() => {
     new SplitType(".heroText");
-    gsap
-      .timeline()
-      .fromTo(
-        ".line .word",
-        { skewY: 65, y: 870 }, // Initial skewY value
-        {
-          skewY: 0,
-          y: 0,
-          duration:2.8,
-          delay: 4,
-          ease: "power4.Out",
-          stagger: {
-            amount: 0.5,
-          },
-        }
-      )
-
+    gsap.timeline().fromTo(
+      ".line .word",
+      { skewY: 65, y: 870 }, // Initial skewY value
+      {
+        skewY: 0,
+        y: 0,
+        duration: 2.8,
+        delay: 4,
+        ease: "power4.Out",
+        stagger: {
+          amount: 0.5,
+        },
+      }
+    );
   }, []);
+  const [state, setState] = React.useState({
+    value: "essienedidiong1000@gmail.com",
+    copied: false,
+  });
+  console.log(state.copied)
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
@@ -52,18 +56,7 @@ const Hero = () => {
               interface and digital design – mainly building products, branding
               and websites.
             </p>{" "}
-            <div className="w-100 flex item-center btn_wrapper">
-              <div className="btn_left flex item-center justify-center">
-                <div className="icon flex item-center justify-center">
-                  <IoMdMail fontSize={"20px"} color="#fff" />
-                </div>
-              </div>
-              <div className="btn_right flex item-center justify-center">
-                <h4 className="block fs-18 text-extra-bold">
-                  hello@eddiongessien.com
-                </h4>
-              </div>
-            </div>
+            <Button/>
           </div>
         </div>
       </div>
@@ -74,13 +67,13 @@ const Hero = () => {
 const HeroStyles = styled.div`
   width: 100%;
   .line {
-    overflow:hidden !important;
+    overflow: hidden !important;
   }
   .hero_top {
     padding: 2rem 0;
     .icon {
       transition: all 0.5s;
-      cursor:pointer;
+      cursor: pointer;
       width: 4rem !important;
       height: 4rem !important;
       &:hover {
@@ -115,6 +108,43 @@ const HeroStyles = styled.div`
         height: 9rem;
         width: 90%;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          &::before {
+            transform: skew(0, 0) rotate(0) translateY(0);
+          }
+          .mail {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .mail {
+          /* transform: translateY(250px); */
+          position: absolute;
+          top: 40%;
+          left: 20%;
+          width: 100%;
+          height: 100%;
+          color: #222 !important;
+          font-size: 1.8rem;
+          transition: transform 400ms;
+
+          transform: translate(-50%, -20%);
+          opacity: 0;
+        }
+        &::before {
+          content: "";
+          background-color: #eea1be;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: skew(0, 10deg) rotate(10deg) translateY(250px);
+          transition: transform 400ms;
+          z-index: -10;
+        }
         .btn_right {
           width: 80%;
           height: 100%;
