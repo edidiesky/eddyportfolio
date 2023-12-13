@@ -19,7 +19,7 @@ const Button = () => {
           className="btn_wrapper w-100 flex item-center"
         >
           <span className="mail w-100 h-100 fs-16 text-bold text-dark">
-            {!state.copied ? "Mail has been copied" : "Click to copy mail"}
+            {state.copied ? "Mail has been copied" : "Click to copy mail"}
           </span>
 
           <div className="btn_left flex item-center justify-center">
