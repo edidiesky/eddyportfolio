@@ -286,13 +286,12 @@ const HeroStyles = styled.div`
       }
     }
     h2 {
-      font-size: 9rem;
-      @media (max-width: 980px) {
-        font-size: 7.5rem;
+      font-size: 8.6rem;
+      @media (max-width: 1080px) {
+        font-size: 6.7rem;
       }
       @media (max-width: 580px) {
-        font-size: 5rem;
-      }
+        
     }
   }
 `;
