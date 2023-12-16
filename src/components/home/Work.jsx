@@ -70,7 +70,7 @@ const WorkStyles = styled.div`
     top: -20%;
     left: -10%;
     z-index: 30;
-    @media (max-width: 980px) {
+    @media (max-width: 780px) {
       top: -20%;
       left: 5%;
       font-size: 4rem !important;
@@ -102,10 +102,10 @@ const WorkStyles = styled.div`
       margin-right: 1.5rem;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 780px) {
       font-size: 7.5rem;
     }
-    @media (max-width: 580px) {
+    @media (max-width: 780px) {
       font-size: 5.5rem;
     }
   }
@@ -113,7 +113,7 @@ const WorkStyles = styled.div`
     width: 50px;
     height: 1px;
     background: rgba(255, 255, 255, 0.419);
-    @media (max-width: 580px) {
+    @media (max-width: 780px) {
       width: 70px;
     }
   }
@@ -125,7 +125,7 @@ const WorkStyles = styled.div`
     cursor: pointer;
     transition: all 0.7s ease;
     position:relative;
-    @media (max-width: 580px) {
+    @media (max-width: 780px) {
       width: 6rem;
       height: 6rem;
       .text1 {
@@ -183,7 +183,7 @@ const WorkStyles = styled.div`
       /* padding-left: 7rem; */
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.5s;
-      @media (max-width: 980px) {
+      @media (max-width: 780px) {
         padding-left: 1rem;
       }
     }
@@ -194,18 +194,18 @@ const WorkStyles = styled.div`
     }
     h3 {
       font-size: 3rem;
-      @media (max-width: 580px) {
+      @media (max-width: 980px) {
         font-size: 2.7rem;
       }
     }
     p {
       line-height: 1.8;
-      @media (max-width: 580px) {
+      @media (max-width: 780px) {
         font-size: 1.4rem;
       }
     }
     .image_wrapper {
-      @media (max-width: 580px) {
+      @media (max-width: 780px) {
         height: 25rem;
       }
 
@@ -219,7 +219,7 @@ const WorkStyles = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10rem;
-    @media (max-width: 980px) {
+    @media (max-width: 780px) {
       grid-template-columns: 1fr;
     }
   }
@@ -228,7 +228,7 @@ const WorkStyles = styled.div`
     display: grid;
     grid-template-columns: 0.6fr 1fr;
     grid-gap: 2rem;
-    @media (max-width: 980px) {
+    @media (max-width: 780px) {
       grid-template-columns: 1fr;
     }
   }

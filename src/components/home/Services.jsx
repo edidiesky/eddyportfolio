@@ -208,6 +208,9 @@ const WorkStyles = styled.div`
     height: 9rem;
     width: 90%;
     cursor: pointer;
+    @media (max-width: 780px) {
+      width: 100%;
+    }
     .btn_right {
       width: 80%;
       height: 100%;
@@ -220,6 +223,9 @@ const WorkStyles = styled.div`
   }
   p {
     line-height: 1.8;
+    @media (max-width: 780px) {
+      font-size: 1.5rem;
+    }
     .mask {
       display: inline-flex;
       overflow: hidden;
@@ -228,6 +234,9 @@ const WorkStyles = styled.div`
   }
 
   h3 {
+    @media (max-width: 780px) {
+      font-size: 3.5rem;
+    }
     .mask {
       display: inline-flex;
       overflow: hidden;
@@ -267,9 +276,16 @@ const WorkStyles = styled.div`
     .services_left {
       padding: 4rem 3rem;
       background-color: #eea1be;
+      @media (max-width: 780px) {
+        width: 100%;
+        padding: 4rem 2rem;
+      }
       .services_left_wrapper {
         padding-top: 4rem;
         padding-bottom: 4rem;
+        @media (max-width: 780px) {
+          width: 100% !important;
+        }
         .services_left_wrapper_bottom {
           padding-top: 2rem;
           .about {
@@ -312,10 +328,10 @@ const WorkStyles = styled.div`
     }
 
     @media (max-width: 980px) {
-      font-size: 7.5rem;
+      font-size: 5rem;
     }
     @media (max-width: 580px) {
-      font-size: 5.5rem;
+      font-size: 4rem;
     }
   }
 `;

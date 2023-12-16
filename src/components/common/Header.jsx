@@ -15,31 +15,32 @@ const Header = ({ text,path }) => {
           <Link to={"/"} className="fs-16 text-bold">
             © Code by Victor
           </Link>
-          <div className="flex-1 hero_top_wrapper_left flex item-center jusify-center gap-4">
-            <div className="flex item-center gap-2">
-              <Link
-                to={"https://twitter.com/edidiesky"}
-                target="_blank"
-                className="fs-20 icon flex item-center justify-center text-bold"
-              >
-                <FaXTwitter fontSize={"22px"} />
-              </Link>
-              <Link
-                to={"https://github.com/edidiesky"}
-                target="_blank"
-                className="fs-20 icon flex item-center justify-center text-bold"
-              >
-                <BsGithub fontSize={"22px"} />
-              </Link>
-              <Link
-                to={"https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"}
-                target="_blank"
-                className="fs-20 icon flex item-center justify-center text-bold"
-              >
-                <RiLinkedinFill fontSize={"22px"} />
-              </Link>
+          <div className="flex flex-1 item-center gap-4">
+            <div className="flex-1 hero_top_wrapper_left flex item-center jusify-center gap-4">
+              <div className="flex item-center gap-2">
+                <Link
+                  to={"https://twitter.com/edidiesky"}
+                  target="_blank"
+                  className="fs-20 icon flex item-center justify-center text-bold"
+                >
+                  <FaXTwitter fontSize={"22px"} />
+                </Link>
+                <Link
+                  to={"https://github.com/edidiesky"}
+                  target="_blank"
+                  className="fs-20 icon flex item-center justify-center text-bold"
+                >
+                  <BsGithub fontSize={"22px"} />
+                </Link>
+                <Link
+                  to={"https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"}
+                  target="_blank"
+                  className="fs-20 icon flex item-center justify-center text-bold"
+                >
+                  <RiLinkedinFill fontSize={"22px"} />
+                </Link>
+              </div>
             </div>
-
             <Link
               to={`${path}`}
               className="fs-16 flex gap-1 item-center justify-center text-bold"
@@ -84,6 +85,9 @@ const HeaderStyles = styled.div`
       justify-content: space-between;
       .hero_top_wrapper_left {
         justify-content: flex-end;
+        @media (max-width:580px) {
+          display:none;
+        }
       }
     }
   }

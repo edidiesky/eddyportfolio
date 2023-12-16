@@ -35,8 +35,8 @@ const Hero = () => {
       <Header text={"About & Services"} path={"about"} />
       {/* center section */}
       <div className="w-100 hero_center">
-        <div className="w-85 auto flex item-start column gap-2">
-          <div className="flex item-center gap-2">
+        <div className="w-85  auto flex item-start column gap-2">
+          <div className="flex hero_center_top item-center gap-1">
             <span className="block fs-16 text-extra-bold">
               I'm Victor Essien
             </span>
@@ -56,7 +56,7 @@ const Hero = () => {
               interface and digital design – mainly building products, branding
               and websites.
             </p>{" "}
-            <Button/>
+            <Button />
           </div>
         </div>
       </div>
@@ -89,18 +89,26 @@ const HeroStyles = styled.div`
       }
     }
   }
+  .hero_center_top {
+    @media (max-width: 580px) {
+      flex-direction:column;
+      align-items:flex-start;
+    }
+  }
   .hero_center {
     padding: 8rem 0;
+    gap: 3px;
     .span_length {
       width: 100px;
       height: 1px;
       background: rgba(255, 255, 255, 0.6);
       @media (max-width: 580px) {
-        width: 70px;
+        width: 10px;
+        display: none;
       }
     }
     .hero_c_Bottom {
-      width: 55%;
+      width: 65%;
 
       .btn_wrapper {
         margin-top: 4rem;
@@ -154,9 +162,13 @@ const HeroStyles = styled.div`
           width: 20%;
           height: 100%;
         }
+
+        @media (max-width: 780px) {
+          width: 100%;
+        }
       }
       @media (max-width: 780px) {
-        width: 90%;
+        width: 100%;
       }
       p {
         line-height: 1.8;
@@ -175,10 +187,10 @@ const HeroStyles = styled.div`
     h2 {
       font-size: 8rem;
       @media (max-width: 1080px) {
-        font-size: 6.7rem;
+        font-size: 6rem;
       }
       @media (max-width: 580px) {
-        font-size: 5rem;
+        font-size: 4rem;
       }
     }
   }

@@ -34,17 +34,29 @@ const Skills = () => {
 
 const WorkStyles = styled.div`
   width: 100%;
-  margin:7rem auto;
+  margin: 7rem auto;
   .skill_wrapper {
     width: 65%;
     flex-wrap: wrap;
     gap: 2rem;
+    @media (max-width: 980px) {
+      width: 95%;
+    }
     .tab {
       padding: 2rem 4rem;
-      display:flex;
-      border:1px solid rgba(255,255,255, .2);
-      border-radius:40px;
-      font-size:3rem;
+      display: flex;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 40px;
+      font-size: 2.5rem;
+      @media (max-width: 980px) {
+        font-size: 2rem;
+        padding: 1.2rem 2rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+        padding: 1.2rem 2rem;
+      }
     }
   }
 `;
