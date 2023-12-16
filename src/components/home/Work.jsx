@@ -41,14 +41,14 @@ const Work = () => {
             </div>
 
             <div className="skills_wrapper w-100">
-              <Card index={1} />
+              <Card index={3} />
               <Card index={2} />
             </div>
 
-            {/* <div className="skills_wrapper w-100">
-              <Card index={4} />
-              <Card index={3} />
-            </div> */}
+            <div className="skills_wrapper w-100">
+              <Card index={1} />
+              {/* <div className="w-100"></div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -118,27 +118,22 @@ const WorkStyles = styled.div`
     }
   }
   .card_btn1 {
-    width: 14rem;
-    height: 14rem;
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
-    position: absolute;
-    top: 60%;
-    right: 5%;
-    background-color: var(--blue-1);
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.7s ease;
-    transform: translateY(50%);
+    position:relative;
     @media (max-width: 580px) {
-      width: 10rem;
-      height: 10rem;
+      width: 6rem;
+      height: 6rem;
       .text1 {
         font-size: 13px;
       }
     }
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     .text1 {
       z-index: 10;
       color: #fff;
@@ -184,12 +179,12 @@ const WorkStyles = styled.div`
       }
     }
     .card_bottom {
-      padding: 6rem 4rem;
-      padding-left: 7rem;
+      padding: 6rem 1rem;
+      /* padding-left: 7rem; */
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.5s;
       @media (max-width: 980px) {
-        padding-left: 2rem;
+        padding-left: 1rem;
       }
     }
     .tab {
@@ -198,7 +193,7 @@ const WorkStyles = styled.div`
       border-radius: 45px;
     }
     h3 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       @media (max-width: 580px) {
         font-size: 2.7rem;
       }
@@ -210,8 +205,6 @@ const WorkStyles = styled.div`
       }
     }
     .image_wrapper {
-      height: 35rem;
-      background: #edf2f8;
       @media (max-width: 580px) {
         height: 25rem;
       }

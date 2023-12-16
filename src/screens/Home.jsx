@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
-import { Hero, Services, Work } from "../components/home";
+import { Hero, Services, Work, Skills } from "../components/home";
 import Footer from "../components/common/Footer";
 import Preloader from "../components/common/Preloader";
 const Home = () => {
@@ -24,6 +24,7 @@ const Home = () => {
 
       <Hero />
       <Work />
+      <Skills />
       <Services />
       <Footer />
     </HomeStyles>
