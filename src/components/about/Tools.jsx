@@ -151,7 +151,7 @@ const Tools = () => {
                     return (
                       <span className="mask">
                         <motion.span
-                          style={{ margin: "1.4rem 0" }}
+                          style={{ margin: "14px 0" }}
                           className="fs-14 tab text-light text-white"
                           key={index}
                           custom={index}
@@ -185,6 +185,10 @@ const WorkStyles = styled.div`
     @media (max-width: 1080px) {
       margin: 120px 50px !important;
     }
+
+    @media (max-width: 580px) {
+      margin: 120px 20px !important;
+    }
   }
   .services_left_wrapper {
     display: grid;
@@ -197,12 +201,13 @@ const WorkStyles = styled.div`
   .list {
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
   }
 
   p {
     line-height: 1.8;
     @media (max-width: 980px) {
-      font-size: 17px;
+      font-size: 15px;
       line-height: 1.8;
     }
     .mask {
@@ -240,7 +245,7 @@ const WorkStyles = styled.div`
       }
     }
     @media (max-width: 980px) {
-      width: 90%;
+      width: 100%;
       grid-template-columns: 1fr;
 
       margin: 0 auto;
@@ -251,9 +256,10 @@ const WorkStyles = styled.div`
       width: 80%;
 
       @media (max-width: 980px) {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         margin-left: 40px;
+        padding: 4rem 2rem;
       }
       @media (max-width: 780px) {
         margin-left: 10px;
@@ -286,6 +292,7 @@ const WorkStyles = styled.div`
     background: var(--grey-1);
     border-radius: 45px;
     color: #fff !important;
+    margin: 10px 8px;
   }
 `;
 

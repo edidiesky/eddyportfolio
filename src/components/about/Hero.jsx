@@ -81,7 +81,7 @@ const Hero = () => {
   return (
     <HeroStyles className="flex column w-100 item-center justify-center">
       {/* top section */}
-      <Header text={'Home'} path={''} />
+      <Header text={'Home'} path={'/'} />
       {/* center section */}
       <div className="w-100 hero_center">
         <div className="about_hero_wrapper auto flex item-start column gap-2">
@@ -176,7 +176,11 @@ const HeroStyles = styled.div`
     max-width: 1496px;
     padding: 0 6rem;
     @media (max-width: 980px) {
-      padding: 0 2rem;
+      padding: 0;
+    }
+
+    @media (max-width: 680px) {
+      padding: 0;
     }
   }
   .hero_top {
@@ -230,6 +234,9 @@ const HeroStyles = styled.div`
   }
   .hero_center {
     padding: 8rem 4rem;
+    @media (max-width: 1080px) {
+      padding: 4rem 2rem;
+    }
     @media (max-width: 580px) {
       padding: 2rem;
     }
@@ -244,11 +251,18 @@ const HeroStyles = styled.div`
     }
     .hero_c_Bottom {
       /* width: 55%; */
-      margin-top: 4rem;
+      margin-top: 10rem;
       gap: 6rem;
       align-items: flex-start;
+      @media (max-width: 980px) {
+        width: 95%;
+        gap: 3rem;
+        margin-top: 4rem;
+      }
+
       @media (max-width: 780px) {
-        width: 90%;
+        width: 95%;
+        gap: 3rem;
         flex-direction: column;
       }
       .hero_c_Bottom_left {
@@ -259,7 +273,7 @@ const HeroStyles = styled.div`
         }
       }
 
-      .hero_c_Bottom_ {
+      .hero_c_Bottom {
         width: 55%;
         @media (max-width: 780px) {
           width: 90%;
@@ -269,13 +283,16 @@ const HeroStyles = styled.div`
       p {
         line-height: 1.8;
         @media (max-width: 980px) {
-          font-size: 17px;
+          font-size: 16px;
           line-height: 1.8;
         }
         .mask {
           display: inline-flex;
           overflow: hidden;
           margin-right: 0.7rem;
+          @media (max-width: 980px) {
+            margin-right: 0.2rem;
+          }
         }
       }
     }
@@ -288,10 +305,11 @@ const HeroStyles = styled.div`
     h2 {
       font-size: 8.6rem;
       @media (max-width: 1080px) {
-        font-size: 6.7rem;
+        font-size: 6rem;
       }
-      @media (max-width: 580px) {
-        
+      @media (max-width: 780px) {
+        font-size: 4rem;
+      }
     }
   }
 `;

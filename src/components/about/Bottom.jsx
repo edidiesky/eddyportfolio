@@ -60,6 +60,9 @@ const WorkStyles = styled.div`
     height: 9rem;
     width: 90%;
     cursor: pointer;
+    @media (max-width: 780px) {
+      width: 100%;
+    }
     .btn_right {
       width: 80%;
       height: 100%;
@@ -108,8 +111,11 @@ const WorkStyles = styled.div`
     .services_right {
       padding: 4rem 6rem;
       padding-top: 9rem;
+      @media (max-width: 780px) {
+        padding: 4rem 1rem;
+      }
     }
-    .services_left {
+    /* .services_left {
       padding: 4rem 3rem;
       background-color: #eea1be;
       .services_left_wrapper {
@@ -134,7 +140,7 @@ const WorkStyles = styled.div`
           }
         }
       }
-    }
+    } */
   }
   h2 {
     font-size: 13rem;

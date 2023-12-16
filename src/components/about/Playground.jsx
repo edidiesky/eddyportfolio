@@ -24,15 +24,15 @@ const Playground = () => {
         <div className="skills_wrapper item-start w-100">
           <div className="services_right w-90 auto">
             <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
-              <h3 className="text-white fs-30 text-extra-bold">
+              <h3 className="text-white w-100 fs-30 text-extra-bold">
                 Driven by a love of exploring new knowledge around design and
                 more.
               </h3>
-              <p className="fs-20 text-grey text-light">
+              <p className="fs-20 w-100 text-grey text-light">
                 Collecting visual inspirations, learning new things and building
                 projects are what filling my daily life.
               </p>
-              <p className="fs-20 text-grey text-light">
+              <p className="fs-20 w-100 text-grey text-light">
                 I tried to understand my learning process and want that there is
                 something to learn from the start to the beginning. I’ve shared
                 it further on Instagram or Codepen.
@@ -57,6 +57,9 @@ const WorkStyles = styled.div`
     margin: 120px 120px !important;
     @media (max-width: 1080px) {
       margin: 120px 50px !important;
+    }
+    @media (max-width: 580px) {
+      margin: 120px 20px !important;
     }
   }
   ul {
@@ -83,6 +86,9 @@ const WorkStyles = styled.div`
   }
   p {
     line-height: 1.8;
+    @media (max-width: 580px) {
+      font-size: 15px;
+    }
   }
   span {
     color: rgb(238, 161, 190);
@@ -111,7 +117,7 @@ const WorkStyles = styled.div`
       }
     }
     @media (max-width: 980px) {
-      width: 90%;
+      width: 95%;
       grid-template-columns: 1fr;
 
       margin: 0 auto;
@@ -123,9 +129,9 @@ const WorkStyles = styled.div`
       margin-left: 140px;
       .services_left_wrapper {
         width: 50% !important;
-        margin:0;
+        margin: 0;
         @media (max-width: 980px) {
-          width: 90%;
+          width: 95% !important;
         }
       }
       @media (max-width: 980px) {
@@ -136,6 +142,7 @@ const WorkStyles = styled.div`
       @media (max-width: 780px) {
         margin-left: 10px;
         padding: 4rem 0;
+        margin-left: 10px;
       }
     }
   }

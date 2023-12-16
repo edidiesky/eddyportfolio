@@ -126,7 +126,7 @@ const WorkStyles = styled.div`
   p {
     line-height: 1.8;
     @media (max-width: 980px) {
-      font-size: 17px;
+      font-size: 15px;
       line-height: 1.8;
     }
     .mask {
@@ -176,12 +176,15 @@ const WorkStyles = styled.div`
       padding: 4rem 3rem;
       background-color: #eea1be;
       z-index: 56;
+      @media (max-width: 780px) {
+        padding: 4rem 2rem;
+      }
 
       .services_left_wrapper {
         padding: 4rem 8rem;
         padding-bottom: 4rem;
         @media (max-width: 980px) {
-          padding: 4rem 2rem;
+          padding: 4rem 1rem;
         }
         .services_left_wrapper_bottom {
           padding-top: 2rem;
