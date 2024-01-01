@@ -102,8 +102,8 @@ const WorkStyles = styled.div`
       margin-right: 1.5rem;
     }
 
-    @media (max-width: 780px) {
-      font-size: 8rem;
+    @media (max-width: 980px) {
+      font-size: 10rem;
       width: 90%;
     }
   }
