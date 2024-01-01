@@ -103,10 +103,8 @@ const WorkStyles = styled.div`
     }
 
     @media (max-width: 780px) {
-      font-size: 7.5rem;
-    }
-    @media (max-width: 780px) {
-      font-size: 5.5rem;
+      font-size: 8rem;
+      width: 90%;
     }
   }
   .span_length {
@@ -124,7 +122,7 @@ const WorkStyles = styled.div`
     overflow: hidden;
     cursor: pointer;
     transition: all 0.7s ease;
-    position:relative;
+    position: relative;
     @media (max-width: 780px) {
       width: 6rem;
       height: 6rem;

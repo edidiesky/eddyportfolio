@@ -185,7 +185,9 @@ const Services = () => {
                   );
                 })}
               </p>
-              <Button/>
+              <div className="w-100">
+                <Button/>
+              </div>
             </div>
           </div>
         </div>
@@ -326,12 +328,12 @@ const WorkStyles = styled.div`
       overflow: hidden;
       margin-right: 1.5rem;
     }
-
     @media (max-width: 980px) {
-      font-size: 5rem;
+      font-size: 7rem;
     }
-    @media (max-width: 580px) {
-      font-size: 4rem;
+    @media (max-width: 780px) {
+      font-size: 8rem;
+      width: 90%;
     }
   }
 `;

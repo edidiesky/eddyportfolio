@@ -7,23 +7,23 @@ import styled from "styled-components";
 import Header from "../common/Header";
 import Button from "../common/Button";
 const Hero = () => {
-  useLayoutEffect(() => {
-    new SplitType(".heroText");
-    gsap.timeline().fromTo(
-      ".line .word",
-      { skewY: 65, y: 870 }, // Initial skewY value
-      {
-        skewY: 0,
-        y: 0,
-        duration: 2.8,
-        delay: 4,
-        ease: "power4.Out",
-        stagger: {
-          amount: 0.5,
-        },
-      }
-    );
-  }, []);
+  // useLayoutEffect(() => {
+  //   new SplitType(".heroText");
+  //   gsap.timeline().fromTo(
+  //     ".line .word",
+  //     { skewY: 65, y: 870 }, // Initial skewY value
+  //     {
+  //       skewY: 0,
+  //       y: 0,
+  //       duration: 2.8,
+  //       delay: 4,
+  //       ease: "power4.Out",
+  //       stagger: {
+  //         amount: 0.5,
+  //       },
+  //     }
+  //   );
+  // }, []);
   const [state, setState] = React.useState({
     value: "essienedidiong1000@gmail.com",
     copied: false,
@@ -45,7 +45,7 @@ const Hero = () => {
               Available For Freelance Work
             </span>
           </div>
-          <h2 className="fs-60 heroText w-100 text-bold">
+          <h2 className="heroText w-100 text-bold">
             I'm Freelance Full Stack Developer Turning Your Paperball Into
             Paperplane
           </h2>
@@ -91,8 +91,8 @@ const HeroStyles = styled.div`
   }
   .hero_center_top {
     @media (max-width: 580px) {
-      flex-direction:column;
-      align-items:flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
   .hero_center {
@@ -185,12 +185,13 @@ const HeroStyles = styled.div`
       }
     }
     h2 {
-      font-size: 8rem;
+      font-size: 9.2rem;
       @media (max-width: 1080px) {
-        font-size: 6rem;
+        font-size: 7rem;
       }
+
       @media (max-width: 580px) {
-        font-size: 4rem;
+        font-size: 6rem;
       }
     }
   }

@@ -12,15 +12,15 @@ const Home = () => {
 
   
 
-  React.useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 4000);
-    return () => clearTimeout(timer);
-  }, []);
+  // React.useEffect(() => {
+  //   const timer = setTimeout(() => setIsLoading(false), 4000);
+  //   return () => clearTimeout(timer);
+  // }, []);
   return (
     <HomeStyles className="w-100 flex column gap-2">
-      <AnimatePresence mode="will">
+      {/* <AnimatePresence mode="will">
         {isloading && <Preloader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <Hero />
       <Work />

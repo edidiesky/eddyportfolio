@@ -9,7 +9,7 @@ const Button = () => {
   });
 //   console.log(state.copied);
   return (
-    <ButtonStyles className="flex column w-100 item-center justify-center">
+    <ButtonStyles className="">
       <CopyToClipboard
         text={state.value}
         onCopy={() => setState({ copied: true })}
@@ -43,12 +43,12 @@ const ButtonStyles = styled.div`
     margin-top: 4rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     height: 9rem;
-    width: 90%;
+   width:600px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    @media (max-width:580px) {
-        width:100%;
+    @media (max-width:780px) {
+        width:80%;
         h4 {
             font-size:16px;
         }

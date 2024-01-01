@@ -15,7 +15,7 @@ const Header = ({ text,path }) => {
           <Link to={"/"} className="fs-16 text-bold">
             © Code by Victor
           </Link>
-          <div className="flex flex-1 item-center gap-4">
+          <div className="flex item-center justify-end flex-1 gap-4">
             <div className="flex-1 hero_top_wrapper_left flex item-center jusify-center gap-4">
               <div className="flex item-center gap-2">
                 <Link
@@ -43,7 +43,7 @@ const Header = ({ text,path }) => {
             </div>
             <Link
               to={`${path}`}
-              className="fs-16 flex gap-1 item-center justify-center text-bold"
+              className="fs-16 flex gap-1 item-center justify-end text-bold"
             >
               {text ? text : "About & Services"}
               <Arrow color={"#fff"} />
