@@ -1,7 +1,8 @@
 export const projectdata = [
+  // CAR
   {
     id: 4,
-    text: "Vaada",
+    text: "a CAR MANAGEMENT SYSTEM",
     color: "#E2D1D9",
     image: "/Car_screen_1.jpeg  ",
     website: "https://vaada.vercel.app/",
@@ -64,6 +65,139 @@ export const projectdata = [
     description:
       "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
   },
+  // LMS
+  {
+    id: 23,
+    text: "A Learning Management Application",
+    color: "#E2D1D9",
+    image: "/Car_screen_1.jpeg  ",
+    website: "https://vaada.vercel.app/",
+    github: "https://github.com/edidiesky/cardealer",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Developer", "Back End Developer"],
+
+    role: [
+      {
+        text: "Backend Development",
+        subtext: [
+          "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
+          "I Designed and integrated middleware for authentication, authorization, and error handling.",
+          "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
+        ],
+      },
+      {
+        text: "Frontend Development",
+        subtext: [
+          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
+          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
+          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
+          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
+        ],
+      },
+      {
+        text: "Database Integration:",
+        subtext: [
+          "Designed and integrated MongoDB as the database system for storing application data.",
+          "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
+        ],
+      },
+    ],
+    title: "A car Rental Concept",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+  },
+  // NOTION
+  {
+    id: 23,
+    text: "REDEVLOPing NOTION",
+    color: "#E2D1D9",
+    image: "/Car_screen_1.jpeg  ",
+    website: "https://vaada.vercel.app/",
+    github: "https://github.com/edidiesky/cardealer",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Developer", "Back End Developer"],
+
+    role: [
+      {
+        text: "Backend Development",
+        subtext: [
+          "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
+          "I Designed and integrated middleware for authentication, authorization, and error handling.",
+          "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
+        ],
+      },
+      {
+        text: "Frontend Development",
+        subtext: [
+          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
+          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
+          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
+          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
+        ],
+      },
+      {
+        text: "Database Integration:",
+        subtext: [
+          "Designed and integrated MongoDB as the database system for storing application data.",
+          "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
+        ],
+      },
+    ],
+    title: "A car Rental Concept",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+  },
+
   {
     id: 2,
     text: "Airbnb",
@@ -274,72 +408,6 @@ export const projectdata = [
     description:
       "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
   },
-
-  // {
-  //   id: 5,
-  //   text: "sendItAapp",
-  //   color: "#48494B",
-  //   image: "/car.jpeg  ",
-  //   website: "",
-  //   github: "https://github.com/edidiesky/cardealer",
-  //   features: [
-  //     {
-  //       text: "User Authentication",
-  //       description:
-  //         "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
-  //     },
-  //     {
-  //       text: "Payment Integration (using stripe)",
-  //       description:
-  //         "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
-  //     },
-  //     {
-  //       text: "Admin Dashboard",
-  //       description:
-  //         "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
-  //     },
-  //   ],
-  //   technologies: [
-  //     "React.js",
-  //     "Node.js",
-  //     "Socket.io",
-  //     "MongoDb",
-  //     "Express.js",
-  //     "Styled-components",
-  //     "Zoid",
-  //   ],
-  //   roles: ["Front End Developer", "Back End Developer"],
-
-  //   // role: [
-  //   //   {
-  //   //     text: "Backend Development",
-  //   //     subtext: [
-  //   //       "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
-  //   //       "I Designed and integrated middleware for authentication, authorization, and error handling.",
-  //   //       "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
-  //   //     ],
-  //   //   },
-  //   //   {
-  //   //     text: "Frontend Development",
-  //   //     subtext: [
-  //   //       "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
-  //   //       "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
-  //   //       "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
-  //   //       " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
-  //   //     ],
-  //   //   },
-  //   //   {
-  //   //     text: "Database Integration:",
-  //   //     subtext: [
-  //   //       "Designed and integrated MongoDB as the database system for storing application data.",
-  //   //       "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
-  //   //     ],
-  //   //   },
-  //   // ],
-  //   title: "Redeveloping the car-rental platform, Car-dealers",
-  //   description:
-  //     "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
-  // },
 ];
 
 export const projectdata2 = [

@@ -9,7 +9,7 @@ const Button = () => {
   });
 //   console.log(state.copied);
   return (
-    <ButtonStyles className="">
+    <ButtonStyles className="w-100">
       <CopyToClipboard
         text={state.value}
         onCopy={() => setState({ copied: true })}
@@ -24,7 +24,7 @@ const Button = () => {
 
           <div className="btn_left flex item-center justify-center">
             <div className="icon flex item-center justify-center">
-              <IoMdMail fontSize={"20px"} color="#fff" />
+              <IoMdMail fontSize={"20px"} color="var(--dark-1)" />
             </div>
           </div>
           <div className="btn_right flex item-center justify-center">
@@ -41,7 +41,7 @@ const Button = () => {
 const ButtonStyles = styled.div`
   .btn_wrapper {
     margin-top: 4rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     height: 9rem;
    width:600px;
     cursor: pointer;
@@ -91,7 +91,7 @@ const ButtonStyles = styled.div`
     .btn_right {
       width: 80%;
       height: 100%;
-      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
     }
     .btn_left {
       width: 20%;

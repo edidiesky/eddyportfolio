@@ -31,38 +31,38 @@ const Hero = () => {
     "communicating about the journey",
   ];
 
-  useLayoutEffect(() => {
-    new SplitType(".about_hero_text");
-    gsap
-      .timeline()
-      .fromTo(
-        ".about_span",
-        { opacity: 0 }, // Initial skewY value
-        {
-          opacity: 1,
-          duration: 1,
-          delay: 0.4,
-          ease: "power4.Out",
-          stagger: {
-            amount: 0.3,
-          },
-        }
-      )
-      .fromTo(
-        ".line .word",
-        { skewY: 65, y: 870 }, // Initial skewY value
-        {
-          skewY: 0,
-          y: 0,
-          duration: 3,
-          delay: 0.3,
-          ease: "power4.Out",
-          stagger: {
-            amount: 0.3,
-          },
-        }
-      );
-  }, []);
+  // useLayoutEffect(() => {
+  //   new SplitType(".about_hero_text");
+  //   gsap
+  //     .timeline()
+  //     .fromTo(
+  //       ".about_span",
+  //       { opacity: 0 }, // Initial skewY value
+  //       {
+  //         opacity: 1,
+  //         duration: 1,
+  //         delay: 0.4,
+  //         ease: "power4.Out",
+  //         stagger: {
+  //           amount: 0.3,
+  //         },
+  //       }
+  //     )
+  //     .fromTo(
+  //       ".line .word",
+  //       { skewY: 65, y: 870 }, // Initial skewY value
+  //       {
+  //         skewY: 0,
+  //         y: 0,
+  //         duration: 3,
+  //         delay: 0.3,
+  //         ease: "power4.Out",
+  //         stagger: {
+  //           amount: 0.3,
+  //         },
+  //       }
+  //     );
+  // }, []);
   const { ref: inViewRef, inView } = useInView({
     /* Optional options */
     threshold: .6,

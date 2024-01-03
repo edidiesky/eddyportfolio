@@ -17,7 +17,7 @@ const Work = () => {
     <WorkStyles>
       <div className="w-100 flex item-center justify-center">
         <div className="w-90 auto flex flex item-center justify-center column gap-2">
-          <h2 className="">
+          <h3 className="text-dark text-extra-bold">
             {phrases.map((word,index) => {
               return (
                 <span ref={ref} className="mask">
@@ -33,7 +33,7 @@ const Work = () => {
                 </span>
               );
             })}
-          </h2>
+          </h3>
           <div className="w-100 project_container flex item-start column">
             <div className="project_wrapper w-100">
               <div className="w-100"></div>
@@ -81,36 +81,21 @@ const WorkStyles = styled.div`
 
     z-index: 10;
   }
-  h2 {
-    font-size: 14rem;
-    line-height: 9.4vw;
-    text-rendering: optimizeLegibility;
-    width: 100%;
-    font-family: "CustomFont_", sans-serif;
-    font-weight: light;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: 1px #fff;
-    -webkit-text-stroke: 1px #cecae3;
-    color: rgba(0, 0, 0, 0) !important;
+  h3 {
     line-height: 1.1;
-    /* padib-left: 5rem !important; */
     padding-right: 5rem !important;
-    width: 70%;
+    width: 100%;
+    font-size: 4rem;
     .mask {
       display: inline-flex;
       overflow: hidden;
       margin-right: 1.5rem;
     }
-
-    @media (max-width: 980px) {
-      font-size: 10rem;
-      width: 90%;
-    }
   }
   .span_length {
     width: 50px;
     height: 1px;
-    background: rgba(255, 255, 255, 0.419);
+    background: rgba(0, 0, 0, 0.419);
     @media (max-width: 780px) {
       width: 70px;
     }
@@ -131,7 +116,7 @@ const WorkStyles = styled.div`
       }
     }
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     .text1 {
       z-index: 10;
       color: #fff;
@@ -162,8 +147,8 @@ const WorkStyles = styled.div`
     }
   }
   .card {
+    background-color: #f7f7f7;
     transition: all 0.5s;
-
     &.active {
       margin-top: 16rem;
       @media (max-width: 780px) {
@@ -178,8 +163,7 @@ const WorkStyles = styled.div`
     }
     .card_bottom {
       padding: 6rem 1rem;
-      /* padding-left: 7rem; */
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: none;
       transition: all 0.5s;
       @media (max-width: 780px) {
         padding-left: 1rem;
@@ -192,9 +176,6 @@ const WorkStyles = styled.div`
     }
     h3 {
       font-size: 3rem;
-      @media (max-width: 980px) {
-        font-size: 2.7rem;
-      }
     }
     p {
       line-height: 1.8;
@@ -203,10 +184,6 @@ const WorkStyles = styled.div`
       }
     }
     .image_wrapper {
-      @media (max-width: 780px) {
-        height: 25rem;
-      }
-
       img {
         object-fit: cover;
         /* width:300px !important; */

@@ -69,27 +69,7 @@ const Services = () => {
   // }, []);
   return (
     <WorkStyles>
-      <div className="w-100 Services flex item-center column justify-center">
-        <div className="w-90 auto flex flex item-center justify-center column gap-2">
-          <h2 className="">
-            {phrases.map((word, index) => {
-              return (
-                <span ref={setRefs} className="mask">
-                  <motion.span
-                    key={index}
-                    custom={index}
-                    variants={slideup}
-                    initial={"initial"}
-                    animate={inView ? "open" : "closed"}
-                  >
-                    {word}
-                  </motion.span>
-                </span>
-              );
-            })}
-          </h2>
-          <div className="w-100 project_container flex item-start column"></div>
-        </div>
+      <div className="w-100 Services flex item-start column gap-4">
         <div className="skills_wrapper item-start w-100">
           <div ref={setRefs} className="services_left w-100">
             <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
@@ -152,23 +132,7 @@ const Services = () => {
                 </span>
               </h3>
               <p className="text-light w-85 text-grey fs-20">
-                {/* I’m not really active on{" "}
-                <Link to={"/"} className="span_highlight">
-                  Linkedin
-                </Link>{" "}
-                and{" "}
-                <Link to={"/"} className="span_highlight">
-                  Facebook
-                </Link>{" "}
-                but you can stay in touch with me on{" "}
-                <Link to={"/"} className="span_highlight">
-                  Twitter
-                </Link>
-                . Most of works can also be on found on my{" "}
-                <Link to={"/"} className="span_highlight">
-                  Github
-                </Link>{" "}
-                page. */}
+                
                 {experienceDetails.map((word, index) => {
                   return (
                     <span className="mask">
@@ -206,7 +170,7 @@ const WorkStyles = styled.div`
   }
   .btn_wrapper {
     margin-top: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     height: 9rem;
     width: 90%;
     cursor: pointer;
@@ -216,7 +180,7 @@ const WorkStyles = styled.div`
     .btn_right {
       width: 80%;
       height: 100%;
-      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
     }
     .btn_left {
       width: 20%;
@@ -307,30 +271,6 @@ const WorkStyles = styled.div`
           }
         }
       }
-    }
-  }
-  h2 {
-    font-size: 13rem;
-    line-height: 9.4vw;
-    text-rendering: optimizeLegibility;
-    width: 100%;
-    font-family: "CustomFont_", sans-serif;
-    font-weight: light;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: 1px #fff;
-    -webkit-text-stroke: 1px #cecae3;
-    color: rgba(0, 0, 0, 0) !important;
-    line-height: 1.1;
-    padding-right: 5rem !important;
-    width: 70%;
-    .mask {
-      display: inline-flex;
-      overflow: hidden;
-      margin-right: 1.5rem;
-    }
-    @media (max-width: 980px) {
-      font-size: 10rem;
-      width: 90%;
     }
   }
 `;

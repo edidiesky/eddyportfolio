@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
-import { Hero, Services, Work, Skills } from "../components/home";
+import { Hero, Services, Work, Skills, Case } from "../components/home";
 import Footer from "../components/common/Footer";
 import Preloader from "../components/common/Preloader";
 const Home = () => {
@@ -21,9 +21,14 @@ const Home = () => {
       {/* <AnimatePresence mode="will">
         {isloading && <Preloader />}
       </AnimatePresence> */}
-
       <Hero />
-      <Work />
+      <div className="case">
+        <Case />
+      </div>
+
+      <div className="small_work">
+        <Work />
+      </div>
       <Skills />
       <Services />
       <Footer />
@@ -33,6 +38,21 @@ const Home = () => {
 
 const HomeStyles = styled.div`
   width: 100%;
+  .case {
+    display: block;
+
+    @media (max-width: 1080px) {
+      display: none;
+    }
+  }
+
+  .small_work {
+    display: none;
+
+    @media (max-width: 1080px) {
+      display: block;
+    }
+  }
 `;
 
 export default Home;

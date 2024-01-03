@@ -1,12 +1,12 @@
 
 @font-face {
   font-family: "CustomFont_Bold";
-  src: url("./assets/fonts/Bold.ttf") format("truetype");
+  src: url("./assets/fonts/AvertaBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CustomFont_Normal";
-  src: url("./assets/fonts/Light.ttf") format("truetype");
+  src: url("./assets/fonts/Montreal.ttf") format("truetype");
 }
 
 @font-face {
@@ -47,10 +47,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--blue-1);
+  background-color: #fff;
   font-family: "CustomFont_Normal", sans-serif;
   font-weight: normal;
-  color: #Fff;
+  color: hsl(20 14.3% 4.1%);
+  line-height: 1.4;
 }
 
 
@@ -59,9 +60,9 @@ body {
 }
 
 :root {
-  --dark-1: rgb(24, 3, 60);
-  --red: rgb(255, 56, 92);
-  --grey-1: #8C85F3;
+  --dark-1: hsl(20 14.3% 4.1%);
+  --red: #5700FF;
+  --grey-1: #777;
   --light-grey: rgb(113, 113, 113);
   --grey-2: #f7f7f7;
   --blue-1:#5700FF;
@@ -192,11 +193,11 @@ h1 {
   padding: 0 4rem;
 }
 .text-extra-bold {
-  font-weight: bolder;
+  font-weight: 700;
   font-family: "CustomFont_Bold", sans-serif;
 }
 .text-bold {
-  font-weight: bold;
+  font-weight: 600;
   font-family: "CustomFont_Bold", sans-serif;
 }
 .text-light {

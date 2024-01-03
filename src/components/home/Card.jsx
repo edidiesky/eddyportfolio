@@ -51,7 +51,7 @@ const Card = ({ index }) => {
               className="card_btn1 fs-16 flex justify-center item-center text-light"
             >
               <div className="text1 text-bold flex itemcenter gap-1 text-center">
-                <HiArrowUpRight />
+                <HiArrowUpRight color={'var(--dark-1)'} />
               </div>
             </Link>
           </div>
@@ -63,35 +63,6 @@ const Card = ({ index }) => {
               Frontend / Backend Development
             </h4>
           </div>
-
-          {/* <p className="text-light fs-18 text-grey">
-            {projectdata[index]?.description?.substring(0, 160)} ....
-          </p> */}
-          {/* roles */}
-          {/* <div className="flex column gap-2 w-100">
-            <div className="flex w-100 column gap-1">
-              <span className="block fs-12 text-extra-bold">ROLES</span>
-              <div
-                style={{ gap: "5px", flexWrap: "wrap" }}
-                className="w-100 flex item-center flex-wrap"
-              >
-                {projectdata[index]?.roles?.map((x) => {
-                  return <div className="tab fs-12 text-light">{x}</div>;
-                })}
-              </div>
-            </div>
-            <div className="flex w-100 column gap-1">
-              <span className="block fs-12 text-extra-bold">TECH STACK</span>
-              <div
-                style={{ gap: "5px", flexWrap: "wrap" }}
-                className="w-100 flex item-center flex-wrap"
-              >
-                {projectdata[index]?.technologies?.map((x) => {
-                  return <div className="tab fs-12 text-light">{x}</div>;
-                })}
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
