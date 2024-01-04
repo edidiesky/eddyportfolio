@@ -61,7 +61,7 @@ const WorkStyles = styled.div`
   padding: 4rem 0;
   padding-bottom: 7rem;
   .project_container {
-    margin-top: 14rem;
+    margin-top: 2rem;
     gap: 12rem;
   }
   .subtext {

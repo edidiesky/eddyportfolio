@@ -5,12 +5,10 @@ import { Hero, Services, Work, Skills, Case } from "../components/home";
 import Footer from "../components/common/Footer";
 import Preloader from "../components/common/Preloader";
 const Home = () => {
-   React.useEffect(() => {
-     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-   }, []);
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   const [isloading, setIsLoading] = React.useState(true);
-
-  
 
   // React.useEffect(() => {
   //   const timer = setTimeout(() => setIsLoading(false), 4000);

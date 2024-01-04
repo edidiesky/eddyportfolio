@@ -77,7 +77,7 @@ const Services = () => {
                 I building digital product and experience
               </h3>
               <p className="text-light paragraphtext text-dark fs-20">
-                {experienceDetails.map((word, index) => {
+                {/* {experienceDetails.map((word, index) => {
                   return (
                     <span className="mask">
                       <motion.span
@@ -91,7 +91,10 @@ const Services = () => {
                       </motion.span>
                     </span>
                   );
-                })}
+                })} */}
+                Focused on full software development of web applications over
+                the years I helped companies and growing startups build websites
+                of all sorts
               </p>
               <div className="services_left_wrapper_bottom w-100 flex column gap-4">
                 <div className="lenght w-100"></div>
@@ -108,32 +111,33 @@ const Services = () => {
             </div>
           </div>
           <div className="services_right w-90 auto">
-            <div className="w-85 auto services_left_wrapper flex column gap-4 justify-center">
+            <div className="w-85 auto services_left_wrapper flex column gap-1 justify-center">
               <span className="block fs-16 text-extra-bold">Contact</span>
-              <h3 className="text-white fs-50 text-extra-bold">
+              <h3 className="fs-50 text-extra-bold">
                 <span className="mask">
-                  <motion.span
+                  {/* <motion.span
                     variants={slideup}
                     initial={"initial"}
                     animate={inView ? "open" : "closed"}
                   >
                     Interested ?
-                  </motion.span>
+                  </motion.span> */}
+                  Interested ?
                 </span>{" "}
                 <br />
                 <span className="mask">
-                  <motion.span
+                  Lets Get In Touch !
+                  {/* <motion.span
                     variants={slideup}
                     initial={"initial"}
                     animate={inView ? "open" : "closed"}
                   >
                     Lets Get In Touch !
-                  </motion.span>
+                  </motion.span> */}
                 </span>
               </h3>
-              <p className="text-light w-85 text-grey fs-20">
-                
-                {experienceDetails.map((word, index) => {
+              <h5 className="text-light w-85 text-dark fs-18">
+                {/* {experienceDetails.map((word, index) => {
                   return (
                     <span className="mask">
                       <motion.span
@@ -147,10 +151,13 @@ const Services = () => {
                       </motion.span>
                     </span>
                   );
-                })}
-              </p>
+                })} */}
+                Focused on full software development of web applications over
+                the years I helped companies and growing startups build websites
+                of all sorts
+              </h5>
               <div className="w-100">
-                <Button/>
+                <Button />
               </div>
             </div>
           </div>
@@ -168,36 +175,17 @@ const WorkStyles = styled.div`
     margin-top: 14rem;
     gap: 12rem;
   }
-  .btn_wrapper {
-    margin-top: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    height: 9rem;
-    width: 90%;
-    cursor: pointer;
+  /* p {
+    line-height: 1.4;
     @media (max-width: 780px) {
-      width: 100%;
-    }
-    .btn_right {
-      width: 80%;
-      height: 100%;
-      border-left: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    .btn_left {
-      width: 20%;
-      height: 100%;
-    }
-  }
-  p {
-    line-height: 1.8;
-    @media (max-width: 780px) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
     .mask {
       display: inline-flex;
       overflow: hidden;
       margin-right: 0.7rem;
     }
-  }
+  } */
 
   h3 {
     @media (max-width: 780px) {
@@ -238,6 +226,9 @@ const WorkStyles = styled.div`
     .services_right {
       padding: 4rem 0;
       padding-top: 9rem;
+      @media (max-width: 780px) {
+        width: 100%;
+      }
     }
     .services_left {
       padding: 4rem 3rem;

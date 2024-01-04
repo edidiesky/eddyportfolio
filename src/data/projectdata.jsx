@@ -3,6 +3,7 @@ export const projectdata = [
   {
     id: 4,
     text: "a CAR MANAGEMENT SYSTEM",
+    subtext: "Vaada",
     color: "#E2D1D9",
     image: "/Car_screen_1.jpeg  ",
     website: "https://vaada.vercel.app/",
@@ -69,6 +70,7 @@ export const projectdata = [
   {
     id: 23,
     text: "A Learning Management Application",
+    subtext: "UCATY",
     color: "#E2D1D9",
     image: "/Car_screen_1.jpeg  ",
     website: "https://vaada.vercel.app/",
@@ -135,6 +137,8 @@ export const projectdata = [
   {
     id: 23,
     text: "REDEVLOPing NOTION",
+    subtext: "COTION",
+
     color: "#E2D1D9",
     image: "/Car_screen_1.jpeg  ",
     website: "https://vaada.vercel.app/",
@@ -201,6 +205,8 @@ export const projectdata = [
   {
     id: 2,
     text: "Airbnb",
+    subtext: "Airbnb",
+
     color: "#48494B",
     image: "/airbnb_screen.jpeg",
     github: "https://github.com/edidiesky/airbnb",
@@ -267,6 +273,8 @@ export const projectdata = [
   {
     id: 1,
     text: "Weeters",
+    subtext: "Weeters",
+
     color: "#D8D3CD",
     image: "/twitter_screen_2.jpeg",
     github: "https://github.com/edidiesky/twitter_clone",
@@ -346,6 +354,7 @@ export const projectdata = [
   {
     id: 3,
     text: "Fiverr",
+    subtext: "Fiverr",
     color: "#E49C4A",
     image: "/fiverr_screen.png",
     github: "https://github.com/edidiesky/fiverrclone",

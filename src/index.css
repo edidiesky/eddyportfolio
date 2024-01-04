@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: "CustomFont_Bold";
-  src: url("./assets/fonts/AvertaBold.ttf") format("truetype");
+   src: url("./assets/fonts/SuisseWorks-Bold-v1.ttf") format("truetype");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "CustomFont_Medium";
-  src: url("./assets/fonts/Light.ttf") format("truetype");
+   src: url("./assets/fonts/Udemy-Sans-Regular-v1.ttf") format("truetype");
 }
 
 * {
@@ -116,6 +116,10 @@ html {
 }
 .text-dark {
   color: var(--dark-1);
+}
+
+.text-white {
+  color: #fff;
 }
 .back-grey:hover {
   background-color: var(--grey-2);
@@ -433,7 +437,7 @@ h1 {
     width: 90%;
   }
   html {
-  font-size: 55%;
+  font-size: 50%;
 }
 
 }

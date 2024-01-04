@@ -148,6 +148,7 @@ const HeroStyles = styled.div`
     @media (max-width: 1080px) {
       width: 100%;
       grid-gap: 4rem;
+      grid-template-columns: 1fr;
     }
 
     /* @media (max-width: 680px) {
@@ -202,77 +203,13 @@ const HeroStyles = styled.div`
     }
     .hero_c_Bottom {
       width: 100%;
-
-      .btn_wrapper {
-        margin-top: 4rem;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        height: 9rem;
-        width: 600px;
-
-        margin: 4rem 0;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        &:hover {
-          &::before {
-            transform: skew(0, 0) rotate(0) translateY(0);
-          }
-          .mail {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        .mail {
-          /* transform: translateY(250px); */
-          position: absolute;
-          top: 40%;
-          left: 20%;
-          width: 100%;
-          height: 100%;
-          color: #222 !important;
-          font-size: 1.8rem;
-          transition: transform 400ms;
-
-          transform: translate(-50%, -20%);
-          opacity: 0;
-        }
-        &::before {
-          content: "";
-          background-color: #eea1be;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          transform: skew(0, 10deg) rotate(10deg) translateY(250px);
-          transition: transform 400ms;
-          z-index: -10;
-        }
-        .btn_right {
-          width: 80%;
-          height: 100%;
-          border-left: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        .btn_left {
-          width: 20%;
-          height: 100%;
-        }
-
-        @media (max-width: 1080px) {
-          width: 400px;
-        }
-
-        @media (max-width: 780px) {
-          width: 100%;
-        }
-      }
       @media (max-width: 780px) {
         width: 100%;
       }
       p {
         line-height: 1.8;
         @media (max-width: 780px) {
-          font-size: 17px;
+          font-size: 15px;
           line-height: 1.8;
           text-align: start;
         }
@@ -286,25 +223,25 @@ const HeroStyles = styled.div`
       }
     }
     h2 {
-      font-size: 9.2rem;
+      font-size: 8.5rem;
       width: 1150px;
       line-height: 1.2;
       text-align: center;
       z-index: 20;
 
       @media (max-width: 1180px) {
-        font-size: 8rem;
+        font-size: 7rem;
         width: 100%;
       }
 
       @media (max-width: 780px) {
         text-align: start;
-        font-size: 7rem;
+        font-size: 6rem;
       }
 
-      @media (max-width: 580px) {
+      @media (max-width: 480px) {
         text-align: start;
-        font-size: 6rem;
+        font-size: 4.5rem;
       }
     }
   }

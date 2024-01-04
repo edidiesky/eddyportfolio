@@ -20,11 +20,11 @@ const Card = ({ index }) => {
         }}
         className="image_wrapper flex item-center justify-center relative w-100"
       >
-        {projectdata[index]?.subtext && (
+        {/* {projectdata[index]?.subtext && (
           <h3 className="text-extra-bold subtext absolute">
             {projectdata[index]?.subtext}
           </h3>
-        )}
+        )} */}
 
         {/* <div className="image_background absolute w-100 h-100"></div> */}
         <img
@@ -41,7 +41,7 @@ const Card = ({ index }) => {
               <span className="block text-grey fs-16 text-extra-bold">01</span>
               <div className="span_length"></div>
               <span className="block text-grey fs-16 text-extra-bold">
-                {projectdata[index]?.text}
+                {projectdata[index]?.subtext}
               </span>
             </div>
 

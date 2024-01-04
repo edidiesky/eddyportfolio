@@ -22,15 +22,17 @@ const Button = () => {
             {state.copied ? "Mail has been copied" : "Click to copy mail"}
           </span>
 
-          <div className="btn_left flex item-center justify-center">
-            <div className="icon flex item-center justify-center">
-              <IoMdMail fontSize={"20px"} color="var(--dark-1)" />
+          <div className="w-100 btn_container flex">
+            <div className="btn_left flex item-center justify-center">
+              <div className="icon flex item-center justify-center">
+                <IoMdMail fontSize={"20px"} color="var(--dark-1)" />
+              </div>
             </div>
-          </div>
-          <div className="btn_right flex item-center justify-center">
-            <h4 className="block fs-18 text-extra-bold">
-              hello@eddiongessien.com
-            </h4>
+            <div className="btn_right flex item-center justify-center">
+              <h4 className="block fs-14 text-extra-bold">
+                hello@eddiongessien.com
+              </h4>
+            </div>
           </div>
         </div>
       </CopyToClipboard>
@@ -41,25 +43,48 @@ const Button = () => {
 const ButtonStyles = styled.div`
   .btn_wrapper {
     margin-top: 4rem;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    height: 9rem;
-   width:600px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    /* border: 1px solid rgba(0, 0, 0, 0.4); */
+    height: 8rem;
+    width: 400px;
     @media (max-width:780px) {
-        width:80%;
-        h4 {
-            font-size:16px;
-        }
+      width:100%;
+    }
+    .btn_container {
+      z-index: 20;
+      width: 100%;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      height: 100%;
+      border-radius: 4px;
     }
     &:hover {
       &::before {
-        transform: skew(0, 0) rotate(0) translateY(0);
+        background: var(--dark-1);
+        opacity: 0.79;
+        bottom: -3px;
       }
-      .mail {
-        opacity: 1;
-        transform: scale(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 93%;
+      height: 42px;
+      background: var(--dark-1);
+      opacity: 0.79;
+      bottom: -10px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      transition: all 0.4s;
+      border-radius: 0px 0px 4px 4px;
+      z-index: 2;
+    }
+    /* overflow: hidden; */
+    cursor: pointer;
+    position: relative;
+    @media (max-width: 780px) {
+      h4 {
+        font-size: 1.5rem;
       }
     }
     .mail {
@@ -76,26 +101,16 @@ const ButtonStyles = styled.div`
       transform: translate(-50%, -20%);
       opacity: 0;
     }
-    &::before {
-      content: "";
-      background-color: #eea1be;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: skew(0, 10deg) rotate(10deg) translateY(250px);
-      transition: transform 400ms;
-      z-index: -10;
-    }
     .btn_right {
       width: 80%;
       height: 100%;
       border-left: 1px solid rgba(0, 0, 0, 0.2);
+      z-index: 20;
     }
     .btn_left {
       width: 20%;
       height: 100%;
+      z-index: 20;
     }
   }
 `;
