@@ -30,7 +30,7 @@ const Button = () => {
             </div>
             <div className="btn_right flex item-center justify-center">
               <h4 className="block fs-14 text-extra-bold">
-                hello@eddiongessien.com
+                hello@eddiongessien.com   
               </h4>
             </div>
           </div>
@@ -46,8 +46,11 @@ const ButtonStyles = styled.div`
     /* border: 1px solid rgba(0, 0, 0, 0.4); */
     height: 8rem;
     width: 400px;
-    @media (max-width:780px) {
-      width:100%;
+    @media (max-width: 780px) {
+      width: 320px;
+    }
+    @media (max-width: 580px) {
+      width: 90%;
     }
     .btn_container {
       z-index: 20;
@@ -62,21 +65,22 @@ const ButtonStyles = styled.div`
         background: var(--dark-1);
         opacity: 0.79;
         bottom: -3px;
+        right: -3%;
       }
     }
     &::before {
       content: "";
       position: absolute;
-      width: 93%;
-      height: 42px;
+      width: 100%;
+      height: 100%;
       background: var(--dark-1);
       opacity: 0.79;
-      bottom: -10px;
+      bottom: -16%;
       left: 0px;
-      right: 0px;
+      right: -8%;
       margin: auto;
       transition: all 0.4s;
-      border-radius: 0px 0px 4px 4px;
+      border-radius: 4px;
       z-index: 2;
     }
     /* overflow: hidden; */

@@ -148,7 +148,7 @@ const HeroStyles = styled.div`
     @media (max-width: 1080px) {
       width: 100%;
       grid-gap: 4rem;
-      grid-template-columns: 1fr;
+      /* grid-template-columns: 1fr; */
     }
 
     /* @media (max-width: 680px) {

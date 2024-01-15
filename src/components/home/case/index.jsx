@@ -4,6 +4,7 @@ import { WorkWrapper } from "./styles";
 import Project from "./project";
 import Modal from "./modal";
 import Card from "./card";
+import Button from "../../common/Button";
 
 const galleryData = [
   "/twitter/profile_1.jpg",
@@ -66,9 +67,9 @@ export default function Case() {
               );
             })}
             <div className="w-100 py-2 btnWrapper flex item-center justify-center">
-              <div className="more_btn fs-16 text-extra-bold text-center text-dark">
-                More projects
-              </div>
+             <Button
+            
+             />
             </div>
           </div>
           {/* modals */}
