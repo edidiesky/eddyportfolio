@@ -2,12 +2,26 @@ import { IoMdMail } from "react-icons/io";
 import React, { useLayoutEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from "styled-components";
-const Button = () => {
+const Button = ({type}) => {
   const [state, setState] = React.useState({
     value: "essienedidiong1000@gmail.com",
     copied: false,
   });
 //   console.log(state.copied);
+if(type === 'workbutton') {
+   return (
+     <ButtonStyles className="w-100 ">
+       <div
+         onClick={() => setState({ copied: true })}
+         className="btn_wrapper auto w-100 flex item-center"
+       >
+         <div className="w-100 btn_container flex item-center justify-center">
+           <h4 className="block fs-16 text-extra-bold">More Works</h4>
+         </div>
+       </div>
+     </ButtonStyles>
+   );
+}
   return (
     <ButtonStyles className="w-100">
       <CopyToClipboard
@@ -45,7 +59,7 @@ const ButtonStyles = styled.div`
     margin-top: 4rem;
     /* border: 1px solid rgba(0, 0, 0, 0.4); */
     height: 8rem;
-    width: 400px;
+    width: 350px;
     @media (max-width: 780px) {
       width: 320px;
     }

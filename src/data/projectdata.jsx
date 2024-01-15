@@ -67,82 +67,149 @@ export const projectdata = [
       "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
   },
   // LMS
-  {
-    id: 23,
-    text: "A Learning Management Application",
-    subtext: "UCATY",
-    color: "#E2D1D9",
-    image: "/Car_screen_1.jpeg  ",
-    website: "https://vaada.vercel.app/",
-    github: "https://github.com/edidiesky/cardealer",
-    features: [
-      {
-        text: "User Authentication",
-        description:
-          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
-      },
-      {
-        text: "Payment Integration (using stripe)",
-        description:
-          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
-      },
-      {
-        text: "Admin Dashboard",
-        description:
-          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
-      },
-    ],
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Socket.io",
-      "MongoDb",
-      "Express.js",
-      "Styled-components",
-      "Zoid",
-    ],
-    roles: ["Front End Developer", "Back End Developer"],
+  // {
+  //   id: 23,
+  //   text: "A Learning Management Application",
+  //   subtext: "UCATY",
+  //   color: "#E2D1D9",
+  //   image: "/Car_screen_1.jpeg  ",
+  //   website: "https://vaada.vercel.app/",
+  //   github: "https://github.com/edidiesky/cardealer",
+  //   features: [
+  //     {
+  //       text: "User Authentication",
+  //       description:
+  //         "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+  //     },
+  //     {
+  //       text: "Payment Integration (using stripe)",
+  //       description:
+  //         "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+  //     },
+  //     {
+  //       text: "Admin Dashboard",
+  //       description:
+  //         "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+  //     },
+  //   ],
+  //   technologies: [
+  //     "React.js",
+  //     "Node.js",
+  //     "Socket.io",
+  //     "MongoDb",
+  //     "Express.js",
+  //     "Styled-components",
+  //     "Zoid",
+  //   ],
+  //   roles: ["Front End Developer", "Back End Developer"],
 
-    role: [
-      {
-        text: "Backend Development",
-        subtext: [
-          "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
-          "I Designed and integrated middleware for authentication, authorization, and error handling.",
-          "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
-        ],
-      },
-      {
-        text: "Frontend Development",
-        subtext: [
-          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
-          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
-          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
-          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
-        ],
-      },
-      {
-        text: "Database Integration:",
-        subtext: [
-          "Designed and integrated MongoDB as the database system for storing application data.",
-          "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
-        ],
-      },
-    ],
-    title: "A car Rental Concept",
-    description:
-      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
-  },
+  //   role: [
+  //     {
+  //       text: "Backend Development",
+  //       subtext: [
+  //         "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
+  //         "I Designed and integrated middleware for authentication, authorization, and error handling.",
+  //         "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
+  //       ],
+  //     },
+  //     {
+  //       text: "Frontend Development",
+  //       subtext: [
+  //         "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
+  //         "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
+  //         "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
+  //         " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
+  //       ],
+  //     },
+  //     {
+  //       text: "Database Integration:",
+  //       subtext: [
+  //         "Designed and integrated MongoDB as the database system for storing application data.",
+  //         "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
+  //       ],
+  //     },
+  //   ],
+  //   title: "A car Rental Concept",
+  //   description:
+  //     "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+  // },
   // NOTION
-  {
-    id: 23,
-    text: "REDEVLOPing NOTION",
-    subtext: "COTION",
+  // {
+  //   id: 23,
+  //   text: "REDEVLOPing NOTION",
+  //   subtext: "COTION",
 
-    color: "#E2D1D9",
-    image: "/Car_screen_1.jpeg  ",
-    website: "https://vaada.vercel.app/",
-    github: "https://github.com/edidiesky/cardealer",
+  //   color: "#E2D1D9",
+  //   image: "/Car_screen_1.jpeg  ",
+  //   website: "https://vaada.vercel.app/",
+  //   github: "https://github.com/edidiesky/cardealer",
+  //   features: [
+  //     {
+  //       text: "User Authentication",
+  //       description:
+  //         "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+  //     },
+  //     {
+  //       text: "Payment Integration (using stripe)",
+  //       description:
+  //         "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+  //     },
+  //     {
+  //       text: "Admin Dashboard",
+  //       description:
+  //         "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+  //     },
+  //   ],
+  //   technologies: [
+  //     "React.js",
+  //     "Node.js",
+  //     "Socket.io",
+  //     "MongoDb",
+  //     "Express.js",
+  //     "Styled-components",
+  //     "Zoid",
+  //   ],
+  //   roles: ["Front End Developer", "Back End Developer"],
+
+  //   role: [
+  //     {
+  //       text: "Backend Development",
+  //       subtext: [
+  //         "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
+  //         "I Designed and integrated middleware for authentication, authorization, and error handling.",
+  //         "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
+  //       ],
+  //     },
+  //     {
+  //       text: "Frontend Development",
+  //       subtext: [
+  //         "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
+  //         "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
+  //         "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
+  //         " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
+  //       ],
+  //     },
+  //     {
+  //       text: "Database Integration:",
+  //       subtext: [
+  //         "Designed and integrated MongoDB as the database system for storing application data.",
+  //         "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
+  //       ],
+  //     },
+  //   ],
+  //   title: "A car Rental Concept",
+  //   description:
+  //     "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+  // },
+  {
+    id: 1,
+    text: "Weeters",
+    subtext: "Weeters",
+
+    color: "#D8D3CD",
+    image: "/twitter_screen_2.jpeg",
+    github: "https://github.com/edidiesky/twitter_clone",
+    website: "https://weeters.vercel.app/",
     features: [
       {
         text: "User Authentication",
@@ -150,19 +217,26 @@ export const projectdata = [
           "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
       },
       {
-        text: "Payment Integration (using stripe)",
+        text: "Real-time Chat system",
         description:
-          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+          "I had to integrate socket.io to see the poer behind a real time communication",
       },
       {
-        text: "Admin Dashboard",
+        text: "Tweet CRUD",
         description:
-          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+          "I had to make use of the authentication tokens in managing users tweets. In other words, users were being allowed to create tweets, update them, like and retweet tweets. and not letting out, tweet deleting were being made exclusive only to the user of the tweet",
+      },
+      {
+        text: "Chain commenting",
+        description:
+          "I had to use the power of mongoDb aggregation in implementing chain comments made by users on a particular tweet",
       },
     ],
     technologies: [
-      "React.js",
+      "Next.js",
+      "Typescript",
       "Node.js",
+      "Typescript-Express.js",
       "Socket.io",
       "MongoDb",
       "Express.js",
@@ -170,36 +244,9 @@ export const projectdata = [
       "Zoid",
     ],
     roles: ["Front End Developer", "Back End Developer"],
-
-    role: [
-      {
-        text: "Backend Development",
-        subtext: [
-          "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
-          "I Designed and integrated middleware for authentication, authorization, and error handling.",
-          "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
-        ],
-      },
-      {
-        text: "Frontend Development",
-        subtext: [
-          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
-          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
-          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
-          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
-        ],
-      },
-      {
-        text: "Database Integration:",
-        subtext: [
-          "Designed and integrated MongoDB as the database system for storing application data.",
-          "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
-        ],
-      },
-    ],
-    title: "A car Rental Concept",
+    title: "Redeveloping the social platform, Twitter",
     description:
-      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+      "I am thrilled to share the highlights of my recent project - a Twitter clone built from scratch using Next.js, Typescript, Typescript-Express.js and Typescript-Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Twitter's platform, providing users with a seamless and immersive social experience.",
   },
 
   {
@@ -269,86 +316,6 @@ export const projectdata = [
     title: "Redeveloping the rental platform, Airbnb",
     description:
       "I am thrilled to share the highlights of my recent project - an Airbnb clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Airbnb's platform, providing users with a seamless and immersive booking experience.",
-  },
-  {
-    id: 1,
-    text: "Weeters",
-    subtext: "Weeters",
-
-    color: "#D8D3CD",
-    image: "/twitter_screen_2.jpeg",
-    github: "https://github.com/edidiesky/twitter_clone",
-    website: "https://weeters.vercel.app/",
-    features: [
-      {
-        text: "User Authentication",
-        description:
-          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
-      },
-      {
-        text: "Real-time Chat system",
-        description:
-          "I had to integrate socket.io to see the poer behind a real time communication",
-      },
-      {
-        text: "Tweet CRUD",
-        description:
-          "I had to make use of the authentication tokens in managing users tweets. In other words, users were being allowed to create tweets, update them, like and retweet tweets. and not letting out, tweet deleting were being made exclusive only to the user of the tweet",
-      },
-      {
-        text: "Chain commenting",
-        description:
-          "I had to use the power of mongoDb aggregation in implementing chain comments made by users on a particular tweet",
-      },
-    ],
-    technologies: [
-      "Next.js",
-      "Typescript",
-      "Node.js",
-      "Typescript-Express.js",
-      "Socket.io",
-      "MongoDb",
-      "Express.js",
-      "Styled-components",
-      "Zoid",
-    ],
-    roles: ["Front End Developer", "Back End Developer"],
-    // role: [
-    //   {
-    //     text: "Backend Development",
-    //     subtext: [
-    //       "Utilized Express.js and node.js to build the RESTful API backend, implementing robust endpoints for data manipulation and retrieval",
-    //       "I Designed and integrated middleware for authentication, authorization, and error handling.",
-    //       "I had to designed models for each of the section I will have to interact with (User models, Listing models and many more)",
-    //     ],
-    //   },
-    //   {
-    //     text: "TypeScript Integration",
-    //     subtext: [
-    //       "Leveraged TypeScript to add static typing to JavaScript, preventing runtime errors and enhancing code quality",
-    //       "Utilized interfaces and type annotations to define data structures and improve code readability.",
-    //     ],
-    //   },
-    //   {
-    //     text: "Frontend Development",
-    //     subtext: [
-    //       "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
-    //       "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
-    //       "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
-    //       " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
-    //     ],
-    //   },
-    //   {
-    //     text: "Database Integration:",
-    //     subtext: [
-    //       "Designed and integrated MongoDB as the database system for storing application data.",
-    //       "Implemented data models and schema designs, User model, listing model and may more, that aligned with the applications requirements.",
-    //     ],
-    //   },
-    // ],
-    title: "Redeveloping the social platform, Twitter",
-    description:
-      "I am thrilled to share the highlights of my recent project - a Twitter clone built from scratch using Next.js, Typescript, Typescript-Express.js and Typescript-Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Twitter's platform, providing users with a seamless and immersive social experience.",
   },
 
   {

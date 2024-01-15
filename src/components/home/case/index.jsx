@@ -20,7 +20,7 @@ export default function Case() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <WorkWrapper id="about" className='flex w-100 column gap-4'>
+    <WorkWrapper id="about" className="flex w-100 column gap-4">
       <div className="w-100">
         <div className="work_intro_top w-90 auto">
           <div className="w-100 auto flex column gap-4">
@@ -31,7 +31,10 @@ export default function Case() {
               are, always on the same page by documenting and, communicating
               about the journey,
             </h4>
-            <p style={{lineHeight:"1.6"}} className="fs-20 text-light text-dar">
+            <p
+              style={{ lineHeight: "1.6" }}
+              className="fs-20 text-light text-dar"
+            >
               My experience comes from working with companies to solve problems
               on their product and help them ship redesign, alpha products or
               new features. One of my goals during a project is to make sure we
@@ -51,7 +54,9 @@ export default function Case() {
 
       <div className="work_intro item-start justify-center flex w-90 auto column gap-4">
         <div className="w-100 top">
-          <h4 className="text-extra-bold fs-24 text-dark">My Recent Works / Projects</h4>
+          <h4 className="text-extra-bold fs-24 text-dark">
+            My Recent Works / Projects
+          </h4>
         </div>
         {/* projects */}
         <div className="w-100 small flex column gap-2">
@@ -66,10 +71,8 @@ export default function Case() {
                 <Project title={x.text} index={index} setModal={setModal} />
               );
             })}
-            <div className="w-100 py-2 btnWrapper flex item-center justify-center">
-             <Button
-            
-             />
+            <div style={{paddingBottom:"10rem"}} className="w-100 py-2 btnWrapper flex item-center justify-center">
+              <Button type={"workbutton"} />
             </div>
           </div>
           {/* modals */}
