@@ -54,7 +54,7 @@ export default function Modal({ modal, projects }) {
     // return () => window.removeEventListener("mousemove", handlePosition);
   }, []);
   // console.log(projectdata[index]);
-  const worktitle = projects[index]?.text;
+  const worktitle = projects[index]?.website;
   // console.log(worktitle, index);
 
   return (
@@ -106,7 +106,7 @@ export default function Modal({ modal, projects }) {
         animate={active ? "enter" : "closed"}
         ref={labelContainer}
       >
-        <Link to={`/work/${worktitle}`}>
+        <Link target="_blank" to={`${worktitle}`}>
           <span onClick={() => console.log("Hello Card")}>View</span>
         </Link>
       </LabelWrapper>
