@@ -257,7 +257,7 @@ export const projectdata = [
     color: "#48494B",
     image: "/airbnb_screen.jpeg",
     github: "https://github.com/edidiesky/airbnb",
-    website: "https://eddy-airbnb.vercel.app/",
+    website: "https://edbnb.vercel.app/",
     features: [
       {
         text: "Accommodation Listings",
