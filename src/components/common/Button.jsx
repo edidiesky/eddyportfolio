@@ -2,6 +2,7 @@ import { IoMdMail } from "react-icons/io";
 import React, { useLayoutEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const Button = ({type}) => {
   const [state, setState] = React.useState({
     value: "essienedidiong1000@gmail.com",
@@ -24,34 +25,26 @@ if(type === 'workbutton') {
 }
   return (
     <ButtonStyles className="w-100">
-      <CopyToClipboard
-        text={state.value}
-        onCopy={() => setState({ copied: true })}
+      <Link
+        to="mailto:essienedidiong1000@gmail.com?subject=Hey! lets work!"
+        className="btn_wrapper w-100 flex item-center"
       >
-        <div
-          onClick={() => setState({ copied: true })}
-          className="btn_wrapper w-100 flex item-center"
-        >
-          <span className="mail w-100 h-100 fs-16 text-bold text-dark">
-            {state.copied ? "Mail has been copied" : "Click to copy mail"}
-          </span>
-
-          <div className="w-100 btn_container flex">
-            <div className="btn_left flex item-center justify-center">
-              <div className="icon flex item-center justify-center">
-                <IoMdMail fontSize={"20px"} color="var(--dark-1)" />
-              </div>
-            </div>
-            <div className="btn_right flex item-center justify-center">
-              <h4 className="block fs-14 text-extra-bold">
-                hello@eddiongessien.com   
-              </h4>
+        <div className="w-100 btn_container flex">
+          <div className="btn_left flex item-center justify-center">
+            <div className="icon flex item-center justify-center">
+              <IoMdMail fontSize={"20px"} color="var(--dark-1)" />
             </div>
           </div>
+          <div className="btn_right flex item-center justify-center">
+            <h4 className="block fs-14 text-extra-bold">
+              hello@eddiongessien.com
+            </h4>
+          </div>
         </div>
-      </CopyToClipboard>
+      </Link>
     </ButtonStyles>
   );
+
 };
 
 const ButtonStyles = styled.div`
