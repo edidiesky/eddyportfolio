@@ -26,16 +26,16 @@ export default function App() {
   }, []);
   return (
     <div className="based" style={{ height }}>
-      <Hero />
+      {/* <Hero />
       <About />
-      <Works />
-      {/* <Routes>
+      <Works /> */}
+      <Routes>
         <Route path={"/"} element={<Layout />}>
           <Route index element={<Home />} />
 
           <Route path="about" element={<About />} />
         </Route>
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
