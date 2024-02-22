@@ -9,6 +9,7 @@ const Hero = () => {
   const titleRef = useRef(null);
   const heroTextRef_1 = useRef(null);
   const heroTextRef_2 = useRef(null);
+  const heroTextRef_3 = useRef(null);
   const imageRef = useRef(null);
   useLayoutEffect(() => {
     // const text = new SplitType(".titleRef");
@@ -16,8 +17,10 @@ const Hero = () => {
     const text1 = new SplitType(titleRef?.current);
     const text_1 = new SplitType(heroTextRef_1?.current);
     const text2 = new SplitType(heroTextRef_2?.current);
+    const text3 = new SplitType(heroTextRef_3?.current);
     const textrefelement_1 = text_1?.words;
     const textrefelement_2 = text2?.chars;
+    const textrefelement_3 = text3?.chars;
     gsap
       .timeline()
       .to(".pre_loader", {
@@ -47,6 +50,21 @@ const Hero = () => {
           ease: "power4.out",
         },
         6.5
+      )
+      .fromTo(
+        textrefelement_3,
+        {
+          y: -100,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration:.4,
+          ease: "power3.out",
+        },
+        7
       )
       .fromTo(
         imageRef?.current,
@@ -104,6 +122,7 @@ const Hero = () => {
               </span>
               <span
                 data-scroll
+                ref={heroTextRef_3}
                 data-scroll-speed="1.5"
                 className="flex items-center gap-6 text-lg"
               >

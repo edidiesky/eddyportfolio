@@ -24,7 +24,7 @@ const Cta = () => {
           y: 0,
           opacity: 1,
           stagger: 0.1,
-          duration: 1,
+          duration: .9,
           scrollTrigger: {
             trigger: textrefelement_1,
           },

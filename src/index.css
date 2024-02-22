@@ -25,6 +25,9 @@
 .hidden {
   overflow: hidden;
 }
+h3 {
+  overflow: hidden;
+}
 .line {
   overflow: hidden;
   line-height: 1.3;
