@@ -113,7 +113,7 @@ const Hero = () => {
             <h1
               data-scroll
               data-scroll-speed="2"
-              className="font-bold uppercase text-[6rem] lg:text-[8rem] leading-[1] font-portfolio_bold"
+              className="font-extrabold uppercase text-[3.3rem] sm:text-[4.5rem] md:text-[5rem] lg:text-[8rem] leading-[1] font-portfolio_bold"
             >
               <span className="">
                 <span className="titleRef" ref={titleRef}>
@@ -124,7 +124,7 @@ const Hero = () => {
                 data-scroll
                 ref={heroTextRef_3}
                 data-scroll-speed="1.5"
-                className="flex items-center gap-6 text-lg"
+                className="flex items-center gap-6 text-lg mt-4"
               >
                 ( Full-Stack React-typescript Developer )
                 {/* <span><Arrow /></span> */}
@@ -138,32 +138,35 @@ const Hero = () => {
                 backgrounRepeat: "none",
                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
               }}
-              className="w-[90%] lg:w-[600px] h-[360px]"
+              className="w-[90%] md:w-[60%] lg:w-[600px] h-[360px]"
             >
               {/* <img src="profile_1.jpeg" alt="" className="w-full h-full object-cover" /> */}
             </div>
           </div>
-          <div className="w-full py-24 flex items-center gap-12 flex-col justify-between md:flex-row">
-            <span>
-              <Arrow />
-            </span>
-            <h4
-              // data-scroll
-              // data-scroll-speed="3"
-              ref={heroTextRef_1}
-              style={{ fontKerning: "none" }}
-              className="text-xl lg:text-2xl w-[90%] lg:w-[600px] leading-[1.5] font-normal font-portfolio_semibold"
-            >
-              I collaborate with brands globally to design impactful,
-              mission-focused websites that drive results and achieve business
-              goals
-            </h4>
+          <div className="w-full py-24 grid grid-cols-1 md:grid-cols-custom_2 items-start lg:items-center gap-12 flex-col justify-between md:flex-row">
+            <div className="flex items-center gap-4 lg:gap-12">
+              <span>
+                <Arrow />
+              </span>
+
+              <h4
+                // data-scroll
+                // data-scroll-speed="3"
+                ref={heroTextRef_1}
+                style={{ fontKerning: "none" }}
+                className="text-xl lg:text-2xl w-[90%] lg:w-[600px] leading-[1.5] font-normal font-portfolio_semibold"
+              >
+                I collaborate with brands globally to design impactful,
+                mission-focused websites that drive results and achieve business
+                goals
+              </h4>
+            </div>
             <h1
               data-scroll
               ref={heroTextRef_2}
               style={{ fontKerning: "none" }}
               data-scroll-speed="4"
-              className="font-normal uppercase text-[4rem] text-start lg:text-end lg:text-[7rem] leading-[1] font-portfolio_bold"
+              className="font-extrabold heroTitle uppercase text-[3rem] md:text-[5rem] text-start lg:text-end lg:text-[7rem] leading-[1.4] lg:leading-[1] font-portfolio_bold"
             >
               VICTOR ESSIEN
             </h1>

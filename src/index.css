@@ -28,6 +28,9 @@
 h3 {
   overflow: hidden;
 }
+.heroTitle .line {
+  text-align: end !important;
+}
 .line {
   overflow: hidden;
   line-height: 1.3;
@@ -43,6 +46,12 @@ h2 .line {
   line-height: 1 !important;
 }
 
+
+@media (max-width:680px) {
+  .heroTitle .line {
+  text-align: start !important;
+}
+}
 
 
 

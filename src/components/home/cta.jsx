@@ -106,7 +106,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 text-3xl lg:text-4xl leading-[1.6] font-portfolio_bold "
+              className="about_text1 w-full text-3xl lg:text-4xl leading-[1.6] font-portfolio_bold "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -116,7 +116,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 text-3xl lg:text-4xl leading-[1.6] font-portfolio_bold "
+              className="about_text1 w-full text-3xl lg:text-4xl leading-[1.6] font-portfolio_bold "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
@@ -126,7 +126,7 @@ const Cta = () => {
                 // data-scroll
                 // data-scroll-speed="5"
                 ref={descriptionrefs1}
-                className="about_text1 text-xl lg:text-2xl leading-[1.6] font-portfolio_bold "
+                className="about_text1 w-full text-xl lg:text-2xl leading-[1.6] font-portfolio_bold "
               >
                 A blend of Product Engineering and Electrical engineering.
               </h5>
