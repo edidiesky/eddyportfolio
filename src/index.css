@@ -47,7 +47,7 @@ h2 .line {
 }
 
 
-@media (max-width:680px) {
+@media (max-width:780px) {
   .heroTitle .line {
   text-align: start !important;
 }

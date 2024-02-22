@@ -39,10 +39,11 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
     window.addEventListener("mousemove", handlePosition);
     return () => window.removeEventListener("mousemove", handlePosition);
   }, []);
+  console.log(tab)
   return (
     <div
-      onMouseEnter={() => setTab({ active: true, index: index })}
       onMouseLeave={() => setTab({ active: false, index: 0 })}
+      onMouseOver={() => setTab({ active: true, index: index })}
       key={index}
       className="w-100 flex items-center flex-col gap-12"
     >
@@ -68,7 +69,7 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
         style={{
           background: `${x?.color}`,
         }}
-        className="flex w-full h-[400px] md:h-[550px] items-center justify-center"
+        className="flex w-full h-[400px] lg:h-[550px] items-center justify-center"
       >
         <div data-scroll data-scroll-speed="2" className="w-[85%]">
           <img src={x?.image} alt="" className="w-full" />

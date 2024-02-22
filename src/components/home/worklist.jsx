@@ -72,7 +72,6 @@ const WorkList = () => {
             <span ref={adHeaderdRefs}>PROJECTS</span>
           </div>
           <div
-            onMouseLeave={() => setTab({ active: false, index: 0 })}
             className="w-full pt-20 grid grid-cols-1 md:grid-cols-2 gap-20 justify-between"
           >
             {projectdata.map((x, index) => {
@@ -81,6 +80,7 @@ const WorkList = () => {
                   setTab={setTab}
                   tab={tab}
                   x={x}
+                  key={index}
                   index={index}
                   addRefs={addRefs}
                   
