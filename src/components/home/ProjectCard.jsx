@@ -43,7 +43,7 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
   return (
     <div
       onMouseLeave={() => setTab({ active: false, index: 0 })}
-      onMouseOver={() => setTab({ active: true, index: index })}
+      onMouseOver={() => setTab({ active: true, index: x?.id })}
       key={index}
       className="w-100 flex items-center flex-col gap-12"
     >

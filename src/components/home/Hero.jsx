@@ -31,10 +31,10 @@ const Hero = () => {
         ".pre_loader",
         {
           top: "-100%",
-          duration: 2,
-          ease: "power4.out",
+          duration: 1,
+          ease: "power3.out",
         },
-        6
+        5
       )
       .fromTo(
         text1?.chars,
@@ -49,7 +49,7 @@ const Hero = () => {
           duration: 2,
           ease: "power4.out",
         },
-        6.5
+        6
       )
       .fromTo(
         textrefelement_3,

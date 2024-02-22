@@ -14,19 +14,20 @@ const Cta = () => {
   descriptionrefs2.current = [];
 
   useLayoutEffect(() => {
-    refs.current.forEach((ref) => {
+    refs.current.forEach((ref, index) => {
       const text = new SplitType(ref);
-      const textrefelement_1 = text?.lines;
+      const textrefelement_1 = text?.words;
+      const textrefelement_2 = text?.lines;
       gsap.fromTo(
-        textrefelement_1,
+        index === 1 ? textrefelement_1 : textrefelement_2,
         { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           stagger: 0.1,
-          duration: .9,
+          duration: 0.9,
           scrollTrigger: {
-            trigger: textrefelement_1,
+            trigger: index === 1 ? textrefelement_1 : textrefelement_2,
           },
         }
       );
