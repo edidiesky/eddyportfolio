@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,6 +8,10 @@ import ProjectCard from "./ProjectCard";
 const WorkList = () => {
   const ref = useRef([]);
   const headerref = useRef([]);
+  const [tab, setTab] = useState({
+    active: false,
+    index: 0,
+  });
   ref.current = [];
   headerref.current = [];
   useEffect(() => {
@@ -67,9 +71,21 @@ const WorkList = () => {
             <span ref={adHeaderdRefs}>RECENT WORKS?</span>
             <span ref={adHeaderdRefs}>PROJECTS</span>
           </div>
-          <div className="w-full pt-20 grid grid-cols-1 md:grid-cols-2 gap-20 justify-between">
+          <div
+            onMouseLeave={() => setTab({ active: false, index: 0 })}
+            className="w-full pt-20 grid grid-cols-1 md:grid-cols-2 gap-20 justify-between"
+          >
             {projectdata.map((x, index) => {
-              return <ProjectCard x={x} index={index} addRefs={addRefs} />;
+              return (
+                <ProjectCard
+                  setTab={setTab}
+                  tab={tab}
+                  x={x}
+                  index={index}
+                  addRefs={addRefs}
+                  
+                />
+              );
             })}
           </div>
         </div>

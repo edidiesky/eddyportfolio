@@ -102,7 +102,7 @@ const Cta = () => {
             </h3>
           </div>
           <div className="w-full flex flex-col gap-16">
-            <h3
+            <h4
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
@@ -111,8 +111,8 @@ const Cta = () => {
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
               INTERFACES . I CREATE MEMORABLE WEB EXPERIENCES.
-            </h3>
-            <h3
+            </h4>
+            <h4
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
@@ -120,7 +120,7 @@ const Cta = () => {
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
-            </h3>
+            </h4>
             <div className="w-full lg:w-[80%] grid-cols-1 grid py-5 gap-12 md:grid-cols-custom_2">
               <h5
                 // data-scroll
