@@ -17,7 +17,7 @@ const Layout = () => {
   };
   return (
     <LayoutStyles>
-      <div className="transition_columns">
+      {/* <div className="transition_columns">
         {Array(noOfColumns)
           .fill("")
           .map((x, index) => {
@@ -32,7 +32,7 @@ const Layout = () => {
               ></motion.span>
             );
           })}
-      </div>
+      </div> */}
       <Outlet />
     </LayoutStyles>
   );

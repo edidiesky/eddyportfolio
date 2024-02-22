@@ -20,13 +20,6 @@ const Card = ({ index }) => {
         }}
         className="image_wrapper flex item-center justify-center relative w-100"
       >
-        {/* {projectdata[index]?.subtext && (
-          <h3 className="text-extra-bold subtext absolute">
-            {projectdata[index]?.subtext}
-          </h3>
-        )} */}
-
-        {/* <div className="image_background absolute w-100 h-100"></div> */}
         <img
           // style={{ width: "95%" }}
           src={projectdata[index]?.image}
@@ -51,7 +44,7 @@ const Card = ({ index }) => {
               className="card_btn1 fs-16 flex justify-center item-center text-light"
             >
               <div className="text1 text-bold flex itemcenter gap-1 text-center">
-                <HiArrowUpRight color={'var(--dark-1)'} />
+                <HiArrowUpRight color={"var(--dark-1)"} />
               </div>
             </Link>
           </div>

@@ -2,7 +2,7 @@ export const projectdata = [
   // CAR
   {
     id: 4,
-    text: "a CAR MANAGEMENT SYSTEM",
+    text: "CAR MANAGEMENT SYSTEM",
     subtext: "Vaada",
     color: "#E2D1D9",
     image: "/Car_screen_1.jpeg  ",

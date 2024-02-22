@@ -29,22 +29,20 @@ const Preloader = () => {
   }, [index]);
   return (
     <FooterStyles
-      as={motion.div}
-      initial={{ top: 0 }}
-      exit={{
-        top: "-100vh",
-        transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
-      }}
-      animate={{ top: 0 }}
-      className="flex item-center justify-center"
+      className="flex items-center pre_loader justify-center"
     >
+      <h2 className="absolute text-4xl md:text-5xl text-white font-extrabold font-portfolio_bold top-10 left-10">
+        VICTOR ESSIEN
+        <span className="block">PORTFOLIO @2024</span>
+      </h2>
       <motion.h2
         initial={{ opacity: 0 }}
         animate={{
           opacity: "1",
           transition: { duration: 0.4, delay: 0.8 },
         }}
-        className="fs-40 text-bold text-white"
+        // style={{letterSpacing:"1px"}}
+        className="text-3xl md:text-3xl text-white font-extrabold uppercase font-portfolio_bold"
       >
         {wordsArray[index]}
       </motion.h2>
@@ -52,13 +50,14 @@ const Preloader = () => {
   );
 };
 
-const FooterStyles = styled(motion.div)`
+const FooterStyles = styled.div`
   width: 100vw;
   position: fixed;
   height: 100vh;
   background: #000;
   top: 0;
   left: 0;
+  bottom: 0;
   z-index: 4000;
 `;
 

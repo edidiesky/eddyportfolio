@@ -33,15 +33,17 @@ export const imageSlideDown = {
 export const slideup = {
   initial: {
     opacity: 1,
-    y: "200%",
+    y: "100%",
   },
   open: (i) => ({
+    // y: "100%",
+    // transform:"translateY(0)",
     y: "0%",
 
-    transition: { duration: 1, delay: 0.03 * i },
+    transition: { duration: 2, delay: 0.03 * i },
   }),
   closed: {
-    y: "200%",
+    y: "100%",
     opacity: 0,
   },
 };
