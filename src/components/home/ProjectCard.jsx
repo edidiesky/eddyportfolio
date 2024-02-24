@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
-  // console.log(tab);
+  console.log(tab);
   const [mouseposition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -14,8 +14,8 @@ const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
   const handleMouseEnter = (e) => {
     const { clientX, clientY } = e;
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = clientX - rect.left - 60;
-    const y = clientY - rect.top - 60;
+    const x = clientX - rect.left - 120 / 2;
+    const y = clientY - rect.top - 120 / 2;
     setMousePosition({
       x,
       y,
@@ -40,8 +40,8 @@ const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
       <motion.div
         animate={
           mouseposition.active
-            ? { top: `${y}px`, left: `${x}px`, scale: 1 }
-            : { scale: 0 }
+            ? { opacity: 1, top: `${y}px`, left: `${x}px`, scale: 1 }
+            : { opacity: 0, scale: 0,}
         }
         transition={{ type: "tween", ease: "backOut", duration: 1 }}
         // ref={labelContainer}
@@ -49,7 +49,7 @@ const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
           background: `#334BD3`,
           zIndex: 400,
         }}
-        className="absolute cursor-pointer md:h-[120px] md:w-[120px] flex items-center justify-center rounded-full"
+        className="absolute cursor-pointer top-[50%] left-[50%] md:h-[120px] md:w-[120px] flex items-center justify-center rounded-full"
       >
         <Link
           to={`${project?.website}`}

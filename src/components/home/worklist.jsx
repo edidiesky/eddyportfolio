@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -9,6 +11,12 @@ const WorkList = () => {
   const ref = useRef([]);
   const headerref = useRef([]);
   const [tab, setTab] = useState({
+    active: false,
+    index: 0,
+  });
+  const [mouseposition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
     active: false,
     index: 0,
   });
@@ -62,6 +70,8 @@ const WorkList = () => {
       headerref.current.push(el);
     }
   };
+
+
   return (
     <>
       <div data-scroll className="py-12 w-full bg-[#E1DFDD]">
@@ -71,9 +81,8 @@ const WorkList = () => {
             <span ref={adHeaderdRefs}>RECENT WORKS?</span>
             <span ref={adHeaderdRefs}>PROJECTS</span>
           </div>
-          <div
-            className="w-full pt-20 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20 lg:gap-y-52 justify-between"
-          >
+          <div className="w-full relative pt-20 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20 lg:gap-y-52 justify-between">
+           
             {projectdata.map((x, index) => {
               return (
                 <ProjectCard
