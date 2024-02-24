@@ -79,11 +79,10 @@ const WorkList = () => {
                 <ProjectCard
                   setTab={setTab}
                   tab={tab}
-                  x={x}
+                  project={x}
                   key={index}
                   index={index}
                   addRefs={addRefs}
-                  
                 />
               );
             })}

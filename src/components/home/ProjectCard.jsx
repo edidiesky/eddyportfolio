@@ -1,64 +1,62 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
-const scaleAnimations = {
-  initial: { scale: 0, x: "-50%", y: "-50%" },
-  enter: {
-    scale: 1,
-    x: "-50%",
-    y: "-50%",
-    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
-  },
-  closed: {
-    scale: 0,
-    x: "-50%",
-    y: "-50%",
-    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
-  },
-};
 
-const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
-  const labelContainer = useRef(null);
-  useEffect(() => {
-    let labelContainerX = gsap.quickTo(labelContainer?.current, "left", {
-      duration: 0.45,
-      ease: "power3",
+const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
+  console.log(tab);
+  const [mouseposition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+    active: false,
+  });
+
+  const handleMouseEnter = (e) => {
+    const { clientX, clientY } = e;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = clientX - rect.left - 120 / 2;
+    const y = clientY - rect.top - 120 / 2;
+    setMousePosition({
+      x,
+      y,
+      active: true,
     });
+  };
 
-    let labelContainerY = gsap.quickTo(labelContainer?.current, "top", {
-      duration: 0.45,
-      ease: "power3",
+  const handleMouseLeave = (e) => {
+    setMousePosition({
+      x: 0,
+      y: 0,
+      // active: false,
     });
-    const handlePosition = (e) => {
-      const { pageX, pageY } = e;
-      labelContainerX(pageX);
-      labelContainerY(pageY);
-    };
+  };
 
-    window.addEventListener("mousemove", handlePosition);
-    return () => window.removeEventListener("mousemove", handlePosition);
-  }, []);
-  console.log(tab)
+  const { x, y } = mouseposition;
   return (
     <div
-      onMouseLeave={() => setTab({ active: false, index: 0 })}
-      onMouseOver={() => setTab({ active: true, index: x?.id })}
+      onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouseEnter}
       key={index}
-      className="w-100 flex items-center flex-col gap-12"
+      className="w-100 flex items-center relative flex-col gap-12"
     >
       <motion.div
-        variants={scaleAnimations}
-        initial="initial"
-        animate={tab.active ? "enter" : "closed"}
-        ref={labelContainer}
+        animate={
+          mouseposition.active
+            ? { opacity: 1, top: `${y}px`, left: `${x}px`, scale: 1 }
+            : { opacity: 0, scale: 0, top: `${y}px`, left: `${x}px` }
+        }
+        transition={{ type: "tween", ease: "backOut", duration: 1 }}
+        // ref={labelContainer}
         style={{
           background: `#334BD3`,
           zIndex: 400,
         }}
-        className="absolute cursor-pointer top-50 left-50 h-32 w-32 flex items-center justify-center rounded-full"
+        className="absolute cursor-pointer top-[50%] left-[50%] md:h-[120px] md:w-[120px] flex items-center justify-center rounded-full"
       >
-        <Link to={`${x?.website}`} className="text-white text-xl font-medium">
+        <Link
+          to={`${project?.website}`}
+          className="text-white text-xl font-medium"
+        >
           View
         </Link>
       </motion.div>
@@ -67,12 +65,12 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
         data-scroll-speed="1"
         ref={addRefs}
         style={{
-          background: `${x?.color}`,
+          background: `${project?.color}`,
         }}
         className="flex w-full h-[300px] md:h-[400px] lg:h-[550px] items-center justify-center"
       >
         <div data-scroll data-scroll-speed="2" className="w-[85%]">
-          <img src={x?.image} alt="" className="w-full" />
+          <img src={project?.image} alt="" className="w-full" />
         </div>
       </div>
       <div className="flex w-full flex-col gap-8">
@@ -82,7 +80,7 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
             data-scroll-speed="2"
             className="border-b border-[rgba(0,0,0,.2)] pb-4 w-full"
           >
-            {x?.text}
+            {project?.text}
           </span>
           <span
             data-scroll
