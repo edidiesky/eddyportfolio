@@ -76,7 +76,7 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
         </div>
       </div>
       <div className="flex w-full flex-col gap-8">
-        <h3 className="text-xl lg:text-2xl md:text-3xl flex items-start flex-col gap-4 justify-between font-portfolio_bold">
+        <h3 className="text-xl lg:text-2xl md:text-3xl flex items-start flex-col gap-4 justify-between font-portfolio_bold1">
           <span
             data-scroll
             data-scroll-speed="2"

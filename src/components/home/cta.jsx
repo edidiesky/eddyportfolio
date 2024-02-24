@@ -97,7 +97,7 @@ const Cta = () => {
               ref={numberref}
               data-scroll
               data-scroll-speed="-0.08"
-              className="text-3xl font-portfolio_bold"
+              className="text-3xl font-portfolio_bold1"
             >
               01 /
             </h3>
@@ -107,7 +107,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold "
+              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold1 "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -117,7 +117,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold "
+              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold1 "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS

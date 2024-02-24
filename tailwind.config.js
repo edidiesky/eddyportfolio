@@ -19,6 +19,7 @@ export default {
       // Blog_Styles
       fontFamily: {
         portfolio_bold: ["Agency_Extended", "sans-serif"],
+        portfolio_bold1: ["Agency_Extended", "sans-serif"],
         portfolio_italic: ["Italic", "sans-serif"],
         portfolio_semibold: ["SemiBold", "sans-serif"],
       },

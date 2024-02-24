@@ -20,7 +20,7 @@ const Hero = () => {
     const text3 = new SplitType(heroTextRef_3?.current);
     const textrefelement_1 = text_1?.words;
     const textrefelement_2 = text2?.chars;
-    const textrefelement_3 = text3?.chars;
+    const textrefelement_3 = text3?.words;
     gsap
       .timeline()
       .to(".pre_loader", {
@@ -46,7 +46,7 @@ const Hero = () => {
           y: 0,
           opacity: 1,
           stagger: 0.12,
-          duration: 1.5,
+          duration: 1,
           ease: "power4.out",
         },
         5
@@ -61,7 +61,7 @@ const Hero = () => {
           y: 0,
           opacity: 1,
           stagger: 0.05,
-          duration:.1,
+          duration:1,
           ease: "power4.out",
         },
         7

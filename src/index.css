@@ -15,7 +15,17 @@
 
 @font-face {
   font-family: "SemiBold";
+  src: url("./assets/fonts/Manrope.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bold1";
   src: url("./assets/fonts/Manrope-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SemiBold";
+  src: url("./assets/fonts/Manrope.ttf") format("truetype");
 }
 
 @font-face {

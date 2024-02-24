@@ -72,7 +72,7 @@ const WorkList = () => {
             <span ref={adHeaderdRefs}>PROJECTS</span>
           </div>
           <div
-            className="w-full pt-20 grid grid-cols-1 md:grid-cols-2 gap-20 justify-between"
+            className="w-full pt-20 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-52 justify-between"
           >
             {projectdata.map((x, index) => {
               return (
