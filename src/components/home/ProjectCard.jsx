@@ -69,14 +69,14 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
         style={{
           background: `${x?.color}`,
         }}
-        className="flex w-full h-[400px] lg:h-[550px] items-center justify-center"
+        className="flex w-full h-[300px] md:h-[400px] lg:h-[550px] items-center justify-center"
       >
         <div data-scroll data-scroll-speed="2" className="w-[85%]">
           <img src={x?.image} alt="" className="w-full" />
         </div>
       </div>
       <div className="flex w-full flex-col gap-8">
-        <h3 className="text-2xl md:text-3xl flex items-start flex-col gap-4 justify-between font-portfolio_bold">
+        <h3 className="text-xl lg:text-2xl md:text-3xl flex items-start flex-col gap-4 justify-between font-portfolio_bold">
           <span
             data-scroll
             data-scroll-speed="2"
@@ -87,7 +87,7 @@ const ProjectCard = ({ x, index, addRefs, tab, setTab }) => {
           <span
             data-scroll
             data-scroll-speed="2"
-            className="text-lg flex items-center justify-between w-full"
+            className="text-sm md:text-lg flex font-portfolio_semibold items-center justify-between w-full"
           >
             Development
             <span>2023</span>

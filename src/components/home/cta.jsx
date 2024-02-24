@@ -97,7 +97,7 @@ const Cta = () => {
               ref={numberref}
               data-scroll
               data-scroll-speed="-0.08"
-              className="text-4xl font-portfolio_bold"
+              className="text-3xl font-portfolio_bold"
             >
               01 /
             </h3>
@@ -107,7 +107,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full text-3xl lg:text-4xl leading-[1.6] font-portfolio_bold "
+              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -117,7 +117,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full text-3xl lg:text-4xl leading-[1.6] font-portfolio_bold "
+              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
@@ -127,7 +127,7 @@ const Cta = () => {
                 // data-scroll
                 // data-scroll-speed="5"
                 ref={descriptionrefs1}
-                className="about_text1 w-full text-xl lg:text-2xl leading-[1.6] font-portfolio_bold "
+                className="about_text1 w-full text-base lg:text-2xl leading-[1.6] font-portfolio_semibold "
               >
                 A blend of Product Engineering and Electrical engineering.
               </h5>
@@ -136,7 +136,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-xl lg:text-2xl leading-[1.6] font-portfolio_bold "
+                  className="about_text1 text-base lg:text-2xl leading-[1.6] font-normal font-portfolio_semibold "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies
@@ -149,7 +149,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-xl lg:text-2xl leading-[1.6] font-portfolio_bold "
+                  className="about_text1 text-base lg:text-2xl leading-[1.6] font-normal font-portfolio_semibold "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies

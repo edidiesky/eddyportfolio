@@ -34,7 +34,7 @@ const Hero = () => {
           duration: 1,
           ease: "power3.out",
         },
-        5
+        4.6
       )
       .fromTo(
         text1?.chars,
@@ -46,23 +46,23 @@ const Hero = () => {
           y: 0,
           opacity: 1,
           stagger: 0.12,
-          duration: 2,
+          duration: 1.5,
           ease: "power4.out",
         },
-        6
+        5
       )
       .fromTo(
         textrefelement_3,
         {
-          y: -100,
+          y: 100,
           opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
           stagger: 0.05,
-          duration:.4,
-          ease: "power3.out",
+          duration:.1,
+          ease: "power4.out",
         },
         7
       )
@@ -108,12 +108,12 @@ const Hero = () => {
   return (
     <>
       <div data-scroll className="py-20 pb-32 bg-[#E1DFDD]">
-        <div className="w-full px-8 m-auto max-w-custom_1">
+        <div className="w-full px-4 md:px-8 m-auto max-w-custom_1">
           <div className="flex flex-col gap-y-16 w-[90%] lg:w-[1000px]">
             <h1
               data-scroll
               data-scroll-speed="2"
-              className="font-extrabold uppercase text-[3.3rem] sm:text-[4.5rem] md:text-[5rem] lg:text-[8rem] leading-[1] font-portfolio_bold"
+              className="font-extrabold uppercase text-4xl sm:text-6xl md:text-8xl leading-[1] font-portfolio_bold"
             >
               <span className="">
                 <span className="titleRef" ref={titleRef}>
@@ -124,7 +124,7 @@ const Hero = () => {
                 data-scroll
                 ref={heroTextRef_3}
                 data-scroll-speed="1.5"
-                className="flex items-center gap-6 text-lg mt-4"
+                className="flex items-center gap-6 text-sm font-normal font-portfolio_semibold md:text-lg mt-4"
               >
                 ( Full-Stack React-typescript Developer )
                 {/* <span><Arrow /></span> */}
@@ -138,7 +138,7 @@ const Hero = () => {
                 backgrounRepeat: "none",
                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
               }}
-              className="w-[90%] md:w-[60%] lg:w-[600px] h-[360px]"
+              className="w-[90%] md:w-[60%] lg:w-[600px] h-[300px] md:h-[360px]"
             >
               {/* <img src="profile_1.jpeg" alt="" className="w-full h-full object-cover" /> */}
             </div>
@@ -154,7 +154,7 @@ const Hero = () => {
                 // data-scroll-speed="3"
                 ref={heroTextRef_1}
                 style={{ fontKerning: "none" }}
-                className="text-xl lg:text-2xl w-[90%] lg:w-[600px] leading-[1.5] font-normal font-portfolio_semibold"
+                className="text-lg lg:text-2xl w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
               >
                 I collaborate with brands globally to design impactful,
                 mission-focused websites that drive results and achieve business
@@ -166,7 +166,7 @@ const Hero = () => {
               ref={heroTextRef_2}
               style={{ fontKerning: "none" }}
               data-scroll-speed="4"
-              className="font-extrabold heroTitle uppercase text-[3rem] md:text-[5rem] text-start lg:text-end lg:text-[7rem] leading-[1.4] lg:leading-[1] font-portfolio_bold"
+              className="font-extrabold heroTitle uppercase text-6xl text-end w-full lg:text-8xl leading-[1.4] lg:leading-[1] font-portfolio_bold"
             >
               VICTOR ESSIEN
             </h1>
