@@ -30,8 +30,8 @@ const Hero = () => {
       .to(
         ".pre_loader",
         {
-          top: "-100%",
-          duration: 1,
+          top: "-160%",
+          duration: .6,
           ease: "power3.out",
         },
         4.6
@@ -138,7 +138,7 @@ const Hero = () => {
                 backgrounRepeat: "none",
                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
               }}
-              className="w-[90%] md:w-[60%] lg:w-[600px] h-[300px] md:h-[360px]"
+              className="w-[90%] md:w-[60%] lg:w-[600px] h-[350px] md:h-[360px]"
             >
               {/* <img src="profile_1.jpeg" alt="" className="w-full h-full object-cover" /> */}
             </div>
