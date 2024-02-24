@@ -144,7 +144,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="w-full py-24 grid grid-cols-1 md:grid-cols-custom_2 items-start lg:items-center gap-12 flex-col justify-between md:flex-row">
-            <div className="flex items-center gap-4 lg:gap-12">
+            <div className="flex items-center gap-6 lg:gap-20">
               <span>
                 <Arrow />
               </span>

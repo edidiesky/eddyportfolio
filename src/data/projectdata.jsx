@@ -1,4 +1,57 @@
 export const projectdata = [
+  // Agency
+  {
+    id: 4,
+    year: 2024,
+    text: "ONE:NULL AGENCY",
+    subtext: "Agency website",
+    color: "#DCD0C2",
+    image: "./onenull.png  ",
+    website: "https://onenull.vercel.app/",
+    github: "https://github.com/edidiesky/agency",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Development"],
+
+    role: [
+      {
+        text: "Frontend Development",
+        subtext: [
+          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
+          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
+          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
+          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
+        ],
+      },
+    ],
+    title: "A Football Agency Concept",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+  },
   // CAR
   {
     id: 4,
@@ -34,7 +87,7 @@ export const projectdata = [
       "Styled-components",
       "Zoid",
     ],
-    roles: ["Front End Developer", "Back End Developer"],
+    roles: ["Front End Development", "Back End Development"],
 
     role: [
       {
@@ -67,6 +120,11 @@ export const projectdata = [
       "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
   },
 
+
+  // Project Category 2
+
+
+  // Weeter
   {
     id: 1,
     text: "Weeters",
@@ -109,12 +167,12 @@ export const projectdata = [
       "Styled-components",
       "Zoid",
     ],
-    roles: ["Front End Developer", "Back End Developer"],
+    roles: ["Front End Development", "Back End Development"],
     title: "Redeveloping the social platform, Twitter",
     description:
       "I am thrilled to share the highlights of my recent project - a Twitter clone built from scratch using Next.js, Typescript, Typescript-Express.js and Typescript-Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Twitter's platform, providing users with a seamless and immersive social experience.",
   },
-
+  // Airbnb
   {
     id: 2,
     text: "Airbnb",
@@ -152,7 +210,7 @@ export const projectdata = [
       "Express.js",
       "Styled-components",
     ],
-    roles: ["Front End Developer", "Back End Developer"],
+    roles: ["Front End Development", "Back End Development"],
 
     // role: [
     //   {
@@ -183,7 +241,7 @@ export const projectdata = [
     description:
       "I am thrilled to share the highlights of my recent project - an Airbnb clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Airbnb's platform, providing users with a seamless and immersive booking experience.",
   },
-
+  // fiverr
   {
     id: 3,
     text: "Fiverr",
@@ -218,7 +276,7 @@ export const projectdata = [
       "Styled-components",
       "Zoid",
     ],
-    roles: ["Front End Developer", "Back End Developer"],
+    roles: ["Front End Development", "Back End Development"],
 
     // role: [
     //   {
@@ -251,6 +309,17 @@ export const projectdata = [
       "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
   },
 ];
+
+// Notion
+// Agency1
+// Car
+// Messenger
+// Fiverr
+// Airbnb
+// Food
+// Agency2
+// Twitter
+// Agency2
 
 export const projectdata2 = [
   {
