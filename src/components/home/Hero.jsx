@@ -158,7 +158,7 @@ const Hero = () => {
               <h4
                 ref={descriptionRef}
                 style={{ fontKerning: "none" }}
-                className="text-2xl text-light_grey w-[90%] leading-[1.5] uppercase font-normal font-portfolio_semibold"
+                className="text-xl md:text-2xl text-light_grey w-[90%] leading-[1.5] uppercase font-normal font-portfolio_semibold"
               >
                 I collaborate with brands globally to design impactful,
                 mission-focused websites that drive results and achieve business
