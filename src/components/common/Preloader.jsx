@@ -31,7 +31,7 @@ const Preloader = () => {
     <FooterStyles
       className="flex items-center pre_loader justify-center"
     >
-      <h2 className="absolute text-4xl md:text-5xl text-white font-extrabold font-portfolio_bold top-10 left-10">
+      <h2 className="absolute text-4xl text-white font-extrabold font-portfolio_bold top-10 left-10">
         VICTOR ESSIEN
         <span className="block">PORTFOLIO @2024</span>
       </h2>

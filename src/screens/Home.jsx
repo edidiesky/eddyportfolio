@@ -8,6 +8,7 @@ import WorkList from "../components/home/worklist";
 import Cta from "../components/home/cta";
 import { useRef } from "react";
 import Header from "../components/common/Header";
+import SmoothScroll from "../utils/smooth";
 const Home = () => {
   const Homeref = useRef(null);
   const [isloading, setIsLoading] = React.useState(true);
@@ -19,18 +20,20 @@ const Home = () => {
   return (
     <>
       <Preloader />
-      <HomeStyles
-        ref={Homeref}
-        style={{ perspective: "1px", minHeight: "100vh" }}
-        data-scroll-section
-        className="w-full min-h-full bg-[#E1DFDD] overflow-hidden"
-      >
-        <Header />
-        <Hero />
-        <Cta />
-        <WorkList />
-        <Footer />
-      </HomeStyles>
+      <SmoothScroll>
+        <HomeStyles
+          ref={Homeref}
+          style={{ perspective: "1px", minHeight: "100vh" }}
+          data-scroll-section
+          className="w-full min-h-full bg-[#000000] overflow-hidden"
+        >
+          <Header />
+          <Hero />
+          <Cta />
+          <WorkList />
+          <Footer />
+        </HomeStyles>
+      </SmoothScroll>
     </>
   );
 };

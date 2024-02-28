@@ -4,6 +4,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+// import picture1 from "../../../public/profile_2.jpg";
+
+
 const Cta = () => {
   const refs = useRef([]);
   refs.current = [];
@@ -17,17 +20,18 @@ const Cta = () => {
     refs.current.forEach((ref, index) => {
       const text = new SplitType(ref);
       const textrefelement_1 = text?.words;
-      const textrefelement_2 = text?.lines;
+      const textrefelement_2 = text?.words;
       gsap.fromTo(
         index === 1 ? textrefelement_1 : textrefelement_2,
         { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.1,
-          duration: 0.9,
+          stagger: 0.05,
+          duration: 2,
+          ease: "power3.out",
           scrollTrigger: {
-            trigger: index === 1 ? textrefelement_1 : textrefelement_2,
+            trigger: text?.words,
           },
         }
       );
@@ -43,7 +47,7 @@ const Cta = () => {
           opacity: 1,
           y: 0,
           stagger: 0.1,
-          duration: 1.5,
+          duration:2,
           ease: "power3.out",
 
           scrollTrigger: {
@@ -97,7 +101,7 @@ const Cta = () => {
               ref={numberref}
               data-scroll
               data-scroll-speed="-0.08"
-              className="text-3xl font-portfolio_bold1"
+              className="text-3xl font-portfolio_bold1 text-white"
             >
               01 /
             </h3>
@@ -107,7 +111,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold1 "
+              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl lg:text-4xl leading-[1.2] font-portfolio_bold1 text-white "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -117,26 +121,38 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-lg md:text-2xl lg:text-2xl leading-[1.2] font-portfolio_bold1 "
+              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl lg:text-4xl leading-[1.2] font-portfolio_bold1 text-white "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
             </h4>
             <div className="w-full lg:w-[80%] grid-cols-1 grid py-5 gap-12 md:grid-cols-custom_2">
-              <h5
-                // data-scroll
-                // data-scroll-speed="5"
-                ref={descriptionrefs1}
-                className="about_text1 w-full text-base lg:text-2xl leading-[1.6] font-portfolio_semibold "
-              >
-                A blend of Product Engineering and Electrical engineering.
-              </h5>
+              <div className="w-full flex-col gap-12">
+                <div
+                  // ref={imageRef}
+                  className="w-[100%] h-[350px] md:h-[360px]"
+                >
+                  <img
+                    src={"/public/favourite/profile_4.jpg"}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
               <div className="w-full flex flex-col gap-12">
+                <h5
+                  // data-scroll
+                  // data-scroll-speed="5"
+                  ref={descriptionrefs1}
+                  className="about_text1 w-full text-lg lg:text-2xl leading-[1.6] font-light text-white font-portfolio_semibold"
+                >
+                  A blend of Product Engineering and Electrical engineering.
+                </h5>
                 <h4
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-base lg:text-2xl leading-[1.6] font-normal font-portfolio_semibold "
+                  className="about_text1 text-lg lg:text-2xl leading-[1.6] font-light font-portfolio_semibold text-white "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies
@@ -149,7 +165,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-base lg:text-2xl leading-[1.6] font-normal font-portfolio_semibold "
+                  className="about_text1 text-lg lg:text-2xl leading-[1.6] font-light font-portfolio_semibold text-white "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies

@@ -9,13 +9,8 @@
 }
 
 @font-face {
-  font-family: "Italic";
-  src: url("./assets/fonts/Montreal.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "SemiBold";
-  src: url("./assets/fonts/Manrope.ttf") format("truetype");
+  src: url("./assets/fonts/Montreal.ttf") format("truetype");
 }
 
 @font-face {
@@ -58,7 +53,12 @@ h3 .line {
 
 h1 .line {
   overflow: hidden;
-  line-height: 1 !important;
+  line-height: 1.2 !important;
+}
+
+h4 .line {
+  overflow: hidden;
+  line-height: 1.6 !important;
 }
 
 h2 .line {

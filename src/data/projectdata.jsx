@@ -5,7 +5,7 @@ export const projectdata = [
     year: 2024,
     text: "ONE:NULL AGENCY",
     subtext: "Agency website",
-    color: "#DCD0C2",
+    color: "#17120ecd",
     image: "./onenull.png  ",
     website: "https://onenull.vercel.app/",
     github: "https://github.com/edidiesky/agency",
@@ -57,8 +57,8 @@ export const projectdata = [
     id: 4,
     text: "CAR MANAGEMENT SYSTEM",
     subtext: "Vaada",
-    color: "#E2D1D9",
-    image: "/Car_screen_1.jpeg  ",
+    color: "#17120ecd",
+    image: "https://updates.theme-fusion.com/wp-content/uploads/2022/08/prebuilt_car_dealer.jpg ",
     website: "https://vaada.vercel.app/",
     github: "https://github.com/edidiesky/cardealer",
     features: [
@@ -130,7 +130,7 @@ export const projectdata = [
     text: "Weeters",
     subtext: "Weeters",
 
-    color: "#D8D3CD",
+    color: "#17120ecd",
     image: "/twitter_screen_2.jpeg",
     github: "https://github.com/edidiesky/twitter_clone",
     website: "https://weeters.vercel.app/",
@@ -178,7 +178,7 @@ export const projectdata = [
     text: "Airbnb",
     subtext: "Airbnb",
 
-    color: "#48494B",
+    color: "#17120ecd",
     image: "/airbnb_screen.jpeg",
     github: "https://github.com/edidiesky/airbnb",
     website: "https://edbnb.vercel.app/",
@@ -246,7 +246,7 @@ export const projectdata = [
     id: 3,
     text: "Fiverr",
     subtext: "Fiverr",
-    color: "#E49C4A",
+    color: "#17120ecd",
     image: "/fiverr_screen.png",
     github: "https://github.com/edidiesky/fiverrclone",
     website: "https://fiverrclone-client.vercel.app/",
@@ -323,17 +323,17 @@ export const projectdata = [
 
 export const projectdata2 = [
   {
-    color: "#48494B",
+    color: "#17120ecd",
     image:
       "https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2c4eef86f4176c2a15df6f_home-1.jpg",
   },
   {
-    color: "#E2D1D9",
+    color: "#17120ecd",
     image:
       "https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2c50c6d2e06727eda64394_home-3.jpg",
   },
   {
-    color: "#E49C4A",
+    color: "#17120ecd",
     image:
       "https://assets.website-files.com/5d820ccf1097dd2dccadc680/5e2c53efb0943f4311bbc8d7_product.jpg",
   },

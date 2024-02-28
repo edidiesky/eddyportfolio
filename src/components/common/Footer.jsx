@@ -17,42 +17,42 @@ const Footer = () => {
       {
         y: 0,
         opacity: 1,
-        stagger: 0.08,
-        duration: 0.9,
+        stagger: 0.05,
+        duration: 0.4,
         scrollTrigger: {
           trigger: textrefelement_1,
         },
       }
     );
-     headerref.current?.forEach((el) => {
-       const text = new SplitType(el);
-       const textrefelement_1 = text?.chars;
-       gsap.fromTo(
-         textrefelement_1,
-         { y: -100, opacity: 0 },
-         {
-           y: 0,
-           opacity: 1,
-           stagger: 0.08,
-           // delay:1,
-           duration: 0.6,
-           scrollTrigger: {
-             trigger: textrefelement_1,
-           },
-         }
-       );
-     });
+    headerref.current?.forEach((el) => {
+      const text = new SplitType(el);
+      const textrefelement_1 = text?.chars;
+      gsap.fromTo(
+        textrefelement_1,
+        { y: -100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.08,
+          // delay:1,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: textrefelement_1,
+          },
+        }
+      );
+    });
   }, []);
-    const adHeaderdRefs = (el) => {
-      if (el && !headerref?.current?.includes(el)) {
-        headerref.current.push(el);
-      }
-    };
+  const adHeaderdRefs = (el) => {
+    if (el && !headerref?.current?.includes(el)) {
+      headerref.current.push(el);
+    }
+  };
   return (
     <>
       <div data-scroll className="py-16 w-full">
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12 md:gap-20">
-          <h3 className="text-sm md:text-lg font-portfolio_bold1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+          <h3 className="text-sm md:text-lg font-portfolio_bold text-white w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>03/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
             <span ref={adHeaderdRefs}>SEND ME A MESSAGE</span>
@@ -60,14 +60,14 @@ const Footer = () => {
 
           <h2
             ref={aboutTextRef_1}
-            className="text-4xl md:text-6xl lg:text-7xl w-full pb-24 font-extrabold font-portfolio_bold1 uppercase"
+            className="text-4xl md:text-6xl lg:text-7xl w-full leading-[1.4] pb-24 font-normal font-portfolio_bold text-white uppercase"
           >
             HELLO@ VICTORESSIEN.COM
           </h2>
         </div>
 
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
-          <h3 className="text-sm flex-col lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
+          <h3 className="text-sm flex-col text-white lg:flex-row font-portfolio_bold w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
             <span>
               Victor Essien
               <span className="block">Creative Developer</span>
@@ -79,7 +79,7 @@ const Footer = () => {
             </span>
 
             <span className="flex items-center gap-8 ">
-             Development Victor Essien
+              Development Victor Essien
             </span>
           </h3>
         </div>

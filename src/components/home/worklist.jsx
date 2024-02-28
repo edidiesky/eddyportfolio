@@ -74,9 +74,9 @@ const WorkList = () => {
 
   return (
     <>
-      <div data-scroll className="py-12 w-full bg-[#E1DFDD]">
+      <div data-scroll className="py-12 w-full">
         <div className="w-full px-8 m-auto max-w-custom flex flex-col gap-16">
-          <div className="text-sm md:text-lg font-portfolio_bold w-full justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+          <div className="text-sm md:text-lg text-white font-portfolio_bold w-full justify-between flex items-center pt-16 border-t border-[rgba(255,255,255,.2)] font-normal uppercase">
             <span ref={adHeaderdRefs}>02/</span>
             <span ref={adHeaderdRefs}>RECENT WORKS?</span>
             <span ref={adHeaderdRefs}>PROJECTS</span>
