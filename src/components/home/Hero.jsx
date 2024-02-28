@@ -137,7 +137,7 @@ const Hero = () => {
               <h1
                 data-scroll
                 data-scroll-speed="2"
-                className="font-extrabold text-white uppercase text-5xl sm:text-6xl  md:text-7xl leading-[1] font-portfolio_bold"
+                className="font-extrabold text-white uppercase text-4xl sm:text-6xl  md:text-7xl leading-[1] font-portfolio_bold"
               >
                 <span className="overflow-hidden">
                   <span className="titleRef" ref={titleRef}>
