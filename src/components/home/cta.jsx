@@ -2,10 +2,10 @@ import React, { useLayoutEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 // import picture1 from "../../../public/profile_2.jpg";
-
 
 const Cta = () => {
   const refs = useRef([]);
@@ -47,7 +47,7 @@ const Cta = () => {
           opacity: 1,
           y: 0,
           stagger: 0.1,
-          duration:2,
+          duration: 2,
           ease: "power3.out",
 
           scrollTrigger: {
@@ -172,6 +172,17 @@ const Cta = () => {
                   and individuals. I have years of experience working and
                   collaborating on product teams and leading engineering
                   efforts.
+                </h4>
+                <h4
+                  // data-scroll
+                  // data-scroll-speed="5"
+                  ref={addtoDescriptionRefs}
+                  style={{ textDecoration: "underline" }}
+                  className="about_text1 text-lg underline leading-[1.6] font-light font-portfolio_semibold text-dark_grey "
+                >
+                  <Link to={"/about"} style={{ textDecoration: "underline" }}>
+                    <span>More About Victor Essien</span>
+                  </Link>
                 </h4>
               </div>
             </div>
