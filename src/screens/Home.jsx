@@ -9,6 +9,7 @@ import Cta from "../components/home/cta";
 import { useRef } from "react";
 import Header from "../components/common/Header";
 import SmoothScroll from "../utils/smooth";
+import Skills from "../components/home/skills";
 const Home = () => {
   const Homeref = useRef(null);
   const [isloading, setIsLoading] = React.useState(true);
@@ -31,6 +32,7 @@ const Home = () => {
           <Hero />
           <Cta />
           <WorkList />
+          {/* <Skills/> */}
           <Footer />
         </HomeStyles>
       </SmoothScroll>

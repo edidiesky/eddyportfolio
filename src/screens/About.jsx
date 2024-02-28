@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Hero, Services, Tools, Playground } from "../components/about";
+import { Services, Tools, Playground } from "../components/about";
 import Footer from "../components/common/Footer";
 import Bottom from "../components/about/Bottom";
-const Home = () => {
+import { Hero } from "../components/home";
+const About = () => {
    React.useEffect(() => {
      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
    }, []);
@@ -11,9 +12,9 @@ const Home = () => {
     <HomeStyles className="w-100 flex column gap-2">
       <Hero />
       <Services />
-      <Tools />
+      {/* <Tools />
       <Playground/>
-      <Bottom />
+      <Bottom /> */}
       <Footer />
     </HomeStyles>
   );
@@ -24,4 +25,4 @@ const HomeStyles = styled.div`
   overflow:hidden;
 `;
 
-export default Home;
+export default About;

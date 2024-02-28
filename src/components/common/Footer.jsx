@@ -53,7 +53,7 @@ const Footer = () => {
       <div data-scroll className="py-16 w-full">
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12 md:gap-20">
           <h3 className="text-sm md:text-lg font-portfolio_bold text-white w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
-            <span ref={adHeaderdRefs}>03/</span>
+            <span ref={adHeaderdRefs}>04/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
             <span ref={adHeaderdRefs}>SEND ME A MESSAGE</span>
           </h3>
