@@ -95,13 +95,13 @@ const Cta = () => {
   return (
     <>
       <div data-scroll className="py-32">
-        <div className="w-full px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
+        <div className="w-full md:w-[800px] mx-auto px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
           <div className="w-full">
             <h3
               ref={numberref}
               data-scroll
               data-scroll-speed="-0.08"
-              className="text-3xl font-portfolio_bold1 text-white"
+              className="text-3xl font-portfolio_bold1 text-text_dark_1"
             >
               01 /
             </h3>
@@ -111,7 +111,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl lg:text-4xl leading-[1.2] font-portfolio_bold1 text-white "
+              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -121,19 +121,19 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl lg:text-4xl leading-[1.2] font-portfolio_bold1 text-white "
+              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
             </h4>
-            <div className="w-full lg:w-[80%] grid-cols-1 grid py-5 gap-12 md:grid-cols-custom_2">
+            <div className="w-full lg:w-[100%] grid-cols-1 grid py-5 gap-12 md:grid-cols-custom_2">
               <div className="w-full flex-col gap-12">
                 <div
                   // ref={imageRef}
-                  className="w-[100%] h-[350px] md:h-[360px]"
+                  className="w-[100%] h-[220px]"
                 >
                   <img
-                    src={"/public/favourite/profile_4.jpg"}
+                    src={"/public/favourite/profile_6.jpg"}
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -144,7 +144,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={descriptionrefs1}
-                  className="about_text1 w-full text-lg lg:text-2xl leading-[1.6] font-light text-white font-portfolio_semibold"
+                  className="about_text1 w-full text-lg lg:text-xl leading-[1.6] font-light text-text_dark_1 font-portfolio_semibold"
                 >
                   A blend of Product Engineering and Electrical engineering.
                 </h5>
@@ -152,7 +152,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-lg lg:text-2xl leading-[1.6] font-light font-portfolio_semibold text-white "
+                  className="about_text1 text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies
@@ -165,7 +165,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-lg lg:text-2xl leading-[1.6] font-light font-portfolio_semibold text-white "
+                  className="about_text1 text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies

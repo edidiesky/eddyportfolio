@@ -52,22 +52,22 @@ const Footer = () => {
     <>
       <div data-scroll className="py-16 w-full">
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12 md:gap-20">
-          <h3 className="text-sm md:text-lg font-portfolio_bold text-white w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
-            <span ref={adHeaderdRefs}>04/</span>
+          <h3 className="text-sm md:text-lg font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+            <span ref={adHeaderdRefs}>05/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
             <span ref={adHeaderdRefs}>SEND ME A MESSAGE</span>
           </h3>
 
           <h2
             ref={aboutTextRef_1}
-            className="text-4xl md:text-6xl lg:text-7xl w-full leading-[1.4] pb-24 font-normal font-portfolio_bold text-white uppercase"
+            className="text-4xl md:text-6xl lg:text-7xl w-full leading-[1.4] pb-24 font-normal font-portfolio_bold text-text_dark_1 uppercase"
           >
             HELLO@ VICTORESSIEN.COM
           </h2>
         </div>
 
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
-          <h3 className="text-sm flex-col text-white lg:flex-row font-portfolio_bold w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
+          <h3 className="text-sm flex-col text-text_dark_1 lg:flex-row font-portfolio_bold w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
             <span>
               Victor Essien
               <span className="block">Creative Developer</span>

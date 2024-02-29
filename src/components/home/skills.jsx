@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import SplitType from "split-type";
+import { BiPlus } from "react-icons/bi";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +18,26 @@ const skillslist = [
   "GIT",
   "GSAP",
   "FRAMER-MOTION",
+];
+
+const serviceslist = [
+  {
+    title: "Front End Development",
+    description: "",
+  },
+  {
+    title: "Backend Development",
+    description: "",
+  },
+  {
+    title: "Creative Implementation",
+    description: "",
+  },
+
+  {
+    title: "Unit Testing",
+    description: "",
+  },
 ];
 const Skills = () => {
   const refs = useRef([]);
@@ -134,42 +155,72 @@ const Skills = () => {
   return (
     <>
       <div data-scroll className="py-32 flex flex-col gap-20">
-        {/* <div className="w-full px-8 m-auto max-w-custom">
-          <h3 className="text-sm md:text-lg font-portfolio_bold text-white w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
-            <span ref={adHeaderdRefs}>03/</span>
-            <span ref={adHeaderdRefs}>Skills?</span>
-            <span ref={adHeaderdRefs}>TECHNOLOGIES</span>
-          </h3>
-        </div> */}
-        <div className="w-full px-8 m-auto max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_ gap-16 ">
+        <div className="w-full px-8 m-auto max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
           <div className="w-full">
-            <h3 className="text-sm md:text-lg font-portfolio_bold text-white w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
-              <span ref={adHeaderdRefs}>Skills</span>
+            <h3 className="text-sm md:text-lg mt-12 font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center font-normal uppercase">
+              <span ref={adHeaderdRefs}>03/</span>
             </h3>
           </div>
-          <div className="w-full flex flex-col items-end justify-end gap-4">
+          <div className="w-full flex flex-col gap-4">
             <h4
-              // data-scroll
-              // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-2xl md:text-end md:text-3xl lg:text-6xl border-b border-[rgba(255,255,255,.09)] pb-4 leading-[1.2] font-portfolio_bold1 text-white "
+              className="about_text1 w-full text-start md:text-4xl lg:text-9xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
-              FRONTEND DEVELOPMENT
+              SERVICES
             </h4>
-
-            <h4
-              // data-scroll
-              // data-scroll-speed="5"
-              ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-2xl md:text-end md:text-3xl lg:text-6xl border-b border-[rgba(255,255,255,.09)] pb-4 leading-[1.2] font-portfolio_bold1 text-white "
-            >
-              BACKEND DEVELOPMENT
-            </h4>
+            <div className="w-full flex flex-col">
+              {serviceslist?.map((x, index) => {
+                return (
+                  <div className="w-full border-t py-12 border-[rgba(0,0,0,.4)]">
+                    <div className="header_top text-2xl flex items-center justify-between font-portfolio_bold1 text-text_dark_1">
+                      <span>0{index + 1}</span>
+                      <span> {x?.title}</span>
+                      <span>
+                        <BiPlus />{" "}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="w-full mt-12">
+              <div className="w-full px-8 m-auto max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
+                <div className="w-full">
+                  <h3 className="text-sm md:text-lg mt-20 font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center font-normal uppercase">
+                    <span ref={adHeaderdRefs}>04/</span>
+                  </h3>
+                </div>
+                <div className="w-full flex flex-col gap-4">
+                  <h4
+                    ref={addtoRefs}
+                    className="about_text1 w-full text-start md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+                  >
+                    SKILLS
+                  </h4>
+                  <div className="w-full flex flex-col">
+                    {skillslist?.map((x, index) => {
+                      return (
+                        <div className="w-full border-t py-4 border-[rgba(0,0,0,.4)]">
+                          <div className="header_top text-xl flex items-center justify-between font-portfolio_bold1 text-text_dark_1">
+                            <span>0{index + 1}</span>
+                            <span> {x}</span>
+                            <span>
+                              <BiPlus />{" "}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         {/* <div className="w-full px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_2 gap-16 ">
           <div className="w-full">
-            <h3 className="text-sm md:text-lg font-portfolio_bold text-white w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+            <h3 className="text-sm md:text-lg font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
               <span ref={adHeaderdRefs}>TECHNOLOGIES</span>
             </h3>
           </div>
@@ -181,7 +232,7 @@ const Skills = () => {
                   // data-scroll-speed="5"
                   key={index}
                   ref={addtoRefs}
-                  className="about_text1 w-full md:w-[90%] text-xl md:text-2xl lg:text-2xl border-b border-[rgba(255,255,255,.09)] pb-4 leading-[1.2] font-portfolio_bold1 text-white "
+                  className="about_text1 w-full md:w-[90%] text-xl md:text-2xl lg:text-2xl border-b border-[rgba(255,255,255,.09)] pb-4 leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
                 >
                   PROFICIENCY IN - {x}
                 </h4>

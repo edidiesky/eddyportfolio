@@ -1,11 +1,53 @@
 export const projectdata = [
+  // Notion
+
+  {
+    id: 3,
+    text: "Notion",
+    subtext: "Notion",
+    color: "#626D6E",
+    image: "/fiverr_screen.png",
+    github: "https://github.com/edidiesky/fiverrclone",
+    website: "",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Development", "Back End Development"],
+
+    title: "Redeveloping the freelancing platform, Fiverr",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
+  },
   // Agency
   {
     id: 4,
     year: 2024,
     text: "ONE:NULL AGENCY",
     subtext: "Agency website",
-    color: "#17120ecd",
+    color: "#DCD0C2",
     image: "./onenull.png  ",
     website: "https://onenull.vercel.app/",
     github: "https://github.com/edidiesky/agency",
@@ -57,8 +99,8 @@ export const projectdata = [
     id: 4,
     text: "CAR MANAGEMENT SYSTEM",
     subtext: "Vaada",
-    color: "#17120ecd",
-    image: "https://updates.theme-fusion.com/wp-content/uploads/2022/08/prebuilt_car_dealer.jpg ",
+    color: "#B1A994",
+    image: "./car_details_screen.jpeg ",
     website: "https://vaada.vercel.app/",
     github: "https://github.com/edidiesky/cardealer",
     features: [
@@ -119,10 +161,48 @@ export const projectdata = [
     description:
       "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
   },
+  // Messenger
+  {
+    id: 3,
+    text: "Messenging App",
+    subtext: "Messenging App",
+    color: "#E49C4A",
+    image: "/fiverr_screen.png",
+    github: "https://github.com/edidiesky/fiverrclone",
+    website: "",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Development", "Back End Development"],
 
-
+    title: "Redeveloping the freelancing platform, Fiverr",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
+  },
   // Project Category 2
-
 
   // Weeter
   {
@@ -130,7 +210,7 @@ export const projectdata = [
     text: "Weeters",
     subtext: "Weeters",
 
-    color: "#17120ecd",
+    color: "#626D6E",
     image: "/twitter_screen_2.jpeg",
     github: "https://github.com/edidiesky/twitter_clone",
     website: "https://weeters.vercel.app/",
@@ -178,7 +258,7 @@ export const projectdata = [
     text: "Airbnb",
     subtext: "Airbnb",
 
-    color: "#17120ecd",
+    color: "#E9EAEB",
     image: "/airbnb_screen.jpeg",
     github: "https://github.com/edidiesky/airbnb",
     website: "https://edbnb.vercel.app/",
@@ -246,7 +326,7 @@ export const projectdata = [
     id: 3,
     text: "Fiverr",
     subtext: "Fiverr",
-    color: "#17120ecd",
+    color: "#626D6E",
     image: "/fiverr_screen.png",
     github: "https://github.com/edidiesky/fiverrclone",
     website: "https://fiverrclone-client.vercel.app/",
@@ -304,6 +384,47 @@ export const projectdata = [
     //     ],
     //   },
     // ],
+    title: "Redeveloping the freelancing platform, Fiverr",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
+  },
+  // True foods
+  {
+    id: 3,
+    text: "TrueFoods",
+    subtext: "TrueFoods",
+    color: "#E49C4A",
+    image: "/fiverr_screen.png",
+    github: "https://github.com/edidiesky/fiverrclone",
+    website: "",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Development", "Back End Development"],
+
     title: "Redeveloping the freelancing platform, Fiverr",
     description:
       "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",

@@ -3,22 +3,16 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
-  console.log(tab);
-  const [mouseposition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-    active: false,
-  });
-
+const ProjectCard = ({
+  project,
+  index,
+  addRefs,
+  tab,
+  setTab,
+  setMousePosition,
+}) => {
   const handleMouseEnter = (e) => {
-    const { clientX, clientY } = e;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = clientX - rect.left - 120 / 2;
-    const y = clientY - rect.top - 120 / 2;
     setMousePosition({
-      x,
-      y,
       active: true,
     });
   };
@@ -29,35 +23,13 @@ const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
     });
   };
 
-  const { x, y } = mouseposition;
   return (
     <div
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseEnter}
       key={index}
       className="w-100 group flex items-center relative flex-col gap-12"
     >
-      <motion.div
-        animate={
-          mouseposition.active
-            ? { opacity: 1, top: `${y}px`, left: `${x}px`, scale: 1 }
-            : { opacity: 0, scale: 0 }
-        }
-        transition={{ type: "tween", ease: "backOut", duration: 1 }}
-        // ref={labelContainer}
-        style={{
-          background: `#744118`,
-          zIndex: 400,
-        }}
-        className="absolute cursor-pointer top-[50%] left-[50%]  h-[120px] w-[120px] md:flex hidden items-center justify-center rounded-full"
-      >
-        <Link
-          to={`${project?.website}`}
-          className="text-white text-xl font-medium"
-        >
-          View
-        </Link>
-      </motion.div>
       <div
         data-scroll
         data-scroll-speed="1"
@@ -72,11 +44,11 @@ const ProjectCard = ({ project, index, addRefs, tab, setTab }) => {
         </div>
       </div>
       <div className="flex w-full flex-col gap-8">
-        <h3 className="text-xl lg:text-2xl md:text-3xl flex items-start text-white flex-col gap-4 justify-between font-portfolio_bold">
+        <h3 className="text-xl lg:text-2xl md:text-3xl flex items-start text-text_dark_1 flex-col gap-4 justify-between font-portfolio_bold">
           <span
             data-scroll
             data-scroll-speed="2"
-            className="border-b border-[rgba(255,255,255,.2)] text-white pb-4 w-full"
+            className="border-b border-[rgba(0,0,0,.2)] text-text_dark_1 pb-4 w-full"
           >
             {project?.text}
           </span>

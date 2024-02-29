@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Hero } from "../components/home";
 import Footer from "../components/common/Footer";
@@ -10,6 +10,7 @@ import { useRef } from "react";
 import Header from "../components/common/Header";
 import SmoothScroll from "../utils/smooth";
 import Skills from "../components/home/skills";
+import Mouse from "../components/common/Mouse";
 const Home = () => {
   const Homeref = useRef(null);
   const [isloading, setIsLoading] = React.useState(true);
@@ -18,21 +19,29 @@ const Home = () => {
     const timer = setTimeout(() => setIsLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
+
+  const [mouseposition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+    active: false,
+    index: 0,
+  });
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
+      <Mouse mouseposition={mouseposition} />
       <SmoothScroll>
         <HomeStyles
           ref={Homeref}
           style={{ perspective: "1px", minHeight: "100vh" }}
           data-scroll-section
-          className="w-full min-h-full bg-[#000000] overflow-hidden"
+          className="w-full min-h-full bg-[#E1DFDD] overflow-hidden"
         >
           <Header />
           <Hero />
           <Cta />
-          <WorkList />
-          {/* <Skills/> */}
+          <WorkList setMousePosition={setMousePosition} />
+          <Skills/>
           <Footer />
         </HomeStyles>
       </SmoothScroll>
