@@ -94,7 +94,7 @@ const Cta = () => {
 
   return (
     <>
-      <div data-scroll className="py-32">
+      <div data-scroll className="py-20">
         <div className="w-full md:w-[800px] mx-auto px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
           <div className="w-full">
             <h3
@@ -130,7 +130,7 @@ const Cta = () => {
               <div className="w-full flex-col gap-12">
                 <div
                   // ref={imageRef}
-                  className="w-[100%] h-[220px]"
+                  className="w-[100%] h-[320px] md:h-[220px]"
                 >
                   <img
                     src={"/public/favourite/profile_6.jpg"}
@@ -152,7 +152,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
+                  className="about_text1 w-full text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies
@@ -165,24 +165,13 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
+                  className="about_text1 w-full text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies
                   and individuals. I have years of experience working and
                   collaborating on product teams and leading engineering
                   efforts.
-                </h4>
-                <h4
-                  // data-scroll
-                  // data-scroll-speed="5"
-                  ref={addtoDescriptionRefs}
-                  style={{ textDecoration: "underline" }}
-                  className="about_text1 text-lg underline leading-[1.6] font-light font-portfolio_semibold text-dark_grey "
-                >
-                  <Link to={"/about"} style={{ textDecoration: "underline" }}>
-                    <span>More About Victor Essien</span>
-                  </Link>
                 </h4>
               </div>
             </div>

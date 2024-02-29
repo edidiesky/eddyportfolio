@@ -137,7 +137,7 @@ const Hero = () => {
               <h1
                 data-scroll
                 data-scroll-speed="2"
-                className="font-normal text-text_dark_1 uppercase text-4xl sm:text-8xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+                className="font-normal text-text_dark_1 uppercase text-5xl sm:text-7xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
               >
                 <span className="overflow-hidden">
                   <span className="titleRef block" ref={titleRef}>
@@ -157,7 +157,7 @@ const Hero = () => {
               </h1>
             </div>
             <div className="w-full">
-              <div ref={imageRef} className="w-full h-[460px]">
+              <div ref={imageRef} className="w-full h-[300px] md:h-[460px]">
                 <img
                   src={"../../../public/favourite/profile_4.JPG"}
                   alt=""

@@ -37,14 +37,14 @@ const ProjectCard = ({
         style={{
           background: `${project?.color}`,
         }}
-        className="flex w-full h-[350px] sm:h-[450px] lg:h-[550px] items-center justify-center"
+        className="flex w-full h-[300px] md:h-[350px] lg:h-[550px] items-center justify-center"
       >
         <div data-scroll data-scroll-speed="2" className="w-[70%] md:w-[85%]">
           <img src={project?.image} alt="" className="w-full" />
         </div>
       </div>
       <div className="flex w-full flex-col gap-8">
-        <h3 className="text-xl lg:text-2xl md:text-3xl flex items-start text-text_dark_1 flex-col gap-4 justify-between font-portfolio_bold">
+        <h3 className="text-xl lg:text-2xl flex items-start text-text_dark_1 flex-col gap-4 justify-between font-portfolio_bold">
           <span
             data-scroll
             data-scroll-speed="2"
