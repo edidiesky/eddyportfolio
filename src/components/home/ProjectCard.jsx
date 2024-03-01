@@ -10,6 +10,7 @@ const ProjectCard = ({
   tab,
   setTab,
   setMousePosition,
+  mouseposition,
 }) => {
   const handleMouseEnter = (e) => {
     setMousePosition({
@@ -26,9 +27,10 @@ const ProjectCard = ({
   return (
     <div className="w-full">
       <div
-        onMouseMove={handleMouseEnter}
+        onMouseOver={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         key={index}
-        className="w-100 group flex items-center relative flex-col gap-12"
+        className="w-full group flex items-center relative flex-col gap-12"
       >
         <div
           data-scroll

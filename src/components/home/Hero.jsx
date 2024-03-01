@@ -6,7 +6,6 @@ import Arrow from "../../assets/svg/arrow";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-// import picture1 from "../../../public/favourite/profile_6.JPG";
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -174,7 +173,7 @@ const Hero = () => {
               <div className="w-full h-[300px] md:h-[580px]">
                 <img
                   // ref={imageRef}
-                  src={"../../../public/favourite/profile_3.JPG"}
+                  src={"./profile_3.JPG"}
                   alt=""
                   className="w-full h-full object-cover"
                 />

@@ -7,7 +7,7 @@ import { projectdata } from "../../data/projectdata";
 import ProjectCard from "./ProjectCard";
 import Mouse from "../common/Mouse";
 
-const WorkList = ({ setMousePosition, mouseposition }) => {
+const WorkList = ({ setMousePosition }) => {
   const ref = useRef([]);
   const mouseRef = useRef(null);
   const headerref = useRef([]);
@@ -97,7 +97,6 @@ const WorkList = ({ setMousePosition, mouseposition }) => {
         data-scroll
         className="py-12 w-full"
       >
-        <Mouse mouseposition={mouseposition} />
         <div className="w-full px-8 m-auto max-w-custom flex flex-col gap-16">
           <div className="text-sm md:text-lg text-text_dark_1 font-portfolio_bold w-full justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.3)] font-normal uppercase">
             <span ref={adHeaderdRefs}>02/</span>

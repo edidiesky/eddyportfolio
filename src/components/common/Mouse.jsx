@@ -2,45 +2,45 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import useMouse from "../../utils/useMouse";
 const Mouse = ({ mouseposition }) => {
-  const { x, y } = useMouse();
   const mouseRef = useRef(null);
+  const size = mouseposition.active ? 60 : 10;
+  useEffect(() => {
+    let mousePositionX = gsap.quickTo(mouseRef.current, "left", {
+      duration: 0.8,
+      ease: "power3.out",
+    });
+
+    let mousePositionY = gsap.quickTo(mouseRef.current, "top", {
+      duration: 0.8,
+      ease: "power3.out",
+    });
+    const handlePosition = (e) => {
+      const { pageX, pageY } = e;
+
+      mousePositionX(pageX - size);
+      mousePositionY(pageY - size);
+    };
+
+    window.addEventListener("mousemove", handlePosition);
+    return () => {
+      window.removeEventListener("mousemove", handlePosition);
+    };
+  }, []);
   return (
     <span>
       <motion.div
-        style={{
-          left: x,
-          top: y,
-        }}
-
-        // initial={{
-        //   scale: 0,
-        //   opacity: 0,
-        // }}
-        animate={
-          mouseposition?.active
-            ? {
-                sacle: 1,
-                opacity: 1,
-                // left: x,
-                // top: y,
-              }
-            : {
-                scale: 0,
-                opacity: 0,
-              }
-        }
-        transition={{ type: "tween", ease: [0.7, 0, 0.24, 1], duration: 1 }}
-        className="absolute opacity-0 scale-0 cursor-pointer h-[120px] w-[120px] top-[50%] z-40 left-[50%] bg-[#988871] md:flex hidden items-center justify-center rounded-full"
+        transition={{ type: "tween", ease: "backOut", duration: 1 }}
+        ref={mouseRef}
+        className="absolute cursor-pointer top-[50%] z-40 left-[50%] bg-[#988871] md:flex hidden items-center justify-center rounded-full"
       >
-        <Link
+        {/* <Link
+          // style={{ pointerEvents: "visible" }}
           // to={`${project?.website}`}
-          target="_blank"
           className="text-text_dark_1 text-xl font-medium"
         >
           View
-        </Link>
+        </Link> */}
       </motion.div>
     </span>
   );

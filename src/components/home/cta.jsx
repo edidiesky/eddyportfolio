@@ -5,8 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
-// import picture1 from "../../../public/profile_2.jpg";
-
 const Cta = () => {
   const refs = useRef([]);
   refs.current = [];
@@ -134,7 +132,7 @@ const Cta = () => {
                   className="w-[100%] h-[320px] md:h-[250px]"
                 >
                   <img
-                    src={"/public/favourite/profile_6.jpg"}
+                    src={"./favourite/profile_6.jpg"}
                     alt=""
                     className="w-full h-full object-cover"
                   />
