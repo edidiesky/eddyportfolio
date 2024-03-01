@@ -28,7 +28,8 @@ const WorkList = ({ setMousePosition }) => {
           opacity: 1,
           stagger: 0.1,
           // delay:1,
-          duration: 0.9,
+          ease:'power3.out',
+          duration:1.3,
           scrollTrigger: {
             trigger: el,
           },

@@ -22,13 +22,13 @@ const Cta = () => {
       const textrefelement_1 = text?.words;
       const textrefelement_2 = text?.words;
       gsap.fromTo(
-        index === 1 ? textrefelement_1 : textrefelement_2,
-        { y: 60, opacity: 0 },
+        text?.words,
+        { y: 38, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           stagger: 0.05,
-          duration: 2,
+          duration: 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: text?.words,
@@ -46,8 +46,8 @@ const Cta = () => {
         {
           opacity: 1,
           y: 0,
-          stagger: 0.1,
-          duration: 2,
+          stagger: 0.09,
+          duration: 1,
           ease: "power3.out",
 
           scrollTrigger: {

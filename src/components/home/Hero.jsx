@@ -15,120 +15,10 @@ const Hero = () => {
   const heroTextRef_2 = useRef(null);
   const heroTextRef_3 = useRef(null);
   const imageRef = useRef(null);
-  // useLayoutEffect(() => {
-  //   // const text = new SplitType(".titleRef");
-
-  //   const text1 = new SplitType(titleRef?.current);
-  //   const text_1 = new SplitType(heroTextRef_1?.current);
-  //   const description = new SplitType(descriptionRef?.current);
-  //   const text2 = new SplitType(heroTextRef_2?.current);
-  //   const text3 = new SplitType(heroTextRef_3?.current);
-  //   const textrefelement_1 = text_1?.words;
-  //   const description_1 = description?.words;
-  //   const textrefelement_2 = text2?.chars;
-  //   const textrefelement_3 = text3?.words;
-  //   gsap
-  //     .timeline()
-  // .to(".pre_loader", {
-  //   duration: 3,
-  //   ease: "power4.out",
-  // })
-  // .to(
-  //   ".pre_loader",
-  //   {
-  //     top: "-160%",
-  //     duration: 0.6,
-  //     ease: "power3.out",
-  //   },
-  //   4.6
-  // )
-  //     .fromTo(
-  //       text1?.chars,
-  //       {
-  //         y: 100,
-  //         opacity: 0,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         stagger: 0.12,
-  //         duration: 1.6,
-  //         ease: "power3.out",
-  //       },
-  //       5
-  //     )
-  //     // description
-  //     .fromTo(
-  //       textrefelement_3,
-  //       {
-  //         y: 100,
-  //         opacity: 0,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         stagger: 0.05,
-  //         duration: 1,
-  //         ease: "power4.out",
-  //       },
-  //       7
-  //     )
-  //     .fromTo(
-  //       description_1,
-  //       {
-  //         y: 100,
-  //         opacity: 0,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         stagger: 0.05,
-  //         duration: 2,
-  //         delay:1,
-  //         ease: "power3.out",
-  //       },
-  //       7
-  //     )
-  //     .fromTo(
-  //       imageRef?.current,
-  //       { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", opacity: 0 },
-  //       {
-  //         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-  //         opacity: 1,
-  //         duration: 1.4,
-  //       },
-  //       7
-  //     );
-
-  //   gsap.fromTo(
-  //     textrefelement_1,
-  //     { y: 60, opacity: 0 },
-  //     {
-  //       y: 0,
-  //       opacity: 1,
-  //       stagger: 0.05,
-  //       duration: 1,
-  //       scrollTrigger: {
-  //         trigger: textrefelement_1,
-  //       },
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     textrefelement_2,
-  //     { y: 100, opacity: 0 },
-  //     {
-  //       y: 0,
-  //       opacity: 1,
-  //       stagger: 0.05,
-  //       duration: .8,
-  //       scrollTrigger: {
-  //         trigger: textrefelement_2,
-  //       },
-  //     }
-  //   );
-  // }, []);
-
   useEffect(() => {
+    const text1 = new SplitType(".titleRef");
+    const textrefelement_1 = new SplitType(".hero_text_2");
+    const textrefelement = new SplitType(".hero_text_3");
     gsap
       .timeline()
       .to(".pre_loader", {
@@ -153,7 +43,6 @@ const Hero = () => {
         },
         4.2
       )
-
       .to(
         ".revealer_2",
         {
@@ -173,6 +62,26 @@ const Hero = () => {
         5
       )
       .to(
+        ".revealer_1",
+        {
+          top: "100%",
+          height: "100%",
+          ease: "power3.inOut",
+          duration: 1.2,
+        },
+        6
+      )
+      .to(
+        ".revealer_2",
+        {
+          height: "100%",
+          top: "100%",
+          duration: 0.6,
+          ease: "power3.out",
+        },
+        6.09
+      )
+      .to(
         ".pre_loader",
         {
           scale: 1.5,
@@ -181,33 +90,72 @@ const Hero = () => {
           duration: 2,
           ease: "power3.out",
         },
-        6
+        7
+      )
+      .fromTo(
+        text1?.chars,
+        {
+          y: 150,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.08,
+          duration: 1.3,
+          ease: "power4.inOut",
+        },
+        7.2
+      )
+      .fromTo(
+        imageRef?.current,
+        { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", opacity: 0 },
+        {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          opacity: 1,
+          duration: 2,
+        },
+        7.6
       );
-    // .to(
-    //   ".revealer_1",
-    //   {
-    //     top: "100%",
-    //     height: "100%",
-    //     ease: "power3.inOut",
-    //     duration: 1.2,
-    //   },
-    //   5.2
-    // )
-    // .to(
-    //   ".pre_loader",
-    //   {
-    //     height: "100%",
-    //     top: "100%",
-    //     duration: 0.6,
-    //     ease: "power3.out",
-    //   },
-    //   5.3
-    // );
+
+    gsap.fromTo(
+      textrefelement_1?.words,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.06,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textrefelement_1?.words,
+        },
+      }
+    );
+
+     gsap.fromTo(
+       textrefelement?.chars,
+       { y: 140, opacity: 0 },
+       {
+         y: 0,
+         opacity: 1,
+         stagger: 0.08,
+         duration: 1.5,
+         ease: "power4.inOut",
+         scrollTrigger: {
+           trigger: textrefelement?.chars,
+         },
+       }
+     );
   }, []);
+
   return (
     <>
-      <div data-scroll className="py-20 pb-32 ">
-        <div className="w-full md:w-[800px] mx-auto px-4 md:px-8 max-w-custom_1">
+      <div
+        data-scroll
+        className="min-h-[100vh] py-20 flex items-center justify-center"
+      >
+        <div className="w-full md:w-[850px] mx-auto px-2 max-w-custom_1">
           <div className="flex flex-col mx-auto justify-between gap-y-16 gap-x-20 w-[90%]">
             <div className="flex w-full flex-col gap-16">
               <h1
@@ -215,26 +163,15 @@ const Hero = () => {
                 data-scroll-speed="2"
                 className="font-normal text-text_dark_1 uppercase text-5xl sm:text-7xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
               >
-                <span className="overflow-hidden">
-                  <span className="titleRef block" ref={titleRef}>
-                    Creative
-                  </span>
-                </span>
-                <span className="overflow-hidden">
-                  <span className="titleRef" ref={titleRef}>
-                    FULLSTACK
-                  </span>
-                </span>{" "}
-                <span className="overflow-hidden">
-                  <span className="titleRef block" ref={titleRef}>
-                    Developer
-                  </span>
-                </span>
+                <span className="titleRef">Creative</span>
+                <span className="titleRef">FULLSTACK</span>
+                <span className="titleRef">Developer</span>
               </h1>
             </div>
             <div className="w-full">
-              <div ref={imageRef} className="w-full h-[300px] md:h-[460px]">
+              <div className="w-full h-[300px] md:h-[480px]">
                 <img
+                  ref={imageRef}
                   src={"../../../public/favourite/profile_4.JPG"}
                   alt=""
                   className="w-full h-full object-cover"
@@ -242,28 +179,18 @@ const Hero = () => {
               </div>
             </div>
 
-            <h4
-              ref={heroTextRef_2}
-              className="text-xl lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
-            >
+            <h4 className="text-xl hero_text_2 lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold">
               I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND
               INDUSTRIES
             </h4>
             <h1
               data-scroll
               data-scroll-speed="2"
-              className="font-normal text-text_dark_1 uppercase text-4xl sm:text-8xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+              className="hero_text_3 font-normal text-text_dark_1 uppercase text-4xl sm:text-8xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
             >
-              <span className="overflow-hidden">
-                <span className="titleRef block" ref={titleRef}>
-                  BASED IN
-                </span>
-              </span>{" "}
-              <span className="overflow-hidden">
-                <span className="titleRef block" ref={titleRef}>
-                  NIGERIA
-                </span>
-              </span>
+              BASED IN
+              <br />
+              NIGERIA
             </h1>
           </div>
         </div>
