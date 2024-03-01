@@ -29,19 +29,19 @@ const Hero = () => {
   //   const textrefelement_3 = text3?.words;
   //   gsap
   //     .timeline()
-  //     .to(".pre_loader", {
-  //       duration: 3,
-  //       ease: "power4.out",
-  //     })
-  //     .to(
-  //       ".pre_loader",
-  //       {
-  //         top: "-160%",
-  //         duration: 0.6,
-  //         ease: "power3.out",
-  //       },
-  //       4.6
-  //     )
+  // .to(".pre_loader", {
+  //   duration: 3,
+  //   ease: "power4.out",
+  // })
+  // .to(
+  //   ".pre_loader",
+  //   {
+  //     top: "-160%",
+  //     duration: 0.6,
+  //     ease: "power3.out",
+  //   },
+  //   4.6
+  // )
   //     .fromTo(
   //       text1?.chars,
   //       {
@@ -128,6 +128,82 @@ const Hero = () => {
   //   );
   // }, []);
 
+  useEffect(() => {
+    gsap
+      .timeline()
+      .to(".pre_loader", {
+        duration: 3,
+        ease: "power4.out",
+      })
+      .to(
+        ".loader_text",
+        {
+          y: -140,
+          duration: 1.3,
+          ease: "power3.out",
+        },
+        4
+      )
+      .to(
+        ".loader_text",
+        {
+          opacity: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        },
+        4.2
+      )
+
+      .to(
+        ".revealer_2",
+        {
+          height: 0,
+          ease: "power3.inOut",
+          duration: 1.5,
+        },
+        4.6
+      )
+      .to(
+        ".revealer_1",
+        {
+          height: 0,
+          ease: "power3.inOut",
+          duration: 1,
+        },
+        5
+      )
+      .to(
+        ".pre_loader",
+        {
+          scale: 1.5,
+          opacity: 0,
+          display: "none",
+          duration: 2,
+          ease: "power3.out",
+        },
+        6
+      );
+    // .to(
+    //   ".revealer_1",
+    //   {
+    //     top: "100%",
+    //     height: "100%",
+    //     ease: "power3.inOut",
+    //     duration: 1.2,
+    //   },
+    //   5.2
+    // )
+    // .to(
+    //   ".pre_loader",
+    //   {
+    //     height: "100%",
+    //     top: "100%",
+    //     duration: 0.6,
+    //     ease: "power3.out",
+    //   },
+    //   5.3
+    // );
+  }, []);
   return (
     <>
       <div data-scroll className="py-20 pb-32 ">
@@ -248,13 +324,13 @@ export default Hero;
 //         <Arrow />
 //       </span>
 
-      // <h4
-      //   ref={heroTextRef_2}
-      //   style={{ fontKerning: "none" }}
-      //   className="text-lg lg:text-xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
-      // >
-      //   I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
-      // </h4>
+// <h4
+//   ref={heroTextRef_2}
+//   style={{ fontKerning: "none" }}
+//   className="text-lg lg:text-xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
+// >
+//   I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
+// </h4>
 //     </div>
 //     <h1
 //       data-scroll

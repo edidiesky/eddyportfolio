@@ -170,7 +170,7 @@ const Skills = () => {
           <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-4">
             <h4
               ref={addtoRefs}
-              className="about_text1 w-full text-start md:text-4xl lg:text-9xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+              className="about_text1 w-full text-start text-5xl lg:text-9xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               SERVICES
             </h4>
@@ -188,7 +188,7 @@ const Skills = () => {
               })}
             </div>
             <div className="w-full md:w-[700px] mt-12">
-              <div className="w-full px-8 max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
+              <div className="w-full  md:px-8 max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
                 <div className="w-full">
                   <h3 className="text-sm md:text-lg mt-20 font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center font-normal uppercase">
                     <span ref={adHeaderdRefs}>04/</span>
@@ -197,18 +197,15 @@ const Skills = () => {
                 <div className="w-full flex flex-col gap-4">
                   <h4
                     ref={addtoRefs}
-                    className="about_text1 w-full text-start text-3xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+                    className="about_text1 w-full text-start text-5xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
                   >
                     SKILLS
                   </h4>
-                  <div className="w-full flex flex-col">
+                  <div className="w-full flex items-center flex-wrap gap-4">
                     {skillslist?.map((x, index) => {
                       return (
-                        <div className="w-full border-t py-4 border-[rgba(0,0,0,.4)]">
-                          <div className="header_top text-xl flex items-center justify-between font-portfolio_bold1 text-text_dark_1">
-                            <span>0{index + 1}</span>
-                            <span> {x}</span>
-                          </div>
+                        <div className="py-3 px-8 border rounded-[20px] border-[rgba(0,0,0,.6)]">
+                          <span> {x}</span>
                         </div>
                       );
                     })}

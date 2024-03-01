@@ -28,7 +28,7 @@ const Home = () => {
   });
   return (
     <>
-      {/* <Preloader /> */}
+      <Preloader />
       <Mouse mouseposition={mouseposition} />
       <SmoothScroll>
         <HomeStyles
