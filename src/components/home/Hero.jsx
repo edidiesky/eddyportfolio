@@ -165,6 +165,14 @@ const Hero = () => {
                 />
               </div>
             </div>
+
+            <h4
+              ref={heroTextRef_2}
+              className="text-xl lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
+            >
+              I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND
+              INDUSTRIES
+            </h4>
             <h1
               data-scroll
               data-scroll-speed="2"
@@ -189,9 +197,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
 
 // <div className="w-full m-auto px-4 md:px-8 max-w-custom_1">
 //   <div className="grid grid-cols-1 md:grid-cols-1 justify-between gap-y-16 gap-x-20 w-[90%] lg:w-[1000px]">
@@ -243,13 +248,13 @@ export default Hero;
 //         <Arrow />
 //       </span>
 
-//       <h4
-//         ref={heroTextRef_2}
-//         style={{ fontKerning: "none" }}
-//         className="text-lg lg:text-xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
-//       >
-//         I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
-//       </h4>
+      // <h4
+      //   ref={heroTextRef_2}
+      //   style={{ fontKerning: "none" }}
+      //   className="text-lg lg:text-xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold"
+      // >
+      //   I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
+      // </h4>
 //     </div>
 //     <h1
 //       data-scroll
