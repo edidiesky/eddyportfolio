@@ -51,6 +51,7 @@ const Home = () => {
 
 const HomeStyles = styled.div`
   width: 100%;
+  overflow: hidden;
   .case {
     display: block;
 

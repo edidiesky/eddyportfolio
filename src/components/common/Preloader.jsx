@@ -55,7 +55,7 @@ const Preloader = () => {
           },
         }}
         // style={{letterSpacing:"1px"}}
-        className="text-xl md:text-2xl overflow-hidden loader_text relative text-white font-extrabold uppercase font-portfolio_bold"
+        className="text-xl md:text-2xl overflow-hidden loader_text relative text-white font-normal uppercase font-portfolio_bold"
       >
         <motion.span
           initial={{ opacity: 0 }}

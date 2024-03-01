@@ -61,26 +61,26 @@ const Hero = () => {
         },
         5
       )
-      .to(
-        ".revealer_1",
-        {
-          top: "100%",
-          height: "100%",
-          ease: "power3.inOut",
-          duration: 1.2,
-        },
-        6
-      )
-      .to(
-        ".revealer_2",
-        {
-          height: "100%",
-          top: "100%",
-          duration: 0.6,
-          ease: "power3.out",
-        },
-        6.09
-      )
+      // .to(
+      //   ".revealer_1",
+      //   {
+      //     top: "100%",
+      //     height: "100%",
+      //     ease: "power3.inOut",
+      //     duration: 1.2,
+      //   },
+      //   6
+      // )
+      // .to(
+      //   ".revealer_2",
+      //   {
+      //     height: "100%",
+      //     top: "100%",
+      //     duration: 0.6,
+      //     ease: "power3.out",
+      //   },
+      //   6.09
+      // )
       .to(
         ".pre_loader",
         {
@@ -90,7 +90,7 @@ const Hero = () => {
           duration: 2,
           ease: "power3.out",
         },
-        7
+        6.6
       )
       .fromTo(
         text1?.chars,
@@ -161,11 +161,13 @@ const Hero = () => {
               <h1
                 data-scroll
                 data-scroll-speed="2"
-                className="font-normal text-text_dark_1 uppercase text-5xl sm:text-7xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+                className="font-normal titleRef text-text_dark_1 uppercase text-[3rem] sm:text-[7rem] md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
               >
-                <span className="titleRef">Creative</span>
-                <span className="titleRef">FULLSTACK</span>
-                <span className="titleRef">Developer</span>
+                Creative
+                <br />
+                FULLSTACK
+                <br />
+                Developer
               </h1>
             </div>
             <div className="w-full">
