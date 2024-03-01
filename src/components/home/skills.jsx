@@ -1,8 +1,9 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import { BiPlus } from "react-icons/bi";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AccordionIndex from "./accordion";
 gsap.registerPlugin(ScrollTrigger);
 
 // import picture1 from "../../../public/profile_2.jpg";
@@ -22,24 +23,29 @@ const skillslist = [
 
 const serviceslist = [
   {
+    id: 1,
     title: "Front End Development",
-    description: "",
+    description: "I plan build, test, and maintain scalable web applications",
   },
   {
+    id: 2,
     title: "Backend Development",
-    description: "",
+    description: "I plan build, test, and maintain scalable web applications ",
   },
   {
+    id: 3,
     title: "Creative Implementation",
-    description: "",
+    description: "I plan build, test, and maintain scalable web applications",
   },
 
   {
+    id: 4,
     title: "Unit Testing",
-    description: "",
+    description: "I plan build, test, and maintain scalable web applications",
   },
 ];
 const Skills = () => {
+  const [expanded, setExpanded] = useState(0);
   const refs = useRef([]);
   refs.current = [];
 
@@ -171,15 +177,13 @@ const Skills = () => {
             <div className="w-full flex flex-col">
               {serviceslist?.map((x, index) => {
                 return (
-                  <div className="w-full border-t py-12 border-[rgba(0,0,0,.4)]">
-                    <div className="header_top text-2xl flex items-center justify-between font-portfolio_bold1 text-text_dark_1">
-                      <span>0{index + 1}</span>
-                      <span> {x?.title}</span>
-                      <span>
-                        <BiPlus />{" "}
-                      </span>
-                    </div>
-                  </div>
+                  <AccordionIndex
+                    x={x}
+                    key={index}
+                    index={index}
+                    expanded={expanded}
+                    setExpanded={setExpanded}
+                  />
                 );
               })}
             </div>

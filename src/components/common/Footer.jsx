@@ -60,14 +60,15 @@ const Footer = () => {
 
           <h2
             ref={aboutTextRef_1}
-            className="text-5xl text-center lg:text-9xl w-full leading-[1.4] pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-[3.6rem] text-start sm:text-center sm:text-6xl lg:text-9xl w-full leading-[1.4] pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
-            HELLO@ VICTORESSIEN.COM
+            <span> HELLO@VICTOR</span>
+            <span> ESSIEN.COM</span>
           </h2>
         </div>
 
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
-          <h3 className="text-lg md:text-xl flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
+          <h3 className="text-xl md:text-2xl flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
             <span>
               Victor Essien
               <span className="block">Creative Developer</span>
