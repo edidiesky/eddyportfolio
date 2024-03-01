@@ -4,10 +4,10 @@ const useMouse = () => {
   const [mouseposition, setMousePosition] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const handleUpdateMousePosition = (e) => {
-      const { clientX, clientY } = e;
+      const { pageX, pageY } = e;
       const rect = e.target.getBoundingClientRect();
-      const x = clientX - rect.width/ 2;
-      const y = clientY - rect.height/ 2;
+      const x = pageX - 60;
+      const y = pageY - 60;
 
       setMousePosition({ x: x, y: y });
     };

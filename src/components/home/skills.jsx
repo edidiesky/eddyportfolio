@@ -9,11 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 // import picture1 from "../../../public/profile_2.jpg";
 const skillslist = [
   "TYPESCRIPT",
+  "PRISMA",
   "NODEJS",
   "EXPRESSJS",
   "REACT",
+  "REDUX",
+  "CONTEXT-API",
   "TAILWIND.CSS",
-  "SOLANA",
+  // "SOLANA",
   "HTML",
   "NEXTJS",
   "GIT",
@@ -218,7 +221,7 @@ const Skills = () => {
                   <div className="w-full flex items-center flex-wrap gap-4">
                     {skillslist?.map((x, index) => {
                       return (
-                        <div className="py-3 px-8 border rounded-[20px] border-[rgba(0,0,0,.6)]">
+                        <div className="py-3 px-8 border rounded-[20px] font-portfolio_bold1 border-[rgba(0,0,0,.6)]">
                           <span> {x}</span>
                         </div>
                       );

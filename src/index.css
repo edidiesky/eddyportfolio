@@ -42,11 +42,11 @@
 }
 .titleRef .line {
   overflow: hidden;
-  line-height: 1;
+  line-height: .9;
 }
 .titleRef .word {
   overflow: hidden;
-  line-height: 1;
+  line-height: .9;
 }
 h3 .line {
   overflow: hidden;
@@ -63,9 +63,16 @@ h1 .line {
   line-height: 1 !important;
 }
 
-h4 .line {
+.about_text1 .line {
   overflow: hidden;
-  line-height: 1.4 !important;
+  line-height: 1.5 !important;
+}
+.about_text1  {
+  overflow: hidden;
+}
+.line {
+  overflow: hidden;
+
 }
 
 h2 .line {

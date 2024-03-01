@@ -40,19 +40,20 @@ const Cta = () => {
     descriptionrefs2.current.forEach((ref) => {
       const text = new SplitType(ref);
       const textrefelement_1 = text?.lines;
+      // gsap.set(textrefelement_1, { y: 40 });
       gsap.fromTo(
         textrefelement_1,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 35 },
         {
           opacity: 1,
           y: 0,
-          stagger: 0.09,
-          duration: 1,
-          ease: "power3.out",
+          stagger: 0.06,
+          duration: 1.5,
+          ease: "power4.out",
 
           scrollTrigger: {
             trigger: textrefelement_1,
-            start: "top bottom-=100",
+            start: "top bottom-=200",
           },
         }
       );
@@ -130,7 +131,7 @@ const Cta = () => {
               <div className="w-full flex-col gap-12">
                 <div
                   // ref={imageRef}
-                  className="w-[100%] h-[320px] md:h-[220px]"
+                  className="w-[100%] h-[320px] md:h-[250px]"
                 >
                   <img
                     src={"/public/favourite/profile_6.jpg"}

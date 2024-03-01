@@ -41,7 +41,7 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        text_dark_1: "black",
+        text_dark_1: "#000000",
         dark_grey: "#a49e99",
         light_grey: "rgb(225, 223, 221)",
         green_1: "#008A69",

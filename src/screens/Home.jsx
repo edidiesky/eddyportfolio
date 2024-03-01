@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <Preloader />
-      <Mouse mouseposition={mouseposition} />
+      
       <SmoothScroll>
         <HomeStyles
           ref={Homeref}
@@ -40,8 +40,8 @@ const Home = () => {
           <Header />
           <Hero />
           <Cta />
-          <WorkList setMousePosition={setMousePosition} />
-          <Skills/>
+          <WorkList setMousePosition={setMousePosition} mouseposition={mouseposition} />
+          <Skills />
           <Footer />
         </HomeStyles>
       </SmoothScroll>

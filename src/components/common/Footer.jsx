@@ -13,12 +13,12 @@ const Footer = () => {
     const textrefelement_1 = text?.chars;
     gsap.fromTo(
       textrefelement_1,
-      { y: 50, opacity: 0 },
+      { y: 190, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.05,
-        duration: 0.4,
+        stagger: 0.07,
+        duration: .8,
         scrollTrigger: {
           trigger: textrefelement_1,
         },
@@ -29,13 +29,14 @@ const Footer = () => {
       const textrefelement_1 = text?.words;
       gsap.fromTo(
         textrefelement_1,
-        { y: 100, opacity: 0 },
         {
-          y: 0,
+          opacity: 0,
+        },
+        {
           opacity: 1,
-          stagger: 0.08,
-          // delay:1,
+          stagger: 0.06,
           duration: 1,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: textrefelement_1,
           },

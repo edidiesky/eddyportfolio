@@ -158,7 +158,7 @@ const Hero = () => {
         <div className="w-full md:w-[850px] mx-auto px-2 max-w-custom_1">
           <div className="flex flex-col mx-auto justify-between gap-y-16 gap-x-20 w-[90%]">
             <div className="flex w-full flex-col gap-16">
-              <h1
+              <span
                 data-scroll
                 data-scroll-speed="2"
                 className="font-normal titleRef text-text_dark_1 uppercase text-[3rem] sm:text-[7rem] md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
@@ -168,13 +168,13 @@ const Hero = () => {
                 FULLSTACK
                 <br />
                 Developer
-              </h1>
+              </span>
             </div>
             <div className="w-full">
-              <div className="w-full h-[300px] md:h-[480px]">
+              <div className="w-full h-[300px] md:h-[580px]">
                 <img
-                  ref={imageRef}
-                  src={"../../../public/favourite/profile_4.JPG"}
+                  // ref={imageRef}
+                  src={"../../../public/favourite/profile_3.JPG"}
                   alt=""
                   className="w-full h-full object-cover"
                 />
