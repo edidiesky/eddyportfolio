@@ -6,7 +6,6 @@ import Arrow from "../../assets/svg/arrow";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Hero = () => {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -114,7 +113,7 @@ const Hero = () => {
           opacity: 1,
           duration: 2,
         },
-        7.6
+        8
       );
 
     gsap.fromTo(
@@ -132,20 +131,20 @@ const Hero = () => {
       }
     );
 
-     gsap.fromTo(
-       textrefelement?.chars,
-       { y: 140, opacity: 0 },
-       {
-         y: 0,
-         opacity: 1,
-         stagger: 0.08,
-         duration: 1.5,
-         ease: "power4.inOut",
-         scrollTrigger: {
-           trigger: textrefelement?.chars,
-         },
-       }
-     );
+    gsap.fromTo(
+      textrefelement?.chars,
+      { y: 140, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.08,
+        duration: 1.5,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: textrefelement?.chars,
+        },
+      }
+    );
   }, []);
 
   return (
@@ -172,7 +171,7 @@ const Hero = () => {
             <div className="w-full">
               <div className="w-full h-[300px] md:h-[580px]">
                 <img
-                  // ref={imageRef}
+                  ref={imageRef}
                   src={"./profile_3.JPG"}
                   alt=""
                   className="w-full h-full object-cover"

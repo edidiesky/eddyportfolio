@@ -71,7 +71,6 @@ export const projectdata = [
   {
     year: 2024,
     id: 4,
-    year: 2024,
     text: "ONE:NULL AGENCY",
     subtext: "Agency website",
     color: "#DCD0C2",
@@ -130,7 +129,7 @@ export const projectdata = [
     text: "Notion",
     subtext: "Notion",
     color: "#626D6E",
-    image: "/fiverr_screen.png",
+    image: "/notion_1.jpg",
     github: "https://github.com/edidiesky/fiverrclone",
     website: "",
     features: [
@@ -172,7 +171,7 @@ export const projectdata = [
     text: "Messenging App",
     subtext: "Messenging App",
     color: "#E49C4A",
-    image: "/fiverr_screen.png",
+    image: "/messenger_1.jpg",
     github: "https://github.com/edidiesky/fiverrclone",
     website: "",
     features: [
@@ -403,7 +402,7 @@ export const projectdata = [
     text: "TrueFoods",
     subtext: "TrueFoods",
     color: "#E49C4A",
-    image: "/fiverr_screen.png",
+    image: "/truefoods.jpg",
     github: "https://github.com/edidiesky/fiverrclone",
     website: "",
     features: [

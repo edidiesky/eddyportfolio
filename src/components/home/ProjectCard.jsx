@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
 
 const ProjectCard = ({
   project,
@@ -25,9 +24,10 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="w-full">
+    <div className="card w-full relative">
+   
       <div
-        onMouseOver={handleMouseEnter}
+        onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         key={index}
         className="w-full group flex items-center relative flex-col gap-12"

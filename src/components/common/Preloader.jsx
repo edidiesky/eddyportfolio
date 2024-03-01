@@ -28,7 +28,6 @@ const Preloader = () => {
     return () => clearTimeout(timer);
   }, [index]);
 
-
   return (
     <PreloaderStyles className="flex items-center pre_loader justify-center">
       <div
@@ -48,11 +47,11 @@ const Preloader = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: {
-            duration: 0.4,
-            delay: index * 0.8,
-            ease: [0.76, 0, 0.24, 1],
-          },
+        }}
+        transition={{
+          duration: 1,
+          delay: index * 0.8,
+          ease: [0.76, 0, 0.24, 1],
         }}
         // style={{letterSpacing:"1px"}}
         className="text-xl md:text-2xl overflow-hidden loader_text relative text-white font-normal uppercase font-portfolio_bold"

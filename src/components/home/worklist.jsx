@@ -67,33 +67,11 @@ const WorkList = ({ setMousePosition }) => {
     }
   };
 
-  useEffect(() => {
-    let mousePositionX = gsap.quickTo(mouseRef.current, "left", {
-      duration: 0.8,
-      ease: "power3.out",
-    });
-
-    let mousePositionY = gsap.quickTo(mouseRef.current, "top", {
-      duration: 0.8,
-      ease: "power3.out",
-    });
-    const handlePosition = (e) => {
-      const { pageX, pageY } = e;
-
-      mousePositionX(pageX - 60);
-      mousePositionY(pageY - 60);
-    };
-
-    window.addEventListener("mousemove", handlePosition);
-    return () => {
-      window.removeEventListener("mousemove", handlePosition);
-    };
-  }, []);
 
   return (
     <>
       <div
-        onMouseLeave={() => setMousePosition({ active: false })}
+       
         data-scroll
         className="py-12 w-full"
       >

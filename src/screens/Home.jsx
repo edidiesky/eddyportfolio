@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import { Hero } from "../components/home";
 import Footer from "../components/common/Footer";
@@ -27,25 +28,28 @@ const Home = () => {
     index: 0,
   });
   return (
-    <>
+    <div className="w-full overflow-hidden">
       <Preloader />
+      {/* <AnimatePresence>
+        {mouseposition?.active && <Mouse mouseposition={mouseposition} />}
+      </AnimatePresence> */}
+
       <Mouse mouseposition={mouseposition} />
-      <SmoothScroll>
-        <HomeStyles
-          ref={Homeref}
-          style={{ perspective: "1px", minHeight: "100vh" }}
-          data-scroll-section
-          className="w-full min-h-full bg-[#E1DFDD] overflow-hidden"
-        >
-          <Header />
-          <Hero />
-          <Cta />
-          <WorkList setMousePosition={setMousePosition} />
-          <Skills />
-          <Footer />
-        </HomeStyles>
-      </SmoothScroll>
-    </>
+
+      <HomeStyles
+        ref={Homeref}
+        style={{ perspective: "1px", minHeight: "100vh" }}
+        data-scroll-section
+        className="w-full min-h-full bg-[#E1DFDD] overflow-hidden"
+      >
+        <Header />
+        <Hero />
+        <Cta />
+        <WorkList setMousePosition={setMousePosition} />
+        <Skills />
+        <Footer />
+      </HomeStyles>
+    </div>
   );
 };
 

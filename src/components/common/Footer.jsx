@@ -61,7 +61,7 @@ const Footer = () => {
 
           <h2
             ref={aboutTextRef_1}
-            className="text-[3rem] text-start sm:text-center sm:text-6xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-[3rem] text-start sm:text-6xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
             <span> HELLO@VICTOR</span>
             <span> ESSIEN.COM</span>

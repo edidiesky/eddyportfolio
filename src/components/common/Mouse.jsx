@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 const Mouse = ({ mouseposition }) => {
   const mouseRef = useRef(null);
-  const size = mouseposition.active ? 60 : 10;
+  const active = mouseposition?.active;
   useEffect(() => {
     let mousePositionX = gsap.quickTo(mouseRef.current, "left", {
       duration: 0.8,
@@ -18,8 +18,8 @@ const Mouse = ({ mouseposition }) => {
     const handlePosition = (e) => {
       const { pageX, pageY } = e;
 
-      mousePositionX(pageX - size);
-      mousePositionY(pageY - size);
+      mousePositionX(pageX - 60);
+      mousePositionY(pageY - 60);
     };
 
     window.addEventListener("mousemove", handlePosition);
@@ -30,9 +30,20 @@ const Mouse = ({ mouseposition }) => {
   return (
     <span>
       <motion.div
+        animate={
+          active
+            ? {
+                opacity: 1,
+                scale: 0,
+              }
+            : {
+                opacity: 1,
+                scale: 1,
+              }
+        }
         transition={{ type: "tween", ease: "backOut", duration: 1 }}
         ref={mouseRef}
-        className="absolute cursor-pointer top-[50%] z-40 left-[50%] bg-[#988871] md:flex hidden items-center justify-center rounded-full"
+        className="absolute cursor-pointer h-[120px] w-[120px] top-[50%] z-40 left-[50%] bg-[#988871] md:flex hidden items-center justify-center rounded-full"
       >
         {/* <Link
           // style={{ pointerEvents: "visible" }}

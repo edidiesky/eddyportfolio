@@ -132,7 +132,7 @@ const Cta = () => {
                   className="w-[100%] h-[320px] md:h-[250px]"
                 >
                   <img
-                    src={"./favourite/profile_6.jpg"}
+                    src={"./profile_6.JPG"}
                     alt=""
                     className="w-full h-full object-cover"
                   />
