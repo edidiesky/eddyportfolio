@@ -58,6 +58,8 @@ const Skills = () => {
   descriptionrefs2.current = [];
 
   useLayoutEffect(() => {
+    const headertext_1 = new SplitType(".service_text");
+
     refs.current.forEach((ref, index) => {
       const text = new SplitType(ref);
       const textrefelement_1 = text?.words;
@@ -138,6 +140,21 @@ const Skills = () => {
         }
       );
     });
+
+    gsap.fromTo(
+      headertext_1?.chars,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 1,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: headertext_1?.chars,
+        },
+      }
+    );
   }, []);
 
   const addtoRefs = (ref) => {
@@ -167,11 +184,8 @@ const Skills = () => {
               <span ref={adHeaderdRefs}>03/</span>
             </h3>
           </div>
-          <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-4">
-            <h4
-              ref={addtoRefs}
-              className="about_text1 w-full text-start text-5xl lg:text-9xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
-            >
+          <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-20">
+            <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-7xl md:text-[7rem] leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
               SERVICES
             </h4>
             <div className="w-full flex flex-col">
@@ -197,7 +211,7 @@ const Skills = () => {
                 <div className="w-full flex flex-col gap-4">
                   <h4
                     ref={addtoRefs}
-                    className="about_text1 w-full text-start text-5xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+                    className="about_text2 w-full text-start text-5xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
                   >
                     SKILLS
                   </h4>

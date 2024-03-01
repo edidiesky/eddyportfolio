@@ -1,101 +1,7 @@
 export const projectdata = [
-  // Notion
-
-  {
-    id: 3,
-    text: "Notion",
-    subtext: "Notion",
-    color: "#626D6E",
-    image: "/fiverr_screen.png",
-    github: "https://github.com/edidiesky/fiverrclone",
-    website: "",
-    features: [
-      {
-        text: "User Authentication",
-        description:
-          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
-      },
-      {
-        text: "Payment Integration (using stripe)",
-        description:
-          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
-      },
-      {
-        text: "Admin Dashboard",
-        description:
-          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
-      },
-    ],
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Socket.io",
-      "MongoDb",
-      "Express.js",
-      "Styled-components",
-      "Zoid",
-    ],
-    roles: ["Front End Development", "Back End Development"],
-
-    title: "Redeveloping the freelancing platform, Fiverr",
-    description:
-      "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
-  },
-  // Agency
-  {
-    id: 4,
-    year: 2024,
-    text: "ONE:NULL AGENCY",
-    subtext: "Agency website",
-    color: "#DCD0C2",
-    image: "./onenull.png  ",
-    website: "https://onenull.vercel.app/",
-    github: "https://github.com/edidiesky/agency",
-    features: [
-      {
-        text: "User Authentication",
-        description:
-          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
-      },
-      {
-        text: "Payment Integration (using stripe)",
-        description:
-          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
-      },
-      {
-        text: "Admin Dashboard",
-        description:
-          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
-      },
-    ],
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Socket.io",
-      "MongoDb",
-      "Express.js",
-      "Styled-components",
-      "Zoid",
-    ],
-    roles: ["Front End Development"],
-
-    role: [
-      {
-        text: "Frontend Development",
-        subtext: [
-          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
-          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
-          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
-          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
-        ],
-      },
-    ],
-    title: "A Football Agency Concept",
-    description:
-      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
-  },
   // CAR
   {
+    year: 2022,
     id: 4,
     text: "CAR MANAGEMENT SYSTEM",
     subtext: "Vaada",
@@ -161,8 +67,107 @@ export const projectdata = [
     description:
       "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
   },
+  // Agency
+  {
+    year: 2024,
+    id: 4,
+    year: 2024,
+    text: "ONE:NULL AGENCY",
+    subtext: "Agency website",
+    color: "#DCD0C2",
+    image: "./onenull.png  ",
+    website: "https://onenull.vercel.app/",
+    github: "https://github.com/edidiesky/agency",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Development"],
+
+    role: [
+      {
+        text: "Frontend Development",
+        subtext: [
+          "Developed dynamic user interfaces using React.js, focusing on component-based architecture for reusability and modularity.",
+          "Incorporated Redux (Redux toolkit) for state management, ensuring consistent application state and efficient data flow.",
+          "Implemented responsive designs and intuitive user experiences that fit into the clone of airbnb, adhering to best UI/UX practices.",
+          " I developed a chatting system were users can chat with owners of the gigs at real time basis ",
+        ],
+      },
+    ],
+    title: "A Football Agency Concept",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Car-dealers clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Car-dealers's platform, providing users with a seamless and immersive renting experience.",
+  },
+
+  // Notion
+
+  {
+    year: 2024,
+    id: 3,
+    text: "Notion",
+    subtext: "Notion",
+    color: "#626D6E",
+    image: "/fiverr_screen.png",
+    github: "https://github.com/edidiesky/fiverrclone",
+    website: "",
+    features: [
+      {
+        text: "User Authentication",
+        description:
+          "Implemented a secure authentication system, allowing users to register, log in, and access protected endpoints. Generate authentication tokens for secure communication.",
+      },
+      {
+        text: "Payment Integration (using stripe)",
+        description:
+          "I had to integrate stripe in recieving payment from the various gigs that were being purchased by the user",
+      },
+      {
+        text: "Admin Dashboard",
+        description:
+          "Admin Dashboard was being created in order for uswer to have a view of bookings and make mangament of their bookings, profile",
+      },
+    ],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Socket.io",
+      "MongoDb",
+      "Express.js",
+      "Styled-components",
+      "Zoid",
+    ],
+    roles: ["Front End Development", "Back End Development"],
+
+    title: "Redeveloping the freelancing platform, Fiverr",
+    description:
+      "I am thrilled to share the highlights of my recent project - a Fiverr clone built from scratch using React and Node.js. Leveraging these cutting-edge technologies, I aimed to recreate the essence of Fiverr's platform, providing users with a seamless and immersive booking experience.",
+  },
   // Messenger
   {
+    year: 2023,
     id: 3,
     text: "Messenging App",
     subtext: "Messenging App",
@@ -206,6 +211,7 @@ export const projectdata = [
 
   // Weeter
   {
+    year: 2023,
     id: 1,
     text: "Weeters",
     subtext: "Weeters",
@@ -254,6 +260,7 @@ export const projectdata = [
   },
   // Airbnb
   {
+    year: 2023,
     id: 2,
     text: "Airbnb",
     subtext: "Airbnb",
@@ -323,6 +330,7 @@ export const projectdata = [
   },
   // fiverr
   {
+    year: 2023,
     id: 3,
     text: "Fiverr",
     subtext: "Fiverr",
@@ -390,6 +398,7 @@ export const projectdata = [
   },
   // True foods
   {
+    year: 2024,
     id: 3,
     text: "TrueFoods",
     subtext: "TrueFoods",

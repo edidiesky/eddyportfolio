@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -28,8 +26,8 @@ const WorkList = ({ setMousePosition }) => {
           opacity: 1,
           stagger: 0.1,
           // delay:1,
-          ease:'power3.out',
-          duration:1.3,
+          ease: "power3.out",
+          duration: 1.3,
           scrollTrigger: {
             trigger: el,
           },
@@ -94,7 +92,6 @@ const WorkList = ({ setMousePosition }) => {
   return (
     <>
       <div
-      
         // onMouseLeave={() => setMousePosition({ active: false })}
         data-scroll
         className="py-12 w-full"

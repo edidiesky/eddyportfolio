@@ -58,7 +58,7 @@ const ProjectCard = ({
             className="text-sm md:text-lg flex font-portfolio_bold1 items-center justify-between w-full"
           >
             Development
-            <span>2023</span>
+            <span>{project?.year}</span>
           </span>
         </h3>
       </div>
