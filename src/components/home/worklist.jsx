@@ -128,6 +128,14 @@ const WorkList = () => {
         animate={mouseposition?.active ? "enter" : "exit"}
         className="w-[120px] z-50 absolute h-[120px] rounded-full flex items-center justify-center text-[12px] text-white font-portfolio_bold bg-[#2e2e30]"
       ></motion.div>
+      <div
+        onMouseEnter={() =>
+          setMousePosition({
+            active: false,
+          })
+        }
+        className="absolute top-0 w-full h-full z-20"
+      ></div>
 
       <motion.div
         variants={scaleAnimations}
@@ -151,15 +159,6 @@ const WorkList = () => {
             <span ref={adHeaderdRefs}>RECENT WORKS?</span>
             <span ref={adHeaderdRefs}>PROJECTS</span>
           </div>
-
-          <div
-            onMouseEnter={() =>
-              setMousePosition({
-                active: false,
-              })
-            }
-            className="absolute top-0 w-full h-full z-20"
-          ></div>
 
           {/* <Mouse mouseposition={mouseposition} /> */}
           <div className="w-full relative pt-20 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20 lg:gap-y-52 justify-between">
