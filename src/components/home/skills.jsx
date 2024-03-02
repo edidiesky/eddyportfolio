@@ -5,8 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AccordionIndex from "./accordion";
 gsap.registerPlugin(ScrollTrigger);
-
-// import picture1 from "../../../public/profile_2.jpg";
 const skillslist = [
   "TYPESCRIPT",
   "PRISMA",
@@ -27,24 +25,27 @@ const skillslist = [
 const serviceslist = [
   {
     id: 1,
-    title: "Front End Development",
+    title: "Front End Development / engineering",
     description: "I plan build, test, and maintain scalable web applications",
   },
   {
     id: 2,
-    title: "Backend Development",
-    description: "I plan build, test, and maintain scalable web applications ",
+    title: "Backend Development /engineering",
+    description:
+      "I can build REST API for your web products at a very fast pace with testing associated. ",
   },
   {
     id: 3,
     title: "Creative Implementation",
-    description: "I plan build, test, and maintain scalable web applications",
+    description:
+      "I build layouts and interactions optimizing for performance and usabilty.",
   },
 
   {
     id: 4,
     title: "Unit Testing",
-    description: "I plan build, test, and maintain scalable web applications",
+    description:
+      "I can unit test for web applications that deals with React and Typescript",
   },
 ];
 const Skills = () => {

@@ -11,6 +11,7 @@ import { useRef } from "react";
 import Header from "../components/common/Header";
 import SmoothScroll from "../utils/smooth";
 import Skills from "../components/home/skills";
+import Banner from "../components/home/Banner";
 import Mouse from "../components/common/Mouse";
 const Home = () => {
   const Homeref = useRef(null);
@@ -30,11 +31,9 @@ const Home = () => {
   return (
     <div className="w-full overflow-hidden">
       <Preloader />
-      {/* <AnimatePresence>
-        {mouseposition?.active && <Mouse mouseposition={mouseposition} />}
-      </AnimatePresence> */}
-
-      <Mouse mouseposition={mouseposition} />
+      {/* <AnimatePresence></AnimatePresence> */}
+      {/* {mouseposition?.active && <Mouse mouseposition={mouseposition} />} */}
+      {/* <Mouse mouseposition={mouseposition} /> */}
 
       <HomeStyles
         ref={Homeref}
@@ -45,8 +44,12 @@ const Home = () => {
         <Header />
         <Hero />
         <Cta />
-        <WorkList setMousePosition={setMousePosition} />
+        <WorkList
+          setMousePosition={setMousePosition}
+          mouseposition={mouseposition}
+        />
         <Skills />
+        {/* <Banner/> */}
         <Footer />
       </HomeStyles>
     </div>

@@ -41,7 +41,7 @@ const Mouse = ({ mouseposition }) => {
                 scale: 1,
               }
         }
-        transition={{ type: "tween", ease: "backOut", duration: 1 }}
+        transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
         ref={mouseRef}
         className="absolute cursor-pointer h-[120px] w-[120px] top-[50%] z-40 left-[50%] bg-[#988871] md:flex hidden items-center justify-center rounded-full"
       >
