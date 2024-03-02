@@ -1,10 +1,15 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
+  const [active, setActive] = useState(false);
+  const [activetwitter, setActiveTwitter] = useState(false);
+  const [activegithub, setActiveGithub] = useState(false);
+  const [activelinkedln, setActiveLinkedln] = useState(false);
   const aboutTextRef_1 = useRef(null);
   const headerref = useRef([]);
   headerref.current = [];
@@ -53,9 +58,9 @@ const Footer = () => {
 
   return (
     <>
-      <div data-scroll className="py-16 w-full">
+      <div data-scroll className="py-16 z-50 w-full">
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12 md:gap-20">
-          <h3 className="text-sm md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+          <h3 className="text-sm z-50 md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
             <span ref={adHeaderdRefs}>SEND ME A MESSAGE</span>
@@ -66,7 +71,7 @@ const Footer = () => {
             to={
               "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
             }
-            className="text-4xl text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-4xl z-50 text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
             <span> HELLO@VICTOR</span>
             <span> ESSIEN.COM</span>
@@ -80,9 +85,87 @@ const Footer = () => {
               <span className="block">Creative Developer</span>
             </span>
             <span className="flex items-center gap-8 ">
-              <span>Twitter</span>
-              <span>Linkedln</span>
-              <span>Github</span>
+              <h4
+                onMouseMove={() => setActiveGithub(true)}
+                onMouseLeave={() => setActiveGithub(false)}
+                className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
+              >
+                <motion.div
+                  animate={{ top: activegithub ? "-100%" : "0" }}
+                  transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
+                  className="w-full h-full flex items-center flex-col relative"
+                >
+                  <Link
+                    to={"https://twitter.com/edidiesky"}
+                    target="_blank"
+                    className=""
+                  >
+                    Twitter
+                  </Link>
+                  <Link
+                    to={"https://twitter.com/edidiesky"}
+                    className="absolute top-[100%] w-full left-0 "
+                  >
+                    Twitter
+                  </Link>
+                </motion.div>
+              </h4>
+
+              <h4
+                onMouseMove={() => setActiveTwitter(true)}
+                onMouseLeave={() => setActiveTwitter(false)}
+                className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
+              >
+                <motion.div
+                  animate={{ top: activetwitter ? "-100%" : "0" }}
+                  transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
+                  className="w-full h-full flex items-center flex-col relative"
+                >
+                  <Link
+                    to={"https://github.com/edidiesky"}
+                    target="_blank"
+                    className=""
+                  >
+                    Github
+                  </Link>
+                  <Link
+                    to={"https://github.com/edidiesky"}
+                    className="absolute top-[100%] w-full left-0 "
+                  >
+                    Github
+                  </Link>
+                </motion.div>
+              </h4>
+
+              <h4
+                onMouseMove={() => setActiveLinkedln(true)}
+                onMouseLeave={() => setActiveLinkedln(false)}
+                className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
+              >
+                <motion.div
+                  animate={{ top: activelinkedln ? "-100%" : "0" }}
+                  transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
+                  className="w-full h-full flex items-center flex-col relative"
+                >
+                  <Link
+                    to={
+                      "https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"
+                    }
+                    target="_blank"
+                    className=""
+                  >
+                    LinkedIn
+                  </Link>
+                  <Link
+                    to={
+                      "https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"
+                    }
+                    className="absolute top-[100%] w-full left-0 "
+                  >
+                    LinkedIn
+                  </Link>
+                </motion.div>
+              </h4>
             </span>
 
             <span className="flex items-center gap-8 ">

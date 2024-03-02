@@ -7,13 +7,13 @@ const Header = ({ text, path }) => {
   const [activegithub, setActiveGithub] = useState(false);
   const [activelinkedln, setActiveLinkedln] = useState(false);
   return (
-    <div className="w-full">
+    <div className="w-full z-50">
       <div className="w-100 w-full px-8 m-auto max-w-custom py-8">
         <div className="w-90 auto hero_top_wrapper text-text_dark_1 flex item-center justify-space gap-4">
           <h4
             onMouseMove={() => setActive(true)}
             onMouseLeave={() => setActive(false)}
-            className="relative text-[14px] sm:text-xl w-auto md:w-[300px] overflow-hidden font-portfolio_bold font-normal "
+            className="relative z-50 text-[14px] sm:text-xl w-auto md:w-[300px] overflow-hidden font-portfolio_bold font-normal "
           >
             <motion.div
               animate={{ top: active ? "-100%" : "0" }}
@@ -34,7 +34,7 @@ const Header = ({ text, path }) => {
                 <h4
                   onMouseMove={() => setActiveGithub(true)}
                   onMouseLeave={() => setActiveGithub(false)}
-                  className="relative text-[12px] sm:text-sm w-auto overflow-hidden font-portfolio_bold font-normal "
+                  className="relative text-[12px] z-50 sm:text-sm w-auto overflow-hidden font-portfolio_bold font-normal "
                 >
                   <motion.div
                     animate={{ top: activegithub ? "-100%" : "0" }}
@@ -60,7 +60,7 @@ const Header = ({ text, path }) => {
                 <h4
                   onMouseMove={() => setActiveTwitter(true)}
                   onMouseLeave={() => setActiveTwitter(false)}
-                  className="relative text-[12px] sm:text-sm w-auto overflow-hidden font-portfolio_bold font-normal "
+                  className="relative text-[12px] z-50 sm:text-sm w-auto overflow-hidden font-portfolio_bold font-normal "
                 >
                   <motion.div
                     animate={{ top: activetwitter ? "-100%" : "0" }}
@@ -86,7 +86,7 @@ const Header = ({ text, path }) => {
                 <h4
                   onMouseMove={() => setActiveLinkedln(true)}
                   onMouseLeave={() => setActiveLinkedln(false)}
-                  className="relative text-[12px] sm:text-sm w-auto overflow-hidden font-portfolio_bold font-normal "
+                  className="relative text-[12px] z-50 sm:text-sm w-auto overflow-hidden font-portfolio_bold font-normal "
                 >
                   <motion.div
                     animate={{ top: activelinkedln ? "-100%" : "0" }}

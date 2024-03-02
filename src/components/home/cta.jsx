@@ -93,7 +93,7 @@ const Cta = () => {
 
   return (
     <>
-      <div data-scroll className="py-20">
+      <div data-scroll className="py-20 z-50">
         <div className="w-full md:w-[800px] mx-auto px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
           <div className="w-full">
             <h3

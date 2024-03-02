@@ -151,7 +151,7 @@ const Hero = () => {
     <>
       <div
         data-scroll
-        className="min-h-[100vh] py-20 flex items-center justify-center"
+        className="min-h-[100vh] z-50 py-20 flex items-center justify-center"
       >
         <div className="w-full md:w-[850px] mx-auto px-2 max-w-custom_1">
           <div className="flex flex-col mx-auto justify-between gap-y-16 gap-x-20 w-[90%]">

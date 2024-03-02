@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AccordionIndex = ({ expanded, setExpanded, x, index }) => {
   const active = expanded === index;
   return (
-    <div className="w-full border-t py-12 group cursor-pointer border-[rgba(0,0,0,.4)]">
+    <div className="w-full z-50 border-t py-12 group cursor-pointer border-[rgba(0,0,0,.4)]">
       <div
         onClick={() => setExpanded(active ? false : index)}
         className="header_top h-[40px] group-hover:text-[rgba(0,0,0,.5)] cursor-pointer text-xl md:text-2xl flex items-center justify-between font-portfolio_bold1 gap-8 md:gap-24 text-text_dark_1"
