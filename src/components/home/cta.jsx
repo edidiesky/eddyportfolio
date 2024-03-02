@@ -143,7 +143,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={descriptionrefs1}
-                  className="about_text1 w-full text-lg lg:text-xl leading-[1.6] font-light text-text_dark_1 font-portfolio_semibold"
+                  className="about_text1 w-full text-xl leading-[1.6] font-light text-text_dark_1 font-portfolio_semibold"
                 >
                   A blend of Product Engineering and Electrical engineering.
                 </h5>
@@ -151,7 +151,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 w-full text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
+                  className="about_text1 w-full text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies
@@ -164,7 +164,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 w-full text-lg lg:text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
+                  className="about_text1 w-full text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies

@@ -3,21 +3,28 @@ import SplitType from "split-type";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
-
+gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
-  let direction = -1;
-  let xPercentValue = 0;
-  const helloRef1 = useRef(null);
-  const helloRef2 = useRef(null);
-  const sliderRef = useRef(null);
-
   const aboutTextRef_1 = useRef(null);
   const headerref = useRef([]);
   headerref.current = [];
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     const text = new SplitType(aboutTextRef_1?.current);
+    const textrefelement_1 = text?.chars;
+    gsap.fromTo(
+      textrefelement_1,
+      { y: 190, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.07,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: textrefelement_1,
+        },
+      }
+    );
     headerref.current?.forEach((el) => {
       const text = new SplitType(el);
       const textrefelement_1 = text?.words;
@@ -37,46 +44,7 @@ const Footer = () => {
         }
       );
     });
-
-    // gsap.to(sliderRef?.current, {
-    //   x: "-=500px",
-    //   scrollTrigger: {
-    //     trigger: document.documentElement,
-    //     start: 0,
-    //     end: window.innerHeight,
-    //     scrub: 0.25,
-    //     onUpdate: (e) => (direction = e.direction * -1),
-    //   },
-    // });
-
-     gsap.to(sliderRef?.current, {
-       x: "-=500px",
-       scrollTrigger: {
-         trigger: document.documentElement,
-         start: 0,
-         end: window.innerHeight,
-         scrub: 0.2,
-         onUpdate: (e) => (direction = e.direction * -1),
-       },
-     });
-
-    requestAnimationFrame(handleAnimationScroll);
   }, []);
-  const handleAnimationScroll = (e) => {
-    if (xPercentValue <= -240) {
-      xPercentValue = 0;
-    }
-
-    if (xPercentValue > 0) {
-      xPercentValue = -240;
-    }
-    gsap.set(helloRef1?.current, { xPercent: xPercentValue });
-    gsap.set(helloRef2?.current, { xPercent: xPercentValue });
-
-    xPercentValue += 0.12 * direction;
-    requestAnimationFrame(handleAnimationScroll);
-  };
-
   const adHeaderdRefs = (el) => {
     if (el && !headerref?.current?.includes(el)) {
       headerref.current.push(el);
@@ -94,21 +62,19 @@ const Footer = () => {
           </h3>
 
           <Link
-            to={"mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"}
-            ref={sliderRef}
-            className="slider relative text-[3rem] text-start sm:text-6xl lg:text-9xl flex w-full pb-16 md:pb-24 whitespace-nowrap font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            ref={aboutTextRef_1}
+            to={
+              "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
+            }
+            className="text-4xl text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
-            <span ref={helloRef1}>
-              LET'S WORK - SAY HELLO- HELLO@VICTOR.COM 
-            </span>
-            <span ref={helloRef2} className="absolute left-[240%] ">
-              LET'S WORK - SAY HELLO- HELLO@VICTOR.COM 
-            </span>
+            <span> HELLO@VICTOR</span>
+            <span> ESSIEN.COM</span>
           </Link>
         </div>
 
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
-          <h3 className="text-xl md:text-2xl flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
+          <h3 className="text-xl md:text-2xl  flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
             <span>
               Victor Essien
               <span className="block">Creative Developer</span>

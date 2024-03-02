@@ -189,7 +189,7 @@ const Skills = () => {
             </h3>
           </div>
           <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-20">
-            <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-7xl md:text-[7rem] leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
+            <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-6xl md:text-[7rem] leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
               SERVICES
             </h4>
             <div className="w-full flex flex-col">

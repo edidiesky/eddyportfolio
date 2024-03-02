@@ -159,7 +159,7 @@ const Hero = () => {
               <span
                 data-scroll
                 data-scroll-speed="2"
-                className="font-normal titleRef text-text_dark_1 uppercase text-[3rem] sm:text-[7rem] md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+                className="font-normal titleRef text-text_dark_1 uppercase text-[3.5rem] sm:text-[7rem] lg:text-[8rem] w-full leading-[1] font-portfolio_bold1"
               >
                 Creative
                 <br />
@@ -186,7 +186,7 @@ const Hero = () => {
             <h1
               data-scroll
               data-scroll-speed="2"
-              className="hero_text_3 font-normal text-text_dark_1 uppercase text-4xl sm:text-8xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+              className="hero_text_3 font-normal text-text_dark_1 uppercase text-7xl sm:text-8xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
             >
               BASED IN
               <br />
