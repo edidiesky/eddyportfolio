@@ -45,7 +45,7 @@ const serviceslist = [
     id: 4,
     title: "Unit Testing",
     description:
-      "I can unit test for web applications that deals with React and Typescript",
+      "I can write unit test for web applications that deals with React and Typescript",
   },
 ];
 const Skills = () => {

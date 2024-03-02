@@ -91,6 +91,8 @@ const Cta = () => {
     }
   };
 
+  // purposeful, proacitve predetermined and driven
+
   return (
     <>
       <div data-scroll className="py-20 z-50">

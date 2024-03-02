@@ -8,7 +8,7 @@ const Header = ({ text, path }) => {
   const [activelinkedln, setActiveLinkedln] = useState(false);
   return (
     <div className="w-full z-50">
-      <div className="w-100 w-full px-8 m-auto max-w-custom py-8">
+      <div className="w-100 w-full px-8 m-auto max-w-custom_2 py-8">
         <div className="w-90 auto hero_top_wrapper text-text_dark_1 flex item-center justify-space gap-4">
           <h4
             onMouseMove={() => setActive(true)}

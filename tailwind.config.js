@@ -27,9 +27,9 @@ export default {
         light_grey: "#F6F5F4",
       },
       maxWidth: {
-        custom: "1304px",
-        custom_1: "1204px",
-        custom_2: "804px",
+        custom: "1200px",
+        custom_1: "1200px",
+        custom_2: "1304px",
       },
       boxShadow: {
         custom:

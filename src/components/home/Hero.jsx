@@ -179,9 +179,9 @@ const Hero = () => {
               </div>
             </div>
 
-            <h4 className="text-xl hero_text_2 lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal font-portfolio_semibold">
-              I AM A CATALYST FOR CREATIVE DEVELOPMENT FOR AGENCIES AND
-              INDUSTRIES
+            <h4 className="text-xl hero_text_2 lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal uppercase font-portfolio_semibold">
+              I AM purposeful, proactive, predetermined and a driven CATALYST FOR
+              CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
             </h4>
             <h1
               data-scroll

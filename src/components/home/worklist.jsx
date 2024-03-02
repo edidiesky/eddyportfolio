@@ -28,42 +28,42 @@ const WorkList = () => {
   headerref.current = [];
 
   useEffect(() => {
-    // ref.current?.forEach((el) => {
-    //   gsap.fromTo(
-    //     el,
-    //     { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", opacity: 0 },
-    //     {
-    //       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    //       opacity: 1,
-    //       stagger: 0.1,
-    //       // delay:1,
-    //       ease: "power3.out",
-    //       duration: 1.3,
-    //       scrollTrigger: {
-    //         trigger: el,
-    //       },
-    //     }
-    //   );
-    // });
+    ref.current?.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", opacity: 0 },
+        {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          opacity: 1,
+          stagger: 0.1,
+          // delay:1,
+          ease: "power3.out",
+          duration: 1.3,
+          scrollTrigger: {
+            trigger: el,
+          },
+        }
+      );
+    });
 
-    // headerref.current?.forEach((el) => {
-    //   const text = new SplitType(el);
-    //   const textrefelement_1 = text?.chars;
-    //   gsap.fromTo(
-    //     textrefelement_1,
-    //     { y: -100, opacity: 0 },
-    //     {
-    //       y: 0,
-    //       opacity: 1,
-    //       stagger: 0.1,
-    //       // delay:1,
-    //       duration: 0,
-    //       scrollTrigger: {
-    //         trigger: textrefelement_1,
-    //       },
-    //     }
-    //   );
-    // });
+    headerref.current?.forEach((el) => {
+      const text = new SplitType(el);
+      const textrefelement_1 = text?.chars;
+      gsap.fromTo(
+        textrefelement_1,
+        { y: -100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          // delay:1,
+          duration: 0,
+          scrollTrigger: {
+            trigger: textrefelement_1,
+          },
+        }
+      );
+    });
 
     let mouseXMovement = gsap.quickTo(mouseRef.current, "left", {
       duration: 0.9,
