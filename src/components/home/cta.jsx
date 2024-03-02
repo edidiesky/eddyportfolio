@@ -162,7 +162,7 @@ const Cta = () => {
                   efforts.
                 </h4>
 
-                <h4
+                {/* <h4
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
@@ -173,7 +173,7 @@ const Cta = () => {
                   and individuals. I have years of experience working and
                   collaborating on product teams and leading engineering
                   efforts.
-                </h4>
+                </h4> */}
               </div>
             </div>
           </div>
