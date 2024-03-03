@@ -105,28 +105,20 @@ const Footer = () => {
         variants={scaleAnimations}
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
-        className="w-[180px] z-[80] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
+        className="w-[180px] z-[60] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
         font-portfolio_bold bg-[#E49C4A]"
       ></motion.div>
-      <div
-        onMouseEnter={() =>
-          setMousePosition({
-            active: false,
-          })
-        }
-        className="absolute top-0 w-full h-full z-10"
-      ></div>
 
       <motion.div
         variants={scaleAnimations}
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
         ref={labelRef}
-        className="z-[80] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
+        className="z-[60] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
       >
         <Link
           target="_blank"
-          className="z-50"
+          className="z-[60] relative"
           to={
             "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
           }
@@ -135,7 +127,14 @@ const Footer = () => {
         </Link>
       </motion.div>
       <div data-scroll className="py-16  relative w-full">
-        <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12 md:gap-20">
+        <div
+          onMouseEnter={() =>
+            setMousePosition({
+              active: true,
+            })
+          }
+          className="w-full px-4 md:px-8 z-50 relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
+        >
           <h3 className="text-sm relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
@@ -143,21 +142,25 @@ const Footer = () => {
           </h3>
 
           <Link
-            onMouseEnter={() =>
-              setMousePosition({
-                active: true,
-              })
-            }
             ref={aboutTextRef_1}
             to={
               "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
             }
-            className="text-4xl z-40 text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-4xl z-40 relative text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
             <span> HELLO@VICTOR</span>
             <span> ESSIEN.COM</span>
           </Link>
         </div>
+
+        <div
+          onMouseEnter={() =>
+            setMousePosition({
+              active: false,
+            })
+          }
+          className="absolute top-0 w-full h-full z-[40]"
+        ></div>
 
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
           <h3 className="text-xl md:text-2xl  flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
@@ -172,7 +175,7 @@ const Footer = () => {
                 className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
               >
                 <motion.div
-                  animate={{ top: activegithub ? "-100%" : "0" }}
+                  animate={{ top: activegithub ? "-200%" : "0" }}
                   transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
                   className="w-full h-full flex items-center flex-col relative"
                 >
