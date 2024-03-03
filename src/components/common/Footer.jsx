@@ -100,12 +100,21 @@ const Footer = () => {
 
   return (
     <>
+     {/* <div
+          onMouseEnter={() =>
+            setMousePosition({
+              active: false,
+            })
+          }
+          className="absolute top-0 left-0 w-full h-full z-[40]"
+        ></div>
+
       <motion.div
         ref={mouseRef}
         variants={scaleAnimations}
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
-        className="w-[180px] z-[60] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
+        className="w-[180px] z-[50] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
         font-portfolio_bold bg-[#E49C4A]"
       ></motion.div>
 
@@ -114,18 +123,18 @@ const Footer = () => {
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
         ref={labelRef}
-        className="z-[60] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
+        className="z-[50] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
       >
         <Link
           target="_blank"
-          className="z-[60] relative"
+          className="z-[50] relative"
           to={
             "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
           }
         >
           Message Me
         </Link>
-      </motion.div>
+      </motion.div> */}
       <div data-scroll className="py-16  relative w-full">
         <div
           onMouseEnter={() =>
@@ -153,15 +162,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div
-          onMouseEnter={() =>
-            setMousePosition({
-              active: false,
-            })
-          }
-          className="absolute top-0 w-full h-full z-[40]"
-        ></div>
-
+       
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
           <h3 className="text-xl md:text-2xl  flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
             <span>
