@@ -134,7 +134,7 @@ const WorkList = () => {
             active: false,
           })
         }
-        className="absolute top-0 w-full h-full z-10"
+        className="absolute top-0 w-full h-full z-40"
       ></div>
 
       <motion.div

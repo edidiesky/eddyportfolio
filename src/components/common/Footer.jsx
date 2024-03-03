@@ -4,9 +4,16 @@ import gsap from "gsap";
 import { motion } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import { scaleAnimations } from "../../utils/framer";
 gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
   const [active, setActive] = useState(false);
+  const [mouseposition, setMousePosition] = useState({
+    active: false,
+    index: 0,
+  });
+  const mouseRef = useRef(null);
+  const labelRef = useRef(null);
   const [activetwitter, setActiveTwitter] = useState(false);
   const [activegithub, setActiveGithub] = useState(false);
   const [activelinkedln, setActiveLinkedln] = useState(false);
@@ -16,6 +23,7 @@ const Footer = () => {
 
   useEffect(() => {
     const text = new SplitType(aboutTextRef_1?.current);
+
     const textrefelement_1 = text?.chars;
     gsap.fromTo(
       textrefelement_1,
@@ -49,6 +57,40 @@ const Footer = () => {
         }
       );
     });
+
+    let mouseXMovement = gsap.quickTo(mouseRef.current, "left", {
+      duration: 0.9,
+      ease: "power3",
+    });
+
+    let mouseYMovement = gsap.quickTo(mouseRef.current, "top", {
+      duration: 0.9,
+      ease: "power3",
+    });
+
+    let labelXMovement = gsap.quickTo(labelRef.current, "left", {
+      duration: 0.68,
+      ease: "power3",
+    });
+
+    let labelYMovement = gsap.quickTo(labelRef.current, "top", {
+      duration: 0.68,
+      ease: "power3",
+    });
+
+    const handleMouseMotion = (e) => {
+      const { pageX, pageY } = e;
+      mouseXMovement(pageX);
+      mouseYMovement(pageY);
+
+      labelXMovement(pageX);
+      labelYMovement(pageY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMotion);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMotion);
+    };
   }, []);
   const adHeaderdRefs = (el) => {
     if (el && !headerref?.current?.includes(el)) {
@@ -58,20 +100,59 @@ const Footer = () => {
 
   return (
     <>
-      <div data-scroll className="py-16 z-50 w-full">
+      <motion.div
+        ref={mouseRef}
+        variants={scaleAnimations}
+        initial="initial"
+        animate={mouseposition?.active ? "enter" : "exit"}
+        className="w-[180px] z-[80] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
+        font-portfolio_bold bg-[#E49C4A]"
+      ></motion.div>
+      <div
+        onMouseEnter={() =>
+          setMousePosition({
+            active: false,
+          })
+        }
+        className="absolute top-0 w-full h-full z-10"
+      ></div>
+
+      <motion.div
+        variants={scaleAnimations}
+        initial="initial"
+        animate={mouseposition?.active ? "enter" : "exit"}
+        ref={labelRef}
+        className="z-[80] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
+      >
+        <Link
+          target="_blank"
+          className="z-50"
+          to={
+            "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
+          }
+        >
+          Message Me
+        </Link>
+      </motion.div>
+      <div data-scroll className="py-16  relative w-full">
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12 md:gap-20">
-          <h3 className="text-sm z-50 md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+          <h3 className="text-sm relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
             <span ref={adHeaderdRefs}>SEND ME A MESSAGE</span>
           </h3>
 
           <Link
+            onMouseEnter={() =>
+              setMousePosition({
+                active: true,
+              })
+            }
             ref={aboutTextRef_1}
             to={
               "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
             }
-            className="text-4xl z-50 text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-4xl z-40 text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
             <span> HELLO@VICTOR</span>
             <span> ESSIEN.COM</span>
