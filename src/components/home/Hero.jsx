@@ -151,15 +151,15 @@ const Hero = () => {
     <>
       <div
         data-scroll
-        className="min-h-[100vh] z-50 py-20 flex items-center justify-center"
+        className="min-h-[100vh] z-50 py-20 relative flex items-center justify-center"
       >
         <div className="w-full md:w-[850px] mx-auto px-2 max-w-custom_1">
-          <div className="flex flex-col mx-auto justify-between gap-y-16 gap-x-20 w-[90%]">
+          <div className="flex flex-col mx-auto justify-between gap-y-8 gap-x-20 w-[90%]">
             <div className="flex w-full flex-col gap-16">
               <span
                 data-scroll
                 data-scroll-speed="2"
-                className="font-normal titleRef text-text_dark_1 uppercase text-[3.5rem] sm:text-[7rem] lg:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+                className="font-normal z-50 titleRef text-text_dark_1 uppercase text-[3.5rem] sm:text-[7rem] lg:text-[8rem] w-full leading-[1] font-portfolio_bold1"
               >
                 Creative
                 <br />
@@ -169,9 +169,16 @@ const Hero = () => {
               </span>
             </div>
             <div className="w-full">
-              <div className="w-full h-[300px] md:h-[580px]">
+              <div
+                // style={{
+                //   background: 'url("./profile_6.JPG")',
+                //   backgroundRepeat: "none",
+                //   backgroundPosition: "center center",
+                // }}
+                className="w-full relative z-50 h-[300px] flex items-center justify-center md:h-[600px]"
+              >
                 <img
-                  ref={imageRef}
+                  // ref={imageRef}
                   src={"./profile_3.JPG"}
                   alt=""
                   className="w-full h-full object-cover"
@@ -180,8 +187,8 @@ const Hero = () => {
             </div>
 
             <h4 className="text-xl hero_text_2 lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal uppercase font-portfolio_semibold">
-              I AM purposeful, proactive, predetermined and a driven CATALYST FOR
-              CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
+              I AM purposeful, proactive, predetermined and a driven CATALYST
+              FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
             </h4>
             <h1
               data-scroll
