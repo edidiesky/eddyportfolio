@@ -93,7 +93,7 @@ const Hero = () => {
       .fromTo(
         text1?.chars,
         {
-          y: 150,
+          y: 110,
           opacity: 0,
         },
         {
@@ -133,7 +133,7 @@ const Hero = () => {
 
     gsap.fromTo(
       textrefelement?.chars,
-      { y: 140, opacity: 0 },
+      { y: 110, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -178,7 +178,7 @@ const Hero = () => {
                 className="w-full relative z-50 h-[300px] flex items-center justify-center md:h-[600px]"
               >
                 <img
-                  // ref={imageRef}
+                  ref={imageRef}
                   src={"./profile_3.JPG"}
                   alt=""
                   className="w-full h-full object-cover"

@@ -57,6 +57,10 @@ h3 .line {
   overflow: hidden;
   line-height: 1;
 }
+.hero_text_2 .line {
+  line-height: 1.2;
+
+}
 
 h1 .line {
   overflow: hidden;

@@ -28,7 +28,7 @@ const WorkList = () => {
   headerref.current = [];
 
   useEffect(() => {
-    ref.current?.forEach((el) => {
+    ref.current?.forEach((el, index) => {
       gsap.fromTo(
         el,
         { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", opacity: 0 },
@@ -38,7 +38,8 @@ const WorkList = () => {
           stagger: 0.1,
           // delay:1,
           ease: "power3.out",
-          duration: 1.3,
+          duration: 2,
+          delay: index * 0.18,
           scrollTrigger: {
             trigger: el,
           },
@@ -46,7 +47,7 @@ const WorkList = () => {
       );
     });
 
-    headerref.current?.forEach((el) => {
+    headerref.current?.forEach((el, index) => {
       const text = new SplitType(el);
       const textrefelement_1 = text?.chars;
       gsap.fromTo(
@@ -56,8 +57,8 @@ const WorkList = () => {
           y: 0,
           opacity: 1,
           stagger: 0.1,
-          // delay:1,
-          duration: 0,
+          delay: 0.2 * index,
+          duration: 1.2,
           scrollTrigger: {
             trigger: textrefelement_1,
           },

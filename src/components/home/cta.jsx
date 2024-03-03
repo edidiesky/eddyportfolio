@@ -46,7 +46,7 @@ const Cta = () => {
           opacity: 1,
           y: 0,
           stagger: 0.06,
-          duration: 1.5,
+          duration: 2.3,
           ease: "power4.out",
 
           scrollTrigger: {

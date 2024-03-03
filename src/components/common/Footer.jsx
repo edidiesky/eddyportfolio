@@ -27,12 +27,13 @@ const Footer = () => {
     const textrefelement_1 = text?.chars;
     gsap.fromTo(
       textrefelement_1,
-      { y: 190, opacity: 0 },
+      { y: 100, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         stagger: 0.07,
-        duration: 0.5,
+        duration: 1,
+        ease:"power4.inOut",
         scrollTrigger: {
           trigger: textrefelement_1,
         },
@@ -100,7 +101,7 @@ const Footer = () => {
 
   return (
     <>
-     {/* <div
+      {/* <div
           onMouseEnter={() =>
             setMousePosition({
               active: false,
@@ -162,7 +163,6 @@ const Footer = () => {
           </Link>
         </div>
 
-       
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
           <h3 className="text-xl md:text-2xl  flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
             <span>
