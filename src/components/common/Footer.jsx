@@ -102,20 +102,20 @@ const Footer = () => {
   return (
     <>
       {/*  */}
-      <div
+      {/* <div
         onMouseEnter={() =>
           setMousePosition({
             active: false,
           })
         }
         className="absolute top-0 left-0 w-full h-full z-[40]"
-      ></div>
-      <motion.div
+      ></div> */}
+      {/* <motion.div
         ref={mouseRef}
         variants={scaleAnimations}
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
-        className="w-[180px] z-[50] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
+        className="w-[180px] z-[30] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
         font-portfolio_bold bg-[#E49C4A]"
       ></motion.div>
 
@@ -124,18 +124,18 @@ const Footer = () => {
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
         ref={labelRef}
-        className="z-[50] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
+        className="z-[30] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
       >
         <Link
           target="_blank"
-          className="z-[50] relative"
+          className="z-[30] relative"
           to={
             "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
           }
         >
           Message Me
         </Link>
-      </motion.div>
+      </motion.div> */}
 
       <div data-scroll className="py-16  relative w-full">
         <div
@@ -144,7 +144,7 @@ const Footer = () => {
               active: true,
             })
           }
-          className="w-full px-4 md:px-8 z-40 relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
+          className="w-full px-4 md:px-8 z-[30] relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
         >
           <h3 className="text-sm relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>

@@ -127,7 +127,7 @@ const WorkList = () => {
         variants={scaleAnimations}
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
-        className="w-[120px] z-50 absolute h-[120px] rounded-full flex items-center justify-center text-[12px] text-white font-portfolio_bold bg-[#2e2e30]"
+        className="w-[120px] z-[50] absolute h-[120px] rounded-full flex items-center justify-center text-[12px] text-white font-portfolio_bold bg-[#2e2e30]"
       ></motion.div>
       <div
         onMouseEnter={() =>
@@ -135,7 +135,7 @@ const WorkList = () => {
             active: false,
           })
         }
-        className="absolute top-0 w-full h-full z-40"
+        className="absolute top-0 w-full h-full z-[45]"
       ></div>
 
       <motion.div
@@ -143,7 +143,7 @@ const WorkList = () => {
         initial="initial"
         animate={mouseposition?.active ? "enter" : "exit"}
         ref={labelRef}
-        className="w-[60px] z-50 h-[60px] absolute rounded-full flex items-center justify-center text-[10px] text-white font-portfolio_bold"
+        className="w-[60px] z-[50] h-[60px] absolute rounded-full flex items-center justify-center text-[10px] text-white font-portfolio_bold"
       >
         {website ? (
           <Link target="_blank" to={website}>
