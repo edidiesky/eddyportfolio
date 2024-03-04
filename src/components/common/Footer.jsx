@@ -33,7 +33,7 @@ const Footer = () => {
         opacity: 1,
         stagger: 0.07,
         duration: 1,
-        ease:"power4.inOut",
+        ease: "power4.inOut",
         scrollTrigger: {
           trigger: textrefelement_1,
         },
@@ -101,15 +101,15 @@ const Footer = () => {
 
   return (
     <>
-      {/* <div
-          onMouseEnter={() =>
-            setMousePosition({
-              active: false,
-            })
-          }
-          className="absolute top-0 left-0 w-full h-full z-[40]"
-        ></div>
-
+      {/*  */}
+      <div
+        onMouseEnter={() =>
+          setMousePosition({
+            active: false,
+          })
+        }
+        className="absolute top-0 left-0 w-full h-full z-[40]"
+      ></div>
       <motion.div
         ref={mouseRef}
         variants={scaleAnimations}
@@ -135,7 +135,8 @@ const Footer = () => {
         >
           Message Me
         </Link>
-      </motion.div> */}
+      </motion.div>
+
       <div data-scroll className="py-16  relative w-full">
         <div
           onMouseEnter={() =>
@@ -143,7 +144,7 @@ const Footer = () => {
               active: true,
             })
           }
-          className="w-full px-4 md:px-8 z-50 relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
+          className="w-full px-4 md:px-8 z-40 relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
         >
           <h3 className="text-sm relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>
@@ -156,7 +157,7 @@ const Footer = () => {
             to={
               "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
             }
-            className="text-4xl z-40 relative text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-4xl relative text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
             <span> HELLO@VICTOR</span>
             <span> ESSIEN.COM</span>

@@ -93,14 +93,14 @@ const Hero = () => {
       .fromTo(
         text1?.chars,
         {
-          y: 110,
+          y: 130,
           opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
           stagger: 0.08,
-          duration: 1.3,
+          duration: 1.5,
           ease: "power4.inOut",
         },
         7.2
