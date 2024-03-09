@@ -100,7 +100,7 @@ const Footer = () => {
   };
 
   return (
-    <>
+    <div className="relative min-h-[40vh]">
       {/*  */}
       {/* <div
         onMouseEnter={() =>
@@ -114,17 +114,17 @@ const Footer = () => {
         ref={mouseRef}
         variants={scaleAnimations}
         initial="initial"
-        animate={mouseposition?.active ? "enter" : "exit"}
-        className="w-[180px] z-[30] absolute h-[180px] rounded-full hidden md:flex items-center justify-center text-[12px] text-white 
+        animate={!mouseposition?.active ? "enter" : "exit"}
+        className="w-[180px] z-[46] h-[180px] absolute rounded-full md:flex items-center justify-center text-[12px] text-white 
         font-portfolio_bold bg-[#E49C4A]"
       ></motion.div>
 
       <motion.div
         variants={scaleAnimations}
         initial="initial"
-        animate={mouseposition?.active ? "enter" : "exit"}
+        animate={!mouseposition?.active ? "enter" : "exit"}
         ref={labelRef}
-        className="z-[30] absolute rounded-full hidden md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
+        className="z-[30] absolute rounded-full md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
       >
         <Link
           target="_blank"
@@ -136,15 +136,14 @@ const Footer = () => {
           Message Me
         </Link>
       </motion.div> */}
-
-      <div data-scroll className="py-16  relative w-full">
+      <div data-scroll className="py-16 z-[55] relative w-full">
         <div
           onMouseEnter={() =>
             setMousePosition({
               active: true,
             })
           }
-          className="w-full px-4 md:px-8 z-[30] relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
+          className="w-full px-4 md:px-8 relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
         >
           <h3 className="text-sm relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>
@@ -153,6 +152,11 @@ const Footer = () => {
           </h3>
 
           <Link
+            onMouseEnter={() =>
+              setMousePosition({
+                active: true,
+              })
+            }
             ref={aboutTextRef_1}
             to={
               "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
@@ -260,7 +264,7 @@ const Footer = () => {
           </h3>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
