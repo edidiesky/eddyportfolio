@@ -162,7 +162,7 @@ const Hero = () => {
               <div className="w-full">
                 <div className="w-[60%] mx-auto relative z-50 flex items-center justify-center">
                   <img
-                    // ref={imageRef}
+                    ref={imageRef}
                     src={"./profile_6.JPG"}
                     alt=""
                     className="w-full h-full object-cover"

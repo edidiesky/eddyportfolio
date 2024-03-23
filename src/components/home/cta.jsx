@@ -96,7 +96,7 @@ const Cta = () => {
   return (
     <>
       <div data-scroll className="py-20 z-50">
-        <div className="w-full md:w-[800px] mx-auto px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
+        <div className="w-full md:w-[860px] mx-auto px-8 m-auto max-w-custom grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
           <div className="w-full">
             <h3
               ref={numberref}
@@ -112,7 +112,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-xl md:text-2xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+              className="about_text1 w-full md:w-[95%] text-xl md:text-2xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -122,7 +122,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-xl md:text-2xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+              className="about_text1 w-full md:w-[95%] text-xl md:text-2xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
