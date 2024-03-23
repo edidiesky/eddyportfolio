@@ -188,47 +188,81 @@ const Skills = () => {
               <span ref={adHeaderdRefs}>03/</span>
             </h3>
           </div>
-          <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-20">
-            <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-6xl md:text-[7rem] leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
-              SERVICES
-            </h4>
-            <div className="w-full flex flex-col">
-              {serviceslist?.map((x, index) => {
-                return (
-                  <AccordionIndex
-                    x={x}
-                    key={index}
-                    index={index}
-                    expanded={expanded}
-                    setExpanded={setExpanded}
-                  />
-                );
-              })}
-            </div>
-            <div className="w-full md:w-[700px] mt-12">
-              <div className="w-full  md:px-8 max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
-                <div className="w-full">
-                  <h3 className="text-sm md:text-lg mt-20 font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center font-normal uppercase">
-                    <span ref={adHeaderdRefs}>04/</span>
-                  </h3>
-                </div>
-                <div className="w-full flex flex-col gap-4">
-                  <h4
-                    ref={addtoRefs}
-                    className="about_text2 w-full text-start text-5xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
-                  >
-                    SKILLS
-                  </h4>
-                  <div className="w-full flex items-center flex-wrap gap-4">
-                    {skillslist?.map((x, index) => {
-                      return (
-                        <div className="py-3 px-8 border rounded-[20px] font-portfolio_bold1 border-[rgba(0,0,0,.6)]">
-                          <span> {x}</span>
-                        </div>
-                      );
-                    })}
+          <div className="w-full flex flex-col gap-24">
+            <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-20">
+              <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
+                SERVICES
+              </h4>
+              <div className="w-full flex flex-col">
+                {serviceslist?.map((x, index) => {
+                  return (
+                    <AccordionIndex
+                      x={x}
+                      key={index}
+                      index={index}
+                      expanded={expanded}
+                      setExpanded={setExpanded}
+                    />
+                  );
+                })}
+              </div>
+              <div className="w-full md:w-[700px] mt-12">
+                <div className="w-full  md:px-8 max-w-custom items-start grid grid-cols-1 lg:grid-cols-custom_3 gap-16 ">
+                  <div className="w-full">
+                    <h3 className="text-sm md:text-lg mt-20 font-portfolio_bold text-text_dark_1 w-full gap-2 justify-between flex items-center font-normal uppercase">
+                      <span ref={adHeaderdRefs}>04/</span>
+                    </h3>
+                  </div>
+                  <div className="w-full flex flex-col gap-4">
+                    <h4
+                      ref={addtoRefs}
+                      className="about_text2 w-full text-start text-5xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+                    >
+                      SKILLS
+                    </h4>
+                    <div className="w-full flex items-center flex-wrap gap-4">
+                      {skillslist?.map((x, index) => {
+                        return (
+                          <div className="py-3 px-8 border rounded-[20px] font-portfolio_bold1 border-[rgba(0,0,0,.6)]">
+                            <span> {x}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="w-full mt-24 items-start md:items-end md:justify-end flex flex-col gap-20">
+              <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
+                Experience
+              </h4>
+              <div className="w-full flex flex-col gap-8">
+                <h4 className="text-4xl font-portfolio_bold1 flex items-start gap-4 font-medium">
+                  1.{" "}
+                  <div className="flex flex-col gap-4">
+                    FrontEnd Developer
+                    <span className="block text-2xl font-portfolio_semibold">
+                      Bitnorm
+                    </span>
+                    <span className="block text-xl font-portfolio_semibold">
+                      2022-2024
+                    </span>
+                  </div>
+                </h4>
+
+                <h4 className="text-4xl font-portfolio_bold1 flex items-start gap-4 font-medium">
+                  2.{" "}
+                  <div className="flex flex-col gap-4">
+                    Software Developer
+                    <span className="block text-2xl font-portfolio_semibold">
+                      Palkeeper (Freelancer)
+                    </span>
+                    <span className="block text-xl font-portfolio_semibold">
+                      2021-2022
+                    </span>
+                  </div>
+                </h4>
               </div>
             </div>
           </div>

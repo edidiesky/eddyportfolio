@@ -101,41 +101,6 @@ const Footer = () => {
 
   return (
     <div className="relative min-h-[40vh]">
-      {/*  */}
-      {/* <div
-        onMouseEnter={() =>
-          setMousePosition({
-            active: false,
-          })
-        }
-        className="absolute top-0 left-0 w-full h-full z-[40]"
-      ></div> */}
-      {/* <motion.div
-        ref={mouseRef}
-        variants={scaleAnimations}
-        initial="initial"
-        animate={!mouseposition?.active ? "enter" : "exit"}
-        className="w-[180px] z-[46] h-[180px] absolute rounded-full md:flex items-center justify-center text-[12px] text-white 
-        font-portfolio_bold bg-[#E49C4A]"
-      ></motion.div>
-
-      <motion.div
-        variants={scaleAnimations}
-        initial="initial"
-        animate={!mouseposition?.active ? "enter" : "exit"}
-        ref={labelRef}
-        className="z-[30] absolute rounded-full md:flex items-center justify-center text-sm text-text_dark_1 font-portfolio_bold"
-      >
-        <Link
-          target="_blank"
-          className="z-[30] relative"
-          to={
-            "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
-          }
-        >
-          Message Me
-        </Link>
-      </motion.div> */}
       <div data-scroll className="py-16 z-[55] relative w-full">
         <div
           onMouseEnter={() =>
