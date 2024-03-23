@@ -5,7 +5,6 @@ import gsap from "gsap";
 import Arrow from "../../assets/svg/arrow";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
 const Hero = () => {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -18,7 +17,7 @@ const Hero = () => {
     const textrefelement_1 = new SplitType(".hero_text_2");
     const textrefelement = new SplitType(".hero_text_3");
     gsap
-      .timeline()
+      .timeline({ defaults: { ease: "SlowMo.easeOut" } })
       .to(".pre_loader", {
         duration: 3,
         ease: "power4.out",
@@ -59,26 +58,7 @@ const Hero = () => {
         },
         5
       )
-      // .to(
-      //   ".revealer_1",
-      //   {
-      //     top: "100%",
-      //     height: "100%",
-      //     ease: "power3.inOut",
-      //     duration: 1.2,
-      //   },
-      //   6
-      // )
-      // .to(
-      //   ".revealer_2",
-      //   {
-      //     height: "100%",
-      //     top: "100%",
-      //     duration: 0.6,
-      //     ease: "power3.out",
-      //   },
-      //   6.09
-      // )
+
       .to(
         ".pre_loader",
         {
@@ -93,14 +73,14 @@ const Hero = () => {
       .fromTo(
         text1?.chars,
         {
-          y: 130,
+          y: 120,
           opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.08,
-          duration: 1.5,
+          stagger: 0.04,
+          duration: 1.3,
           ease: "power4.inOut",
         },
         7.2
@@ -153,52 +133,57 @@ const Hero = () => {
         data-scroll
         className="min-h-[100vh] z-50 py-20 relative flex items-center justify-center"
       >
-        <div className="w-full md:w-[850px] mx-auto px-2 max-w-custom_1">
-          <div className="flex flex-col mx-auto justify-between gap-y-8 gap-x-20 w-[90%]">
+        <div className="w-full  mx-auto px-2 max-w-custom_1">
+          <div className="flex flex-col mx-auto justify-between gap-y-8 gap-x-20">
             <div className="flex w-full flex-col gap-16">
               <span
                 data-scroll
                 data-scroll-speed="2"
-                className="font-normal z-50 titleRef text-text_dark_1 uppercase text-[3.5rem] sm:text-[7rem] lg:text-[8rem] w-full leading-[1] font-portfolio_bold1"
+                className="font-normal z-50  text-text_dark_1 text-center uppercase text-base lg:text-xl w-full leading-[1] font-portfolio_bold"
               >
-                Creative
+                {/* SPEEDING YOUR BUSINESS EXPERIENCE */}
+                {"</>"} SOFTWARE DEVELOPER {"</>"}
+              </span>
+              <span
+                data-scroll
+                data-scroll-speed="2"
+                className="font-normal titleRef z-50 text-text_dark_1 text-start lg:text-center uppercase text-4xl sm:text-5xl md:text-6xl xl:text-8xl w-full leading-[1] font-portfolio_bold"
+              >
+                {/* SPEEDING YOUR BUSINESS EXPERIENCE */}
+                CREATING PLEASANT EXPERIENCE FOR YOUR BUSINESS
+                {/* Creative
                 <br />
                 FULLSTACK
                 <br />
-                Developer
+                Developer */}
               </span>
             </div>
-            <div className="w-full">
-              <div
-                // style={{
-                //   background: 'url("./profile_6.JPG")',
-                //   backgroundRepeat: "none",
-                //   backgroundPosition: "center center",
-                // }}
-                className="w-full relative z-50 h-[300px] flex items-center justify-center md:h-[600px]"
-              >
-                <img
-                  ref={imageRef}
-                  src={"./profile_3.JPG"}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+            <div className="md:w-[850px] mx-auto flex flex-col gap-8 ">
+              <div className="w-full">
+                <div className="w-[60%] mx-auto relative z-50 flex items-center justify-center">
+                  <img
+                    // ref={imageRef}
+                    src={"./profile_6.JPG"}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-            </div>
 
-            <h4 className="text-xl hero_text_2 lg:text-4xl text-text_dark_1 w-[90%] leading-[1.5] font-normal uppercase font-portfolio_semibold">
-              I AM purposeful, proactive, predetermined and a driven CATALYST
-              FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
-            </h4>
-            <h1
-              data-scroll
-              data-scroll-speed="2"
-              className="hero_text_3 font-normal text-text_dark_1 uppercase text-7xl sm:text-8xl md:text-[8rem] w-full leading-[1] font-portfolio_bold1"
-            >
-              BASED IN
-              <br />
-              NIGERIA
-            </h1>
+              <h4 className="text-lg lg:text-xl hero_text_2 text-start lg:text-center text-text_dark_1 w-[90%] leading-[1.5] font-normal uppercase font-portfolio_bold">
+                I AM purposeful, proactive, predetermined and a driven CATALYST
+                FOR CREATIVE DEVELOPMENT FOR AGENCIES AND INDUSTRIES
+              </h4>
+              <h1
+                data-scroll
+                data-scroll-speed="2"
+                className="hero_text_3 font-normal text-text_dark_1 uppercase text-start lg:text-center text-4xl sm:text-5xl md:text-6xl xl:text-8xl w-full leading-[1] font-portfolio_bold1"
+              >
+                BASED IN
+                <br />
+                NIGERIA
+              </h1>
+            </div>
           </div>
         </div>
       </div>

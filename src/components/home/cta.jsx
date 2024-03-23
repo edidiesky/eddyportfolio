@@ -112,7 +112,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+              className="about_text1 w-full md:w-[90%] text-xl md:text-2xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               PASSIONATE ABOUT WEB TECHNOLOGIES AND ELECTRICAL ENGINEERING. I
               LOVE WORKING AT THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
@@ -122,7 +122,7 @@ const Cta = () => {
               // data-scroll
               // data-scroll-speed="5"
               ref={addtoRefs}
-              className="about_text1 w-full md:w-[90%] text-2xl md:text-3xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+              className="about_text1 w-full md:w-[90%] text-xl md:text-2xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
             >
               WHEN I AM NOT DEVELOPING WEB INTERFACES I AM WORKING AND
               RESEARCHING ON MY ENGINERRING THESIS
@@ -166,7 +166,7 @@ const Cta = () => {
                   // data-scroll
                   // data-scroll-speed="5"
                   ref={addtoDescriptionRefs}
-                  className="about_text1 w-full text-xl leading-[1.6] font-light font-portfolio_semibold text-text_dark_1 "
+                  className="about_text1 w-full text-xl leading-[1.6] font-light font-portfolio_bold1 text-text_dark_1 "
                 >
                   With a background in design, I work closely with design
                   focused teams to build websites and microsites for companies

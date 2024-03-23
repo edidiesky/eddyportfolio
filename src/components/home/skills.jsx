@@ -43,9 +43,9 @@ const serviceslist = [
 
   {
     id: 4,
-    title: "Unit Testing",
+    title: "Unit Testing and Integration Testing",
     description:
-      "I can write unit test for web applications that deals with React and Typescript",
+      "I can write unit test and integration test for your web applications that deals with React and Typescript",
   },
 ];
 const Skills = () => {
@@ -190,8 +190,8 @@ const Skills = () => {
           </div>
           <div className="w-full flex flex-col gap-24">
             <div className="w-full items-start md:items-end md:justify-end flex flex-col gap-20">
-              <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
-                SERVICES
+              <h4 className="service_text w-full text-start  uppercase text-4xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
+                SERVICES I OFFER
               </h4>
               <div className="w-full flex flex-col">
                 {serviceslist?.map((x, index) => {
@@ -216,15 +216,21 @@ const Skills = () => {
                   <div className="w-full flex flex-col gap-4">
                     <h4
                       ref={addtoRefs}
-                      className="about_text2 w-full text-start text-5xl md:text-4xl lg:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
+                      className="about_text2 w-full text-start text-4xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 "
                     >
-                      SKILLS
+                      SKILLS I BRING
                     </h4>
-                    <div className="w-full flex items-center flex-wrap gap-4">
+                    <h5 className="text-xl leading-[1.6] font-portfolio_semibold">
+                      My skills range from conceptual design to technical
+                      implementation, enabling me to transfer unique designs
+                      into the digital realm, where they can be admired by a
+                      broad audience.
+                    </h5>
+                    <div className="w-full flex items-start mt-6 flex-col flex-wrap gap-4">
                       {skillslist?.map((x, index) => {
                         return (
-                          <div className="py-3 px-8 border rounded-[20px] font-portfolio_bold1 border-[rgba(0,0,0,.6)]">
-                            <span> {x}</span>
+                          <div className="font-portfolio_bold1 flex items-center gap-4 text-lg">
+                            {index + 1}. <span>{x}</span>
                           </div>
                         );
                       })}
@@ -233,15 +239,22 @@ const Skills = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full mt-24 items-start md:items-end md:justify-end flex flex-col gap-20">
-              <h4 className="service_text w-full text-start  uppercase text-5xl sm:text-6xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
-                Experience
+            <div className="w-full mt-24 items-start md:items-end md:justify-end flex flex-col gap-6">
+              <h4 className="service_text w-full text-start  uppercase text-4xl leading-[1.2] font-portfolio_bold1 text-text_dark_1 ">
+                HOW I EVOLVED
               </h4>
-              <div className="w-full flex flex-col gap-8">
-                <h4 className="text-4xl font-portfolio_bold1 flex items-start gap-4 font-medium">
+              <h5 className="text-xl leading-[1.6] font-portfolio_semibold">
+                Beyond freelancing, I also gained valuable experience, in roles{" "}
+                <strong className="font-portfolio_semibold font-bold">
+                  demanding full time role and freelancing
+                </strong>
+                , at various companies for which I am very grateful.
+              </h5>
+              <div className="w-full flex flex-col gap-8 mt-16">
+                <h4 className="text-3xl font-portfolio_bold1 flex items-start gap-4 font-medium">
                   1.{" "}
                   <div className="flex flex-col gap-4">
-                    FrontEnd Developer
+                    <span className="uppercase">FrontEnd Developer</span>
                     <span className="block text-2xl font-portfolio_semibold">
                       Bitnorm
                     </span>
@@ -251,10 +264,10 @@ const Skills = () => {
                   </div>
                 </h4>
 
-                <h4 className="text-4xl font-portfolio_bold1 flex items-start gap-4 font-medium">
+                <h4 className="text-3xl font-portfolio_bold1 flex items-start gap-4 font-medium">
                   2.{" "}
                   <div className="flex flex-col gap-4">
-                    Software Developer
+                    <span className="uppercase">Software Developer</span>
                     <span className="block text-2xl font-portfolio_semibold">
                       Palkeeper (Freelancer)
                     </span>

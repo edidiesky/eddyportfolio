@@ -110,7 +110,7 @@ const Footer = () => {
           }
           className="w-full px-4 md:px-8 relative m-auto max-w-custom flex flex-col gap-12 md:gap-20"
         >
-          <h3 className="text-sm relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
+          <h3 className="relative md:text-lg font-portfolio_bold1 text-text_dark_1 w-full gap-2 justify-between flex text-sm items-center pt-16 border-t border-[rgba(0,0,0,.4)] font-normal uppercase">
             <span ref={adHeaderdRefs}>05/</span>
             <span ref={adHeaderdRefs}>WANT TO WORK TOGETHER?</span>
             <span ref={adHeaderdRefs}>SEND ME A MESSAGE</span>
@@ -126,7 +126,7 @@ const Footer = () => {
             to={
               "mailto:essienedidiong1000@gmail.com?subject=Hey! lets work! Love your works!"
             }
-            className="text-4xl relative text-start sm:text-center sm:text-7xl lg:text-9xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
+            className="text-3xl relative text-start sm:text-center sm:text-7xl w-full pb-16 md:pb-24 font-normal font-portfolio_bold1 text-text_dark_1 uppercase"
           >
             <span> HELLO@VICTOR</span>
             <span> ESSIEN.COM</span>
@@ -134,21 +134,21 @@ const Footer = () => {
         </div>
 
         <div className="w-full px-4 md:px-8 m-auto max-w-custom flex flex-col gap-12">
-          <h3 className="text-xl md:text-2xl  flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md:items-center pt-16 font-normal">
+          <h3 className="text-sm flex-col text-text_dark_1 lg:flex-row font-portfolio_bold1 w-full justify-between flex gap-4 md text-sm:items-center pt-16 font-normal">
             <span>
               Victor Essien
               <span className="block">Creative Developer</span>
             </span>
-            <span className="flex items-center gap-8 ">
+            <span className="flex text-sm items-center gap-8 ">
               <h4
                 onMouseMove={() => setActiveGithub(true)}
                 onMouseLeave={() => setActiveGithub(false)}
-                className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
+                className="relative text-sm z-50 w-auto overflow-hidden font-portfolio_bold1 font-normal "
               >
                 <motion.div
                   animate={{ top: activegithub ? "-200%" : "0" }}
                   transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
-                  className="w-full h-full flex items-center flex-col relative"
+                  className="w-full h-full flex text-sm items-center flex-col relative"
                 >
                   <Link
                     to={"https://twitter.com/edidiesky"}
@@ -169,12 +169,12 @@ const Footer = () => {
               <h4
                 onMouseMove={() => setActiveTwitter(true)}
                 onMouseLeave={() => setActiveTwitter(false)}
-                className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
+                className="relative text-lg z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
               >
                 <motion.div
                   animate={{ top: activetwitter ? "-100%" : "0" }}
                   transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
-                  className="w-full h-full flex items-center flex-col relative"
+                  className="w-full h-full flex text-sm items-center flex-col relative"
                 >
                   <Link
                     to={"https://github.com/edidiesky"}
@@ -195,12 +195,12 @@ const Footer = () => {
               <h4
                 onMouseMove={() => setActiveLinkedln(true)}
                 onMouseLeave={() => setActiveLinkedln(false)}
-                className="relative text-xl z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
+                className="relative text-lg z-50 sm:text-2xl w-auto overflow-hidden font-portfolio_bold1 font-normal "
               >
                 <motion.div
                   animate={{ top: activelinkedln ? "-100%" : "0" }}
                   transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
-                  className="w-full h-full flex items-center flex-col relative"
+                  className="w-full h-full flex text-sm items-center flex-col relative"
                 >
                   <Link
                     to={
@@ -223,7 +223,7 @@ const Footer = () => {
               </h4>
             </span>
 
-            <span className="flex items-center gap-8 ">
+            <span className="flex text-sm items-center gap-8 ">
               Development Victor Essien
             </span>
           </h3>
